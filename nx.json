@@ -2,9 +2,10 @@
   "$schema": "./node_modules/nx/schemas/nx-schema.json",
   "npmScope": "angular-samples",
   "affected": {
-    "defaultBase": "main"
+    "defaultBase": "develop"
   },
   "cli": {
+    "defaultCollection": "@nrwl/angular",
     "packageManager": "yarn"
   },
   "implicitDependencies": {
@@ -39,7 +40,12 @@
       "unitTestRunner": "jest"
     },
     "@nrwl/angular:component": {
-      "style": "scss"
+      "style": "scss",
+      "changeDetection": "OnPush"
+    },
+    "@schematics/angular:component": {
+      "style": "scss",
+      "changeDetection": "OnPush"
     }
   },
   "defaultProject": "icons"
