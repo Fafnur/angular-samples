@@ -1,0 +1,15 @@
+:host {
+  display: flex;
+  flex-direction: column;
+  padding: 0 15px;
+
+  @media (min-width: 800px) {
+    width: 600px;
+    margin: 0 auto;
+  }
+
+  @media (min-width: 1200px) {
+    width: 960px;
+    margin: 0 auto;
+  }
+}

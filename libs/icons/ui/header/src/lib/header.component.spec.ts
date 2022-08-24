@@ -1,6 +1,9 @@
 import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MockModule } from 'ng-mocks';
+
+import { ContainerModule } from '@angular-samples/icons/ui/container';
 
 import { HeaderComponent } from './header.component';
 import { HeaderComponentPo } from './header.component.po';
@@ -11,7 +14,7 @@ describe('HeaderComponent', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      imports: [CommonModule, RouterTestingModule],
+      imports: [CommonModule, RouterTestingModule, MockModule(ContainerModule)],
       declarations: [HeaderComponent],
     }).compileComponents();
 
