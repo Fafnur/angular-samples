@@ -3,8 +3,10 @@
   "version": 2,
   "projects": {
     "core-icons": "libs/core/icons",
+    "core-testing": "libs/core/testing",
     "icons": "apps/icons",
     "icons-page": "libs/icons/page",
+    "icons-ui-header": "libs/icons/ui/header",
     "icons-ui-svg-paths": "libs/icons/ui/svg-paths",
     "icons-ui-svg-sources": "libs/icons/ui/svg-sources"
   }

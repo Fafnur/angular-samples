@@ -10,7 +10,7 @@ import { DomSanitizer } from '@angular/platform-browser';
  * @Component({})
  * class YourComponent {
  *   constructor(private readonly iconService: IconService) {
- *     this.iconService.addUrl('yourIcon', '/path/to/your-icon.svg');
+ *     this.iconService.addPath('yourIcon', '/path/to/your-icon.svg');
  *   }
  * }
  *
@@ -50,7 +50,7 @@ export class IconService {
    * @param name Name icon
    * @param path Path to SVG (relative or absolute)
    */
-  addUrl(name: string, path: string): void {
+  addPath(name: string, path: string): void {
     void this.iconRegistry.addSvgIcon(name, this.sanitizer.bypassSecurityTrustResourceUrl(path));
   }
 }

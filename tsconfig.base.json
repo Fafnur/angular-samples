@@ -16,7 +16,9 @@
     "baseUrl": ".",
     "paths": {
       "@angular-samples/core/icons": ["libs/core/icons/src/index.ts"],
+      "@angular-samples/core/testing": ["libs/core/testing/src/index.ts"],
       "@angular-samples/icons/page": ["libs/icons/page/src/index.ts"],
+      "@angular-samples/icons/ui/header": ["libs/icons/ui/header/src/index.ts"],
       "@angular-samples/icons/ui/svg-paths": ["libs/icons/ui/svg-paths/src/index.ts"],
       "@angular-samples/icons/ui/svg-sources": ["libs/icons/ui/svg-sources/src/index.ts"]
     }
