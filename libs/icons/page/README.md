@@ -12,10 +12,10 @@ nx run icons:serve
 
 ## Using modules
 
-- [HeaderModule](../ui/header/src/lib/header.module.ts) - for show navigation between solutions;
-- [ContainerModule](../ui/container/src/lib/container.module.ts) - positioning the content in the center;
-- [SvgPathsModule](../ui/svg-paths/src/lib/svg-paths.module.ts) - demonstrate the creation of custom svg icons with path indication;
-- [SvgSourcesModule](../ui/svg-sources/src/lib/svg-sources.module.ts) - demonstrate the creation of custom svg icons from sources.
+- [HeaderModule](../ui/header/README.md) - for show navigation between solutions;
+- [ContainerModule](../ui/container/README.md) - positioning the content in the center;
+- [SvgPathsModule](../ui/svg-paths/README.md) - demonstrate the creation of custom svg icons with path indication;
+- [SvgSourcesModule](../ui/svg-sources/README.md) - demonstrate the creation of custom svg icons from sources.
 
 ## Running unit tests
 

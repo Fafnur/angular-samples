@@ -31,6 +31,8 @@ class YourComponent {
 
 See example `SvgSourcesComponent` - [libs/icons/ui/svg-sources/src/lib/svg-sources.component.ts](../../../libs/icons/ui/svg-sources/src/lib/svg-sources.component.ts)
 
+![image-sources](../../../apps/icons/src/assets/images/demo-sources.png)
+
 ### Using icons paths
 
 Create a custom SVG icon by calling the `addPath` method. The first argument is the name, the second argument is the path to SVG icon.
@@ -46,6 +48,8 @@ class YourComponent {
 
 See example `SvgPathsComponent` - [libs/icons/ui/svg-paths/src/lib/svg-paths.component.ts](../../../libs/icons/ui/svg-paths/src/lib/svg-paths.component.ts)
 
+![image-paths](../../../apps/icons/src/assets/images/demo-paths.png)
+
 ## Demo
 
 You can run a demo project with both solutions - [icons](../../../apps/icons/src/app/app.module.ts):
@@ -53,6 +57,8 @@ You can run a demo project with both solutions - [icons](../../../apps/icons/src
 ```shell
 nx run icons:serve
 ```
+
+[Read more](../../icons/page/README.md).
 
 ## Running unit tests
 
