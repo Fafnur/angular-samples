@@ -45,7 +45,7 @@ export class IconService {
   }
 
   /**
-   * Add a new icon from source.
+   * Add a new icon path.
    *
    * @param name Name icon
    * @param path Path to SVG (relative or absolute)
