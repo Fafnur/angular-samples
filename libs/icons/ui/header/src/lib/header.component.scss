@@ -1,0 +1,21 @@
+:host {
+  display: block;
+  background-color: whitesmoke;
+}
+
+nav {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+}
+
+a {
+  padding: 1rem;
+  color: #212121;
+  text-decoration: none;
+  text-transform: uppercase;
+
+  &.is-active {
+    background-color: lightgray;
+  }
+}

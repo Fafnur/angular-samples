@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/icons/ui/svg-sources/src",
+  "prefix": "angular-samples",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/icons/ui/svg-sources"],
+      "options": {
+        "jestConfig": "libs/icons/ui/svg-sources/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/icons/ui/svg-sources/**/*.ts", "libs/icons/ui/svg-sources/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

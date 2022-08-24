@@ -2,6 +2,13 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
-    "icons": "apps/icons"
+    "core-icons": "libs/core/icons",
+    "core-testing": "libs/core/testing",
+    "icons": "apps/icons",
+    "icons-page": "libs/icons/page",
+    "icons-ui-container": "libs/icons/ui/container",
+    "icons-ui-header": "libs/icons/ui/header",
+    "icons-ui-svg-paths": "libs/icons/ui/svg-paths",
+    "icons-ui-svg-sources": "libs/icons/ui/svg-sources"
   }
 }
