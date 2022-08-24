@@ -6,12 +6,4 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class HeaderComponent {
-  links = ['paths', 'sources'];
-
-  activeLink = this.links[0];
-
-  onSelect(link: string): void {
-    this.activeLink = link;
-  }
-}
+export class HeaderComponent {}
