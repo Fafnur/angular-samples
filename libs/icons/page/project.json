@@ -1,0 +1,22 @@
+{
+  "projectType": "library",
+  "sourceRoot": "libs/icons/page/src",
+  "prefix": "angular-samples",
+  "targets": {
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["coverage/libs/icons/page"],
+      "options": {
+        "jestConfig": "libs/icons/page/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["libs/icons/page/**/*.ts", "libs/icons/page/**/*.html"]
+      }
+    }
+  },
+  "tags": []
+}

@@ -15,7 +15,8 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
-      "@angular-samples/core/icons": ["libs/core/icons/src/index.ts"]
+      "@angular-samples/core/icons": ["libs/core/icons/src/index.ts"],
+      "@angular-samples/icons/page": ["libs/icons/page/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

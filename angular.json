@@ -3,6 +3,7 @@
   "version": 2,
   "projects": {
     "core-icons": "libs/core/icons",
-    "icons": "apps/icons"
+    "icons": "apps/icons",
+    "icons-page": "libs/icons/page"
   }
 }
