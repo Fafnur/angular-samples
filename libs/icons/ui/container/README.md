@@ -1,6 +1,6 @@
-# icons-ui-container
+# Icons UI Container
 
-This library was generated with [Nx](https://nx.dev).
+A small library with a [ContainerComponent](./src/lib/container.component.ts) for positioning content in the center.
 
 ## Running unit tests
 

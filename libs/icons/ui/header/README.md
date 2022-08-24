@@ -1,6 +1,6 @@
-# icons-ui-header
+# Icons UI Header
 
-This library was generated with [Nx](https://nx.dev).
+A small library with a [HeaderComponent](./src/lib/header.component.ts) for displaying navigation on the demo project.
 
 ## Running unit tests
 

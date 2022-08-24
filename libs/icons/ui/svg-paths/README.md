@@ -1,6 +1,6 @@
-# icons-ui-svg-paths
+# Icons UI SVG paths
 
-This library was generated with [Nx](https://nx.dev).
+A small library with a [SvgPathsComponent](./src/lib/svg-paths.component.ts) to demonstrate the creation of custom svg icons with path indication.
 
 ## Running unit tests
 

@@ -1,6 +1,6 @@
-# icons-ui-svg-sources
+# Icons UI svg sources
 
-This library was generated with [Nx](https://nx.dev).
+A small library with a [SvgSourcesComponent](./src/lib/svg-sources.component.ts) to demonstrate the creation of custom svg icons from sources.
 
 ## Running unit tests
 
