@@ -4,6 +4,8 @@
   "projects": {
     "core-icons": "libs/core/icons",
     "icons": "apps/icons",
-    "icons-page": "libs/icons/page"
+    "icons-page": "libs/icons/page",
+    "icons-ui-svg-paths": "libs/icons/ui/svg-paths",
+    "icons-ui-svg-sources": "libs/icons/ui/svg-sources"
   }
 }
