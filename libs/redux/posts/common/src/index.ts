@@ -1,1 +1,2 @@
-export * from './lib/redux-posts-common.module';
+export * from './lib/post.interface';
+export * from './lib/post.stub';
