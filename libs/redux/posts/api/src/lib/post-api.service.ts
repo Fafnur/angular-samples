@@ -1,7 +1,7 @@
 import { Inject, Injectable, InjectionToken, Optional } from '@angular/core';
 import { Observable } from 'rxjs';
 
-import { Post, PostCreate, PostDto } from '@angular-samples/redux/posts/common';
+import { PostChange, PostCreate, PostDto } from '@angular-samples/redux/posts/common';
 
 /**
  * @description InjectionToken for provide POSTS for demonstration
@@ -129,7 +129,7 @@ export class PostApiService {
    * @description Method for change post
    * @param postChanged Changed post
    */
-  change(postChanged: Partial<Post> & { uuid: string }): Observable<PostDto> {
+  change(postChanged: PostChange): Observable<PostDto> {
     return new Observable((observer) => {
       try {
         let post = this.entities[postChanged.uuid];

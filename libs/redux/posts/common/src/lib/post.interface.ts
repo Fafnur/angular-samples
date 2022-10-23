@@ -16,3 +16,5 @@ export interface PostCreate {
   readonly title: string;
   readonly body: string;
 }
+
+export type PostChange = Partial<Post> & { uuid: string };
