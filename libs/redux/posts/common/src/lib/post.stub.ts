@@ -8,9 +8,13 @@ export const POST_DTO_STUB: PostDto = {
   updated: '2022-10-23T13:47:20.777Z',
 };
 
+export const POSTS_DTO_STUB: Post[] = [POST_DTO_STUB];
+
 export const POST_STUB: Post = {
   ...POST_DTO_STUB,
 };
+
+export const POSTS_STUB: Post[] = [POST_STUB];
 
 export const POST_CREATE_STUB: PostCreate = {
   uuid: '002a649b-72de-4c87-b1d6-cdc6c72d59d4',

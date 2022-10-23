@@ -1,1 +1,1 @@
-export * from './lib/redux-posts-api.module';
+export * from './lib/post-api.module';
