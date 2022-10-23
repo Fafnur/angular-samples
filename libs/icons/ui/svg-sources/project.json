@@ -5,7 +5,7 @@
   "targets": {
     "test": {
       "executor": "@nrwl/jest:jest",
-      "outputs": ["coverage/libs/icons/ui/svg-sources"],
+      "outputs": ["{workspaceRoot}/coverage/libs/icons/ui/svg-sources"],
       "options": {
         "jestConfig": "libs/icons/ui/svg-sources/jest.config.ts",
         "passWithNoTests": true
