@@ -9,6 +9,7 @@
     "icons-ui-container": "libs/icons/ui/container",
     "icons-ui-header": "libs/icons/ui/header",
     "icons-ui-svg-paths": "libs/icons/ui/svg-paths",
-    "icons-ui-svg-sources": "libs/icons/ui/svg-sources"
+    "icons-ui-svg-sources": "libs/icons/ui/svg-sources",
+    "redux": "apps/redux"
   }
 }
