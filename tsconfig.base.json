@@ -22,11 +22,11 @@
       "@angular-samples/icons/ui/header": ["libs/icons/ui/header/src/index.ts"],
       "@angular-samples/icons/ui/svg-paths": ["libs/icons/ui/svg-paths/src/index.ts"],
       "@angular-samples/icons/ui/svg-sources": ["libs/icons/ui/svg-sources/src/index.ts"],
+      "@angular-samples/redux/home/page": ["libs/redux/home/page/src/index.ts"],
       "@angular-samples/redux/ngrx/page": ["libs/redux/ngrx/page/src/index.ts"],
       "@angular-samples/redux/ngrx/posts/api": ["libs/redux/ngrx/posts/api/src/index.ts"],
       "@angular-samples/redux/ngrx/posts/common": ["libs/redux/ngrx/posts/common/src/index.ts"],
-      "@angular-samples/redux/ngrx/posts/state": ["libs/redux/ngrx/posts/state/src/index.ts"],
-      "@angular-samples/redux/pages": ["libs/redux/pages/src/index.ts"]
+      "@angular-samples/redux/ngrx/posts/state": ["libs/redux/ngrx/posts/state/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

@@ -11,10 +11,10 @@
     "icons-ui-svg-paths": "libs/icons/ui/svg-paths",
     "icons-ui-svg-sources": "libs/icons/ui/svg-sources",
     "redux": "apps/redux",
+    "redux-home-page": "libs/redux/home/page",
     "redux-ngrx-page": "libs/redux/ngrx/page",
     "redux-ngrx-posts-api": "libs/redux/ngrx/posts/api",
     "redux-ngrx-posts-common": "libs/redux/ngrx/posts/common",
-    "redux-ngrx-posts-state": "libs/redux/ngrx/posts/state",
-    "redux-pages": "libs/redux/pages"
+    "redux-ngrx-posts-state": "libs/redux/ngrx/posts/state"
   }
 }
