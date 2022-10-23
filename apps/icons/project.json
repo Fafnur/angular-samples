@@ -1,4 +1,5 @@
 {
+  "name": "icons",
   "projectType": "application",
   "sourceRoot": "apps/icons/src",
   "prefix": "angular-samples",
