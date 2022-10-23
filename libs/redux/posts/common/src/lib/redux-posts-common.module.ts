@@ -4,4 +4,4 @@ import { NgModule } from '@angular/core';
 @NgModule({
   imports: [CommonModule],
 })
-export class ReduxNgrxPostsApiModule {}
+export class ReduxPostsCommonModule {}

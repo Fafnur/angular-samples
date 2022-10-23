@@ -24,9 +24,9 @@
       "@angular-samples/icons/ui/svg-sources": ["libs/icons/ui/svg-sources/src/index.ts"],
       "@angular-samples/redux/home/page": ["libs/redux/home/page/src/index.ts"],
       "@angular-samples/redux/ngrx/page": ["libs/redux/ngrx/page/src/index.ts"],
-      "@angular-samples/redux/ngrx/posts/api": ["libs/redux/ngrx/posts/api/src/index.ts"],
-      "@angular-samples/redux/ngrx/posts/common": ["libs/redux/ngrx/posts/common/src/index.ts"],
-      "@angular-samples/redux/ngrx/posts/state": ["libs/redux/ngrx/posts/state/src/index.ts"]
+      "@angular-samples/redux/ngrx/posts/state": ["libs/redux/ngrx/posts/state/src/index.ts"],
+      "@angular-samples/redux/posts/api": ["libs/redux/posts/api/src/index.ts"],
+      "@angular-samples/redux/posts/common": ["libs/redux/posts/common/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

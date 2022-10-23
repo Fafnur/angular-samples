@@ -13,8 +13,8 @@
     "redux": "apps/redux",
     "redux-home-page": "libs/redux/home/page",
     "redux-ngrx-page": "libs/redux/ngrx/page",
-    "redux-ngrx-posts-api": "libs/redux/ngrx/posts/api",
-    "redux-ngrx-posts-common": "libs/redux/ngrx/posts/common",
-    "redux-ngrx-posts-state": "libs/redux/ngrx/posts/state"
+    "redux-ngrx-posts-state": "libs/redux/ngrx/posts/state",
+    "redux-posts-api": "libs/redux/posts/api",
+    "redux-posts-common": "libs/redux/posts/common"
   }
 }
