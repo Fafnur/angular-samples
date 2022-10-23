@@ -1,1 +1,1 @@
-export * from './lib/redux-ngrx-page.module';
+export * from './lib/page.module';
