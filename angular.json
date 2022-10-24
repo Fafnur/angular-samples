@@ -14,6 +14,9 @@
     "redux-home-page": "libs/redux/home/page",
     "redux-ngrx-posts-page": "libs/redux/ngrx/posts/page",
     "redux-ngrx-posts-state": "libs/redux/ngrx/posts/state",
+    "redux-ngrx-posts-ui-last": "libs/redux/ngrx/posts/ui/last",
+    "redux-ngrx-posts-ui-popular": "libs/redux/ngrx/posts/ui/popular",
+    "redux-ngrx-posts-ui-promo": "libs/redux/ngrx/posts/ui/promo",
     "redux-posts-api": "libs/redux/posts/api",
     "redux-posts-common": "libs/redux/posts/common"
   }
