@@ -35,4 +35,11 @@ describe('Post Selectors', () => {
 
     expect(result?.uuid).toBe(POST_STUB.uuid);
   });
+
+  it('selectPostById() should return post by id', () => {
+    state = getState({}, POSTS_STUB);
+    const result = PostSelectors.selectPostState.projector(state);
+
+    expect(result.ids.length).toBe(POSTS_STUB.length);
+  });
 });

@@ -1,7 +1,7 @@
 import { Action } from '@ngrx/store';
 
 import { crateGetEntityState } from '@angular-samples/core/testing';
-import { Post, POST_STUB, POSTS_STUB } from '@angular-samples/redux/posts/common';
+import { Post, POST_CHANGE_STUB, POST_STUB, POSTS_STUB } from '@angular-samples/redux/posts/common';
 
 import * as PostActions from './post.actions';
 import { initialPostState, postAdapter, postReducer, PostState } from './post.reducer';
@@ -53,7 +53,7 @@ describe('Post Reducer', () => {
 
   it('changeSuccess() should change post', () => {
     state = getState({}, POSTS_STUB);
-    const postChanged: Post = { ...POST_STUB, title: 'Long title' };
+    const postChanged: Post = { ...POST_STUB, ...POST_CHANGE_STUB };
     const action = PostActions.changeSuccess({ post: postChanged });
     const result = postReducer(state, action);
 

@@ -11,10 +11,6 @@ export interface PostState extends EntityState<Post> {
   loaded: boolean;
 }
 
-export interface PostPartialState {
-  readonly [POST_FEATURE_KEY]: PostState;
-}
-
 export const postAdapter = createEntityAdapter<Post>({
   selectId: (entity) => entity.uuid,
 });

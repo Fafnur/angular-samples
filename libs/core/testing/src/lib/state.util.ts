@@ -10,3 +10,5 @@ export function crateGetEntityState<T, R>(
 ): (data?: Partial<T>, entities?: R[]) => T {
   return (data = {}, entities = []) => adapter.setAll(entities, { ...initialState, ...data });
 }
+
+export const ERROR_STUB = 'Unknown Error';

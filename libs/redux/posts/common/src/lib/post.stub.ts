@@ -1,4 +1,4 @@
-import { Post, PostCreate, PostDto } from './post.interface';
+import { Post, PostChange, PostCreate, PostDto } from './post.interface';
 
 export const POST_DTO_STUB: PostDto = {
   uuid: '002a649b-72de-4c87-b2d5-cdc6c72d59d4',
@@ -24,4 +24,9 @@ export const POST_CREATE_STUB: PostCreate = {
   uuid: '002a649b-72de-4c87-b1d6-cdc6c72d59d4',
   title: 'New smart post',
   body: 'Description for a new smart post.',
+};
+
+export const POST_CHANGE_STUB: PostChange = {
+  uuid: POST_STUB.uuid,
+  title: 'Old smart post',
 };

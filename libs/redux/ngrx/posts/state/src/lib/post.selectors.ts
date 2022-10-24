@@ -2,7 +2,7 @@ import { createFeatureSelector, createSelector } from '@ngrx/store';
 
 import { POST_FEATURE_KEY, postAdapter, PostState } from './post.reducer';
 
-const selectPostState = createFeatureSelector<PostState>(POST_FEATURE_KEY);
+export const selectPostState = createFeatureSelector<PostState>(POST_FEATURE_KEY);
 
 const { selectAll, selectEntities } = postAdapter.getSelectors();
 

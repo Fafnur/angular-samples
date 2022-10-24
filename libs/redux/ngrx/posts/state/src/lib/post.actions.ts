@@ -24,7 +24,7 @@ export const createSuccess = createAction('[Post] Create Success', props<{ post:
 export const createFailure = createAction('[Post] Create Failure', props<{ error: unknown }>());
 
 // Change
-export const change = createAction('[Post] Change', props<{ post: PostChange }>());
+export const change = createAction('[Post] Change', props<{ postChange: PostChange }>());
 
 export const changeSuccess = createAction('[Post] Change Success', props<{ post: Post }>());
 
