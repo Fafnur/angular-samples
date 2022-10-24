@@ -12,7 +12,7 @@
     "icons-ui-svg-sources": "libs/icons/ui/svg-sources",
     "redux": "apps/redux",
     "redux-home-page": "libs/redux/home/page",
-    "redux-ngrx-page": "libs/redux/ngrx/page",
+    "redux-ngrx-posts-page": "libs/redux/ngrx/posts/page",
     "redux-ngrx-posts-state": "libs/redux/ngrx/posts/state",
     "redux-posts-api": "libs/redux/posts/api",
     "redux-posts-common": "libs/redux/posts/common"

@@ -8,7 +8,7 @@ const routes: Routes = [
   },
   {
     path: 'ngrx',
-    loadChildren: () => import('@angular-samples/redux/ngrx/page').then((modules) => modules.PageModule),
+    loadChildren: () => import('@angular-samples/redux/ngrx/posts/page').then((modules) => modules.PageModule),
   },
 ];
 
