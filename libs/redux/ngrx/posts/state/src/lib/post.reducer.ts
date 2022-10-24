@@ -27,8 +27,8 @@ const reducer = createReducer(
   initialPostState,
   on(
     PostActions.loadSuccess,
-    (state, { post }): PostState =>
-      postAdapter.setAll(post, {
+    (state, { posts }): PostState =>
+      postAdapter.setAll(posts, {
         ...state,
         loaded: true,
       })

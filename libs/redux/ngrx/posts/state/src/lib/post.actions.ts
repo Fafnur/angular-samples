@@ -5,7 +5,7 @@ import { Post, PostChange, PostCreate } from '@angular-samples/redux/posts/commo
 // Load all
 export const load = createAction('[Post] Load');
 
-export const loadSuccess = createAction('[Post] Load Success', props<{ post: Post[] }>());
+export const loadSuccess = createAction('[Post] Load Success', props<{ posts: Post[] }>());
 
 export const loadFailure = createAction('[Post] Load Failure', props<{ error: unknown }>());
 

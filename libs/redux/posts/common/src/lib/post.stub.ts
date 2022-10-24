@@ -16,6 +16,10 @@ export const POST_STUB: Post = {
 
 export const POSTS_STUB: Post[] = [POST_STUB];
 
+export const POSTS_ENTITIES_STUB: Record<string, Post> = {
+  [POST_STUB.uuid]: POST_STUB,
+};
+
 export const POST_CREATE_STUB: PostCreate = {
   uuid: '002a649b-72de-4c87-b1d6-cdc6c72d59d4',
   title: 'New smart post',

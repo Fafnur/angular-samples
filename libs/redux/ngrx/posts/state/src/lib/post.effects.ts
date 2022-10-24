@@ -12,7 +12,7 @@ export class PostEffects {
       fetch({
         run: (action) => {
           // Your custom service 'load' logic goes here. For now just return a success action...
-          return PostActions.loadSuccess({ post: [] });
+          return PostActions.loadSuccess({ posts: [] });
         },
         onError: (action, error) => {
           console.error('Error', error);
