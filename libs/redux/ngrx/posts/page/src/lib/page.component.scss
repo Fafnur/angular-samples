@@ -1,0 +1,98 @@
+@use 'libs/ui/stylesheets/mixins' as mixins;
+@use 'sass:math' as math;
+
+/**
+  *  Styles for base container
+ */
+
+@mixin make-row($breakpoint) {
+  &[#{$breakpoint}] {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    margin-left: -1rem;
+    margin-right: -1rem;
+  }
+}
+
+.container {
+  display: flex;
+  flex-direction: column;
+  flex-wrap: wrap;
+  padding-left: 1rem;
+  padding-right: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+
+  @include mixins.media-tablet-portrait() {
+    max-width: 540px;
+  }
+
+  @include mixins.media-tablet-landscape() {
+    max-width: 900px;
+  }
+
+  @include mixins.media-web-portrait() {
+    max-width: 790px;
+  }
+
+  @include mixins.media-web-landscape() {
+    max-width: 1200px;
+  }
+}
+
+/**
+  *  Styles for grid system
+ */
+
+@mixin make-columns($mode) {
+  &[#{$mode}] {
+    flex: 1 0 0;
+    padding: 0 1rem;
+  }
+
+  &[#{$mode}]:not([#{$mode}='']) {
+    flex: 0 0 auto;
+  }
+
+  :host-context(bunch-row.no-padding) &[#{$mode}] {
+    padding: 0;
+  }
+
+  @for $column from 1 through 12 {
+    &[#{$mode}='#{$column}'] {
+      width: math.percentage(math.div($column, 12));
+    }
+  }
+}
+
+.row {
+  @include mixins.media-handset-up() {
+    @include make-row(handset);
+  }
+
+  @include mixins.media-tablet-up() {
+    @include make-row(tablet);
+  }
+
+  @include mixins.media-web-up() {
+    @include make-row(web);
+  }
+}
+
+.column {
+  display: block;
+
+  @include mixins.media-handset-up() {
+    @include make-columns(handset);
+  }
+
+  @include mixins.media-tablet-up() {
+    @include make-columns(tablet);
+  }
+
+  @include mixins.media-web-up() {
+    @include make-columns(web);
+  }
+}
