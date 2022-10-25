@@ -32,7 +32,8 @@
       "@angular-samples/redux/posts/api": ["libs/redux/posts/api/src/index.ts"],
       "@angular-samples/redux/posts/common": ["libs/redux/posts/common/src/index.ts"],
       "@angular-samples/ui/container": ["libs/ui/container/src/index.ts"],
-      "@angular-samples/ui/grid": ["libs/ui/grid/src/index.ts"]
+      "@angular-samples/ui/grid": ["libs/ui/grid/src/index.ts"],
+      "@angular-samples/ui/layout": ["libs/ui/layout/src/index.ts"]
     }
   },
   "exclude": ["node_modules", "tmp"]

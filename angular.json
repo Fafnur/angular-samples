@@ -21,6 +21,7 @@
     "redux-posts-api": "libs/redux/posts/api",
     "redux-posts-common": "libs/redux/posts/common",
     "ui-container": "libs/ui/container",
-    "ui-grid": "libs/ui/grid"
+    "ui-grid": "libs/ui/grid",
+    "ui-layout": "libs/ui/layout"
   }
 }
