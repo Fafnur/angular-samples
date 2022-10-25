@@ -1,26 +1,59 @@
 import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
+import { MockModule } from 'ng-mocks';
+import { mock } from 'ts-mockito';
+
+import { providerOf } from '@angular-samples/core/testing';
+import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
+import { PostsLastModule } from '@angular-samples/redux/ngrx/posts/ui/last';
+import { PostsPopularModule } from '@angular-samples/redux/ngrx/posts/ui/popular';
+import { PostsPromoModule } from '@angular-samples/redux/ngrx/posts/ui/promo';
+import { ContainerModule } from '@angular-samples/ui/container';
+import { GridModule } from '@angular-samples/ui/grid';
 
 import { PageComponent } from './page.component';
+import { PageComponentPo } from './page.component.po';
 
-describe('NgrxPageComponent', () => {
-  let component: PageComponent;
+describe('PostsPageComponent', () => {
+  let po: PageComponentPo;
   let fixture: ComponentFixture<PageComponent>;
+  let postFacadeMock: PostFacade;
 
   beforeEach(async () => {
+    postFacadeMock = mock(PostFacade);
+
     await TestBed.configureTestingModule({
-      imports: [CommonModule, RouterTestingModule],
+      imports: [
+        CommonModule,
+        RouterTestingModule,
+        MockModule(PostsLastModule),
+        MockModule(PostsPopularModule),
+        MockModule(PostsPromoModule),
+        MockModule(GridModule),
+        MockModule(ContainerModule),
+      ],
       declarations: [PageComponent],
+      providers: [providerOf(PostFacade, postFacadeMock)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(PageComponent);
-    component = fixture.componentInstance;
+    po = new PageComponentPo(fixture);
   });
 
   it('should create', () => {
     fixture.detectChanges();
 
-    expect(component).toBeTruthy();
+    expect(fixture.componentInstance).toBeTruthy();
+  });
+
+  it('should create', () => {
+    fixture.detectChanges();
+
+    expect(po.container).toBeTruthy();
+    expect(po.title).toBeTruthy();
+    expect(po.promo).toBeTruthy();
+    expect(po.last).toBeTruthy();
+    expect(po.popular).toBeTruthy();
   });
 });

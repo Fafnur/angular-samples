@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 
 @Component({
-  selector: 'angular-samples-home-page',
+  selector: 'angular-samples-posts-page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,

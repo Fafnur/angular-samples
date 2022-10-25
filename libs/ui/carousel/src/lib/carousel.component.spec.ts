@@ -4,15 +4,16 @@ import { MockModule } from 'ng-mocks';
 
 import { CarouselComponent } from './carousel.component';
 import { CarouselComponentPo } from './carousel.component.po';
+import { CAROUSEL_SLIDES_STUB } from './carousel.stub';
 import { CarouselDotsModule } from './carousel-dots/carousel-dots.module';
 import { CarouselNavsModule } from './carousel-navs/carousel-navs.module';
 import { CarouselSlideModule } from './carousel-slide/carousel-slide.module';
 
 @Component({
-  template: `<angular-samples-carousel automation-id="carousel" [images]="images"></angular-samples-carousel>`,
+  template: `<angular-samples-carousel automation-id="carousel" [data]="slides"></angular-samples-carousel>`,
 })
 class WrapperComponent {
-  images = ['/1.jpg', '/2.jpg', '/3.jpg'];
+  slides = CAROUSEL_SLIDES_STUB;
 }
 
 describe('CarouselComponent', () => {
@@ -42,7 +43,7 @@ describe('CarouselComponent', () => {
 
     expect(pageObject.carouselDots).toBeTruthy();
     expect(pageObject.carouselNavs).toBeTruthy();
-    expect(pageObject.carouselSlides.length).toBe(3);
+    expect(pageObject.carouselSlides.length).toBe(CAROUSEL_SLIDES_STUB.length);
   });
 
   it('should call selected after click on first slide', () => {
