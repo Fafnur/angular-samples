@@ -17,6 +17,7 @@
     "redux-ngrx-posts-ui-last": "libs/redux/ngrx/posts/ui/last",
     "redux-ngrx-posts-ui-popular": "libs/redux/ngrx/posts/ui/popular",
     "redux-ngrx-posts-ui-promo": "libs/redux/ngrx/posts/ui/promo",
+    "redux-ngrx-store-root": "libs/redux/ngrx/store/root",
     "redux-posts-api": "libs/redux/posts/api",
     "redux-posts-common": "libs/redux/posts/common"
   }

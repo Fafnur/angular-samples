@@ -28,6 +28,7 @@
       "@angular-samples/redux/ngrx/posts/ui/last": ["libs/redux/ngrx/posts/ui/last/src/index.ts"],
       "@angular-samples/redux/ngrx/posts/ui/popular": ["libs/redux/ngrx/posts/ui/popular/src/index.ts"],
       "@angular-samples/redux/ngrx/posts/ui/promo": ["libs/redux/ngrx/posts/ui/promo/src/index.ts"],
+      "@angular-samples/redux/ngrx/store/root": ["libs/redux/ngrx/store/root/src/index.ts"],
       "@angular-samples/redux/posts/api": ["libs/redux/posts/api/src/index.ts"],
       "@angular-samples/redux/posts/common": ["libs/redux/posts/common/src/index.ts"]
     }
