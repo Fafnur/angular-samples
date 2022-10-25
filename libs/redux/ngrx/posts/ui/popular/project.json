@@ -1,6 +1,6 @@
 {
-  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "name": "redux-ngrx-posts-ui-popular",
+  "$schema": "../../../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/redux/ngrx/posts/ui/popular/src",
   "prefix": "angular-samples",

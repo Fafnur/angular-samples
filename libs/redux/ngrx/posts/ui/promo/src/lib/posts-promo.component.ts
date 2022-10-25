@@ -1,4 +1,8 @@
 import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { Observable } from 'rxjs';
+
+import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
+import { Post } from '@angular-samples/redux/posts/common';
 
 @Component({
   selector: 'angular-samples-posts-promo',
@@ -7,7 +11,15 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostsPromoComponent implements OnInit {
-  constructor() {}
+  posts$!: Observable<Post[]>;
 
-  ngOnInit(): void {}
+  constructor(private readonly postFacade: PostFacade) {}
+
+  ngOnInit(): void {
+    this.posts$ = this.postFacade.postsPromo$;
+  }
+
+  trackByFn(index: number, post: Post): string {
+    return post.uuid;
+  }
 }

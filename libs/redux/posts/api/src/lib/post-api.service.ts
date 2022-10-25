@@ -3,15 +3,12 @@ import { Observable } from 'rxjs';
 
 import { PostChange, PostCreate, PostDto } from '@angular-samples/redux/posts/common';
 
+import { POSTS_DEFAULT } from './posts';
+
 /**
  * @description InjectionToken for provide POSTS for demonstration
  */
 export const POSTS = new InjectionToken<PostDto[]>('POSTS');
-
-/**
- * @description Default posts for demonstration
- */
-export const POSTS_DEFAULT: PostDto[] = [];
 
 /**
  * @description Fake API news management CRUD service
@@ -113,7 +110,7 @@ export class PostApiService {
         if (post) {
           post = { ...post, ...postCreate, updated: now };
         } else {
-          post = { ...postCreate, created: now, updated: now };
+          post = { ...postCreate, created: now, updated: now, likes: 0, views: 0 };
           this.uuids.push(post.uuid);
         }
         this.entities[post.uuid] = post;

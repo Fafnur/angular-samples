@@ -1,1 +1,3 @@
-<p>posts-promo works!</p>
+<ng-container *ngIf="posts$ | async; let posts">
+  <angular-samples-post-promo [post]="post" *ngFor="let post of posts; trackBy: trackByFn"></angular-samples-post-promo>
+</ng-container>

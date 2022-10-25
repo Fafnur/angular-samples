@@ -32,7 +32,7 @@ describe('PostApiService', () => {
   });
 
   it('should return new post', () => {
-    const result = hot('(a|)', { a: { ...POST_CREATE_STUB, created: now, updated: now } });
+    const result = hot('(a|)', { a: { ...POST_CREATE_STUB, created: now, updated: now, likes: 0, views: 0 } });
 
     expect(service.create(POST_CREATE_STUB)).toBeObservable(result);
   });

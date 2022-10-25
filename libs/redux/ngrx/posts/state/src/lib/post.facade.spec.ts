@@ -6,10 +6,10 @@ import { hot } from 'jasmine-marbles';
 import { Observable } from 'rxjs';
 
 import { ERROR_STUB } from '@angular-samples/core/testing';
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { POST_CHANGE_STUB, POST_CREATE_STUB, POST_STUB, POSTS_ENTITIES_STUB, POSTS_STUB } from '@angular-samples/redux/posts/common';
 
 import * as PostActions from './post.actions';
+import { PostFacade } from './post.facade';
 import { initialPostState, POST_FEATURE_KEY } from './post.reducer';
 import * as PostSelectors from './post.selectors';
 
