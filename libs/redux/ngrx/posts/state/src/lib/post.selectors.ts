@@ -14,6 +14,14 @@ export const selectPromoPosts = createSelector(selectPosts, (posts) =>
   posts.filter((post) => post.promo).sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime())
 );
 
+export const selectPopularPosts = createSelector(selectPosts, (posts) =>
+  posts.filter((post) => !post.promo).sort((a, b) => b.views - a.views)
+);
+
+export const selectLastPosts = createSelector(selectPosts, (posts) =>
+  posts.filter((post) => !post.promo).sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime())
+);
+
 export const selectPostsEntities = createSelector(selectPostState, (state) => selectEntities(state));
 
 export const selectPostById = (uuid: string) => createSelector(selectPostState, (state) => state.entities[uuid] ?? null);

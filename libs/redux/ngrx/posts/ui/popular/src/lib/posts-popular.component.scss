@@ -1,0 +1,18 @@
+@use 'libs/ui/stylesheets/mixins' as mixins;
+@use 'libs/ui/stylesheets/variables' as variables;
+
+a {
+  display: block;
+  margin-bottom: 1rem;
+  text-decoration: none;
+  color: variables.$color-default;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+}

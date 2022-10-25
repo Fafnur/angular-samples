@@ -1,0 +1,51 @@
+@use 'libs/ui/stylesheets/mixins' as mixins;
+@use 'libs/ui/stylesheets/variables' as variables;
+
+:host {
+  display: block;
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mixins.media-web() {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
+
+a {
+  display: flex;
+  flex-direction: row;
+  text-decoration: none;
+  color: variables.$color-default;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+h4 {
+  margin: 0 0 0 1rem;
+}
+
+img {
+  display: block;
+  width: 100px;
+  max-width: 100%;
+  object-fit: cover;
+
+  @include mixins.media-tablet() {
+    display: none;
+  }
+
+  @include mixins.media-web() {
+    display: block;
+    width: 150px;
+  }
+}

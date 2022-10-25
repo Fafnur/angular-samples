@@ -16,6 +16,10 @@ export class PostFacade {
 
   postsPromo$ = this.store.select(PostSelectors.selectPromoPosts);
 
+  postsPopular$ = this.store.select(PostSelectors.selectPopularPosts);
+
+  postsLast$ = this.store.select(PostSelectors.selectLastPosts);
+
   loadSuccess$ = this.actions.pipe(
     ofType(PostActions.loadSuccess),
     map(({ posts }) => posts)

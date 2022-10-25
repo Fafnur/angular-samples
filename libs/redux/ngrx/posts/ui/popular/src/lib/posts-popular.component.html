@@ -1,1 +1,3 @@
-<p>posts-popular works!</p>
+<nav *ngIf="posts$ | async; let posts">
+  <angular-samples-post-popular [post]="post" *ngFor="let post of posts"></angular-samples-post-popular>
+</nav>

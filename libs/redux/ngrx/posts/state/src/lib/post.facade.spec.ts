@@ -30,6 +30,9 @@ describe('Post Selectors', () => {
             { selector: PostSelectors.selectPostState, value: { entities: POSTS_ENTITIES_STUB } },
             { selector: PostSelectors.selectLoaded, value: true },
             { selector: PostSelectors.selectPosts, value: POSTS_STUB },
+            { selector: PostSelectors.selectLastPosts, value: POSTS_STUB },
+            { selector: PostSelectors.selectPopularPosts, value: POSTS_STUB },
+            { selector: PostSelectors.selectPromoPosts, value: POSTS_STUB },
             { selector: PostSelectors.selectPostById(POST_STUB.uuid), value: POST_STUB },
           ],
         }),
@@ -61,6 +64,24 @@ describe('Post Selectors', () => {
     const expected = hot('a', { a: POSTS_STUB });
 
     expect(facade.posts$).toBeObservable(expected);
+  });
+
+  it('should return postsPopular$', () => {
+    const expected = hot('a', { a: POSTS_STUB });
+
+    expect(facade.postsPopular$).toBeObservable(expected);
+  });
+
+  it('should return postsLast$', () => {
+    const expected = hot('a', { a: POSTS_STUB });
+
+    expect(facade.postsLast$).toBeObservable(expected);
+  });
+
+  it('should return postsPromo$', () => {
+    const expected = hot('a', { a: POSTS_STUB });
+
+    expect(facade.postsPromo$).toBeObservable(expected);
   });
 
   it('should emit loadSuccess$', () => {
