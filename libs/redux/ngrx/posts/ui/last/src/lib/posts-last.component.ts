@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'angular-samples-posts-last',
@@ -6,8 +6,4 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./posts-last.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PostsLastComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class PostsLastComponent {}

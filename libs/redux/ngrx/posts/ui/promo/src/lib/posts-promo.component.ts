@@ -18,8 +18,4 @@ export class PostsPromoComponent implements OnInit {
   ngOnInit(): void {
     this.posts$ = this.postFacade.postsPromo$;
   }
-
-  trackByFn(index: number, post: Post): string {
-    return post.uuid;
-  }
 }

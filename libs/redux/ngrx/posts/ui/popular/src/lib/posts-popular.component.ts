@@ -1,4 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'angular-samples-posts-popular',
@@ -6,8 +6,4 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
   styleUrls: ['./posts-popular.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PostsPopularComponent implements OnInit {
-  constructor() {}
-
-  ngOnInit(): void {}
-}
+export class PostsPopularComponent {}
