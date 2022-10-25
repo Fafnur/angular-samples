@@ -20,6 +20,7 @@
     "redux-ngrx-store-root": "libs/redux/ngrx/store/root",
     "redux-posts-api": "libs/redux/posts/api",
     "redux-posts-common": "libs/redux/posts/common",
+    "ui-carousel": "libs/ui/carousel",
     "ui-container": "libs/ui/container",
     "ui-grid": "libs/ui/grid",
     "ui-layout": "libs/ui/layout"
