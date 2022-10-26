@@ -20,4 +20,8 @@ export class PostsPopularComponent implements OnInit {
   ngOnInit(): void {
     this.posts$ = this.postFacade.postsPopular$.pipe(map((posts) => posts.slice(0, this.view)));
   }
+
+  trackByFn(index: number, post: Post): string {
+    return post.uuid.toString();
+  }
 }

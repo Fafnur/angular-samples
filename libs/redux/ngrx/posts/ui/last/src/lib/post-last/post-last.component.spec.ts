@@ -5,28 +5,28 @@ import { RouterTestingModule } from '@angular/router/testing';
 
 import { POST_STUB } from '@angular-samples/redux/posts/common';
 
-import { PostPopularComponent } from './post-popular.component';
-import { PostPopularComponentPo } from './post-popular.component.po';
+import { PostLastComponent } from './post-last.component';
+import { PostLastComponentPo } from './post-last.component.po';
 
 @Component({
-  template: `<angular-samples-post-popular [post]="post"></angular-samples-post-popular>`,
+  template: `<angular-samples-post-last [post]="post"></angular-samples-post-last>`,
 })
 class WrapperComponent {
   post = POST_STUB;
 }
 
-describe('PostPopularComponent', () => {
-  let po: PostPopularComponentPo;
+describe('PostLastComponent', () => {
+  let po: PostLastComponentPo;
   let fixture: ComponentFixture<WrapperComponent>;
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
       imports: [CommonModule, RouterTestingModule],
-      declarations: [PostPopularComponent, WrapperComponent],
+      declarations: [PostLastComponent, WrapperComponent],
     }).compileComponents();
 
     fixture = TestBed.createComponent(WrapperComponent);
-    po = new PostPopularComponentPo(fixture);
+    po = new PostLastComponentPo(fixture);
   });
 
   it('should create', () => {

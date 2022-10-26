@@ -1,3 +1,5 @@
-<nav *ngIf="posts$ | async; let posts">
-  <angular-samples-post-popular [post]="post" *ngFor="let post of posts"></angular-samples-post-popular>
-</nav>
+<angular-samples-post-popular
+  automation-id="post"
+  [post]="post"
+  *ngFor="let post of posts$ | async; trackBy: trackByFn"
+></angular-samples-post-popular>

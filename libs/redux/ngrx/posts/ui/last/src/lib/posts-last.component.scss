@@ -1,0 +1,18 @@
+@use 'libs/ui/stylesheets/mixins' as mixins;
+@use 'libs/ui/stylesheets/variables' as variables;
+
+angular-samples-column {
+  margin-bottom: 1rem;
+
+  &:last-child {
+    margin-bottom: 0;
+  }
+
+  @include mixins.media-web() {
+    margin-bottom: 2rem;
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+}
