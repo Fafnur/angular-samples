@@ -1,5 +1,5 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { Observable } from 'rxjs';
+import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
+import { map, Observable } from 'rxjs';
 
 import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { Post } from '@angular-samples/redux/posts/common';
@@ -11,12 +11,14 @@ import { Post } from '@angular-samples/redux/posts/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostsLastComponent implements OnInit {
+  @Input() view = 8;
+
   posts$!: Observable<Post[]>;
 
   constructor(private readonly postFacade: PostFacade) {}
 
   ngOnInit(): void {
-    this.posts$ = this.postFacade.postsLast$;
+    this.posts$ = this.postFacade.postsLast$.pipe(map((posts) => posts.slice(0, this.view)));
   }
 
   trackByFn(index: number, post: Post): string {

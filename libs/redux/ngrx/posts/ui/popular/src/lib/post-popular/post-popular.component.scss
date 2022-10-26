@@ -35,17 +35,11 @@ h4 {
 }
 
 img {
-  display: block;
   width: 100px;
   max-width: 100%;
   object-fit: cover;
 
-  @include mixins.media-tablet() {
-    display: none;
-  }
-
   @include mixins.media-web() {
-    display: block;
     width: 150px;
   }
 }

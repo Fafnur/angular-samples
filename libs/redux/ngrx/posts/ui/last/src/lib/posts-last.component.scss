@@ -1,6 +1,15 @@
 @use 'libs/ui/stylesheets/mixins' as mixins;
 @use 'libs/ui/stylesheets/variables' as variables;
 
+:host {
+  display: block;
+  margin-bottom: 1rem;
+
+  @include mixins.media-web() {
+    margin-bottom: 2rem;
+  }
+}
+
 angular-samples-column {
   margin-bottom: 1rem;
 
