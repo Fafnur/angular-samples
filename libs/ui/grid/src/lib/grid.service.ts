@@ -25,7 +25,9 @@ export const LAYOUT_SHORT_TYPES_MAP = {
 export class GridService {
   constructor(private readonly breakpointObserver: BreakpointObserver) {}
 
-  up(type: string): Observable<boolean> {
-    return this.breakpointObserver.observe(LAYOUT_SHORT_TYPES_MAP[type]).pipe(map((breakpoints) => breakpoints.matches));
+  up(types: string | string[]): Observable<boolean> {
+    const observeTypes = Array.isArray(types) ? types.map((type) => LAYOUT_SHORT_TYPES_MAP[type]) : LAYOUT_SHORT_TYPES_MAP[types];
+
+    return this.breakpointObserver.observe(observeTypes).pipe(map((breakpoints) => breakpoints.matches));
   }
 }
