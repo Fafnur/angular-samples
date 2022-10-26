@@ -4,6 +4,7 @@
   "projects": {
     "core-hammer": "libs/core/hammer",
     "core-icons": "libs/core/icons",
+    "core-platform": "libs/core/platform",
     "core-testing": "libs/core/testing",
     "icons": "apps/icons",
     "icons-page": "libs/icons/page",

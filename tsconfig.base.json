@@ -17,6 +17,7 @@
     "paths": {
       "@angular-samples/core/hammer": ["libs/core/hammer/src/index.ts"],
       "@angular-samples/core/icons": ["libs/core/icons/src/index.ts"],
+      "@angular-samples/core/platform": ["libs/core/platform/src/index.ts"],
       "@angular-samples/core/testing": ["libs/core/testing/src/index.ts"],
       "@angular-samples/icons/page": ["libs/icons/page/src/index.ts"],
       "@angular-samples/icons/ui/container": ["libs/icons/ui/container/src/index.ts"],
