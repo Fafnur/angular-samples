@@ -1,7 +1,8 @@
 import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnInit } from '@angular/core';
-import { ActivatedRoute } from '@angular/router';
+import { ActivatedRoute, Router } from '@angular/router';
 import { Subject, takeUntil, tap } from 'rxjs';
 
+import { isNotNullOrUndefined } from '@angular-samples/core/operators';
 import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { Post } from '@angular-samples/redux/posts/common';
 
@@ -19,6 +20,7 @@ export class PageComponent implements OnInit, OnDestroy {
   constructor(
     private readonly changeDetectorRef: ChangeDetectorRef,
     private readonly route: ActivatedRoute,
+    private readonly router: Router,
     private readonly postFacade: PostFacade
   ) {}
 
@@ -29,6 +31,7 @@ export class PageComponent implements OnInit, OnDestroy {
       this.postFacade
         .post$(uuid)
         .pipe(
+          isNotNullOrUndefined(),
           tap((post) => {
             this.post = post;
 
@@ -38,7 +41,8 @@ export class PageComponent implements OnInit, OnDestroy {
         )
         .subscribe();
     } else {
-      // todo: redirect
+      // Note: Redirect should be moved on guard or ngrx effect
+      void this.router.navigate(['/ngrx']);
     }
   }
 
