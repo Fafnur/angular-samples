@@ -8,6 +8,7 @@
     "core-platform": "libs/core/platform",
     "core-testing": "libs/core/testing",
     "core-types": "libs/core/types",
+    "core-uuid": "libs/core/uuid",
     "core-window": "libs/core/window",
     "icons": "apps/icons",
     "icons-page": "libs/icons/page",
