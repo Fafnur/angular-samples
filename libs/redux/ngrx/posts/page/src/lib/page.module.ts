@@ -5,6 +5,7 @@ import { PostStateModule } from '@angular-samples/redux/ngrx/posts/state';
 import { PostsLastModule } from '@angular-samples/redux/ngrx/posts/ui/last';
 import { PostsPopularModule } from '@angular-samples/redux/ngrx/posts/ui/popular';
 import { PostsPromoModule } from '@angular-samples/redux/ngrx/posts/ui/promo';
+import { HeaderModule } from '@angular-samples/redux/ngrx/ui/header';
 import { ContainerModule } from '@angular-samples/ui/container';
 import { GridModule } from '@angular-samples/ui/grid';
 
@@ -21,6 +22,7 @@ import { PageRoutingModule } from './page-routing.module';
     PostsPromoModule,
     GridModule,
     ContainerModule,
+    HeaderModule,
   ],
   declarations: [PageComponent],
 })

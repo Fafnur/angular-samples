@@ -9,6 +9,7 @@ import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { PostsLastModule } from '@angular-samples/redux/ngrx/posts/ui/last';
 import { PostsPopularModule } from '@angular-samples/redux/ngrx/posts/ui/popular';
 import { PostsPromoModule } from '@angular-samples/redux/ngrx/posts/ui/promo';
+import { HeaderModule } from '@angular-samples/redux/ngrx/ui/header';
 import { ContainerModule } from '@angular-samples/ui/container';
 import { GridModule } from '@angular-samples/ui/grid';
 
@@ -32,6 +33,7 @@ describe('PostsPageComponent', () => {
         MockModule(PostsPromoModule),
         MockModule(GridModule),
         MockModule(ContainerModule),
+        MockModule(HeaderModule),
       ],
       declarations: [PageComponent],
       providers: [providerOf(PostFacade, postFacadeMock)],
