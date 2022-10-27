@@ -19,6 +19,7 @@
     "redux-ngrx-posts-page": "libs/redux/ngrx/posts/page",
     "redux-ngrx-posts-pages": "libs/redux/ngrx/posts/pages",
     "redux-ngrx-posts-state": "libs/redux/ngrx/posts/state",
+    "redux-ngrx-posts-ui-create": "libs/redux/ngrx/posts/ui/create",
     "redux-ngrx-posts-ui-last": "libs/redux/ngrx/posts/ui/last",
     "redux-ngrx-posts-ui-popular": "libs/redux/ngrx/posts/ui/popular",
     "redux-ngrx-posts-ui-promo": "libs/redux/ngrx/posts/ui/promo",
