@@ -1,6 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'angular-samples-posts-page',
@@ -8,10 +6,4 @@ import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
   styleUrls: ['./page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PageComponent implements OnInit {
-  constructor(private readonly postFacade: PostFacade) {}
-
-  ngOnInit(): void {
-    this.postFacade.load();
-  }
-}
+export class PageComponent {}

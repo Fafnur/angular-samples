@@ -2,10 +2,7 @@ import { CommonModule } from '@angular/common';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MockModule } from 'ng-mocks';
-import { mock } from 'ts-mockito';
 
-import { providerOf } from '@angular-samples/core/testing';
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { PostsLastModule } from '@angular-samples/redux/ngrx/posts/ui/last';
 import { PostsPopularModule } from '@angular-samples/redux/ngrx/posts/ui/popular';
 import { PostsPromoModule } from '@angular-samples/redux/ngrx/posts/ui/promo';
@@ -19,11 +16,8 @@ import { PageComponentPo } from './page.component.po';
 describe('PostsPageComponent', () => {
   let po: PageComponentPo;
   let fixture: ComponentFixture<PageComponent>;
-  let postFacadeMock: PostFacade;
 
   beforeEach(async () => {
-    postFacadeMock = mock(PostFacade);
-
     await TestBed.configureTestingModule({
       imports: [
         CommonModule,
@@ -36,7 +30,6 @@ describe('PostsPageComponent', () => {
         MockModule(HeaderModule),
       ],
       declarations: [PageComponent],
-      providers: [providerOf(PostFacade, postFacadeMock)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(PageComponent);

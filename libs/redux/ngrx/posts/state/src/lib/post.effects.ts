@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
-import { Actions, createEffect, ofType } from '@ngrx/effects';
+import { Actions, createEffect, ofType, OnInitEffects } from '@ngrx/effects';
+import { Action } from '@ngrx/store';
 import { fetch } from '@nrwl/angular';
 import { map } from 'rxjs';
 
@@ -8,7 +9,18 @@ import { PostApiService } from '@angular-samples/redux/posts/api';
 import * as PostActions from './post.actions';
 
 @Injectable()
-export class PostEffects {
+export class PostEffects implements OnInitEffects {
+  init$ = createEffect(() => {
+    return this.actions$.pipe(
+      ofType(PostActions.init),
+      fetch({
+        id: () => 'init',
+        run: () => PostActions.load(),
+        onError: (action, error) => console.error(error),
+      })
+    );
+  });
+
   load$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(PostActions.load),
@@ -65,4 +77,8 @@ export class PostEffects {
   });
 
   constructor(private readonly actions$: Actions, private readonly postApiService: PostApiService) {}
+
+  ngrxOnInitEffects(): Action {
+    return PostActions.init();
+  }
 }

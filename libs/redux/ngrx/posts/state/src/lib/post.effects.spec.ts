@@ -36,6 +36,13 @@ describe('PostEffects', () => {
     effects = TestBed.inject(PostEffects);
   });
 
+  it('init$ should return load()', () => {
+    actions = hot('a', { a: PostActions.init() });
+    const expected = hot('a', { a: PostActions.load() });
+
+    expect(effects.init$).toBeObservable(expected);
+  });
+
   it('load$ should return loadSuccess()', () => {
     actions = hot('a', { a: PostActions.load() });
 

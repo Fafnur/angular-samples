@@ -2,6 +2,9 @@ import { createAction, props } from '@ngrx/store';
 
 import { Post, PostChange, PostCreate } from '@angular-samples/redux/posts/common';
 
+// Init
+export const init = createAction('[Post] Init');
+
 // Load all
 export const load = createAction('[Post] Load');
 

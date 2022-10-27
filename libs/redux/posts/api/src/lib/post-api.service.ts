@@ -1,6 +1,8 @@
 import { Inject, Injectable, InjectionToken, Optional } from '@angular/core';
 import { Observable } from 'rxjs';
 
+import { PlatformService } from '@angular-samples/core/platform';
+import { WindowService } from '@angular-samples/core/window';
 import { PostChange, PostCreate, PostDto } from '@angular-samples/redux/posts/common';
 
 import { POSTS_DEFAULT } from './posts';
@@ -9,6 +11,8 @@ import { POSTS_DEFAULT } from './posts';
  * @description InjectionToken for provide POSTS for demonstration
  */
 export const POSTS = new InjectionToken<PostDto[]>('POSTS');
+
+export const POSTS_KEY = 'SIMPLES_POSTS';
 
 /**
  * @description Fake API news management CRUD service
@@ -25,8 +29,19 @@ export class PostApiService {
    */
   private entities: Record<string, PostDto>;
 
-  constructor(@Optional() @Inject(POSTS) private readonly posts: PostDto[] | null) {
-    const entities = this.posts ?? POSTS_DEFAULT;
+  constructor(
+    private readonly platformService: PlatformService,
+    private readonly windowService: WindowService,
+    @Optional() @Inject(POSTS) private readonly posts: PostDto[] | null
+  ) {
+    let savedPosts: PostDto[] | null = null;
+    if (this.platformService.isBrowser) {
+      const savedPostString = this.windowService.window.localStorage.getItem(POSTS_KEY) ?? null;
+      if (savedPostString) {
+        savedPosts = JSON.parse(savedPostString);
+      }
+    }
+    const entities = savedPosts ?? this.posts ?? POSTS_DEFAULT;
     this.uuids = entities.map((post) => post.uuid);
     this.entities = entities.reduce((acc, current) => ({ ...acc, [current.uuid]: current }), {});
   }
@@ -38,10 +53,10 @@ export class PostApiService {
     return new Observable((observer) => {
       try {
         observer.next(Object.values(this.entities) ?? []);
-        observer.complete();
       } catch (error) {
         observer.error(error);
       }
+      observer.complete();
     });
   }
 
@@ -74,6 +89,7 @@ export class PostApiService {
       try {
         this.uuids = this.uuids.filter((item) => item !== uuid);
         delete this.entities[uuid];
+        this.save();
         observer.next();
       } catch (error) {
         observer.error(error);
@@ -90,6 +106,7 @@ export class PostApiService {
       try {
         this.uuids = [];
         this.entities = {};
+        this.save();
         observer.next();
       } catch (error) {
         observer.error(error);
@@ -114,6 +131,7 @@ export class PostApiService {
           this.uuids.push(post.uuid);
         }
         this.entities[post.uuid] = post;
+        this.save();
         observer.next(post);
       } catch (error) {
         observer.error(error);
@@ -135,11 +153,40 @@ export class PostApiService {
           post = { ...post, ...postChanged, updated: now };
           this.entities[post.uuid] = post;
         }
+        this.save();
         observer.next(post);
       } catch (error) {
         observer.error(error);
       }
       observer.complete();
     });
+  }
+
+  /**
+   * @description Reset posts to default values
+   */
+  reset(): Observable<PostDto[]> {
+    return new Observable((observer) => {
+      try {
+        const posts = this.posts ?? POSTS_DEFAULT;
+        this.uuids = posts.map((post) => post.uuid);
+        this.entities = posts.reduce((acc, current) => ({ ...acc, [current.uuid]: current }), {});
+        this.save();
+        observer.next(posts);
+      } catch (error) {
+        observer.error(error);
+      }
+      observer.complete();
+    });
+  }
+
+  /**
+   * @description Save entities on localStorage
+   * @private
+   */
+  private save(): void {
+    if (this.platformService.isBrowser) {
+      this.windowService.window.localStorage.setItem(POSTS_KEY, JSON.stringify(this.entities));
+    }
   }
 }
