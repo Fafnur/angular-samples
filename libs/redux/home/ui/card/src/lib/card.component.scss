@@ -1,0 +1,25 @@
+a {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100%;
+  text-decoration: none;
+  color: black;
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+  }
+}
+
+img {
+  width: 100%;
+  max-width: 100%;
+  max-height: 250px;
+}
+
+h3 {
+  text-transform: uppercase;
+  margin: 2rem 0;
+  font-size: 1.25rem;
+}

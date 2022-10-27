@@ -1,0 +1,5 @@
+<angular-samples-post-popular
+  automation-id="post"
+  [post]="post"
+  *ngFor="let post of posts$ | async; trackBy: trackByFn"
+></angular-samples-post-popular>

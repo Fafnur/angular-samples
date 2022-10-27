@@ -1,4 +1,5 @@
 {
+  "name": "core-testing",
   "projectType": "library",
   "sourceRoot": "libs/core/testing/src",
   "prefix": "angular-samples",

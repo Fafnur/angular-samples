@@ -1,0 +1,32 @@
+@use 'libs/ui/stylesheets/mixins' as mixins;
+
+.carousel-image {
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  cursor: pointer;
+  background-size: cover;
+  background-position: 50% 50%;
+
+  &.is-active {
+    z-index: 1;
+  }
+}
+
+.carousel-title {
+  position: absolute;
+  bottom: 0;
+  padding: 2rem 2rem 4rem 2rem;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.4);
+  color: white;
+  text-align: center;
+  font-size: 1.25rem;
+
+  @include mixins.media-web() {
+    font-size: 1.5rem;
+  }
+}

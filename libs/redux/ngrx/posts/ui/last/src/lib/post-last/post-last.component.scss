@@ -1,0 +1,24 @@
+@use 'libs/ui/stylesheets/mixins' as mixins;
+@use 'libs/ui/stylesheets/variables' as variables;
+
+a {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  color: variables.$color-default;
+
+  &:hover {
+    text-decoration: none;
+    color: black;
+  }
+}
+
+h4 {
+  margin: 1rem 0 0 0;
+}
+
+img {
+  display: block;
+  width: 100%;
+  max-width: 100%;
+}

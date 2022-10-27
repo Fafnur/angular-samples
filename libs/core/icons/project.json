@@ -1,4 +1,5 @@
 {
+  "name": "core-icons",
   "projectType": "library",
   "sourceRoot": "libs/core/icons/src",
   "prefix": "angular-samples",

@@ -1,4 +1,5 @@
 {
+  "name": "icons-ui-container",
   "projectType": "library",
   "sourceRoot": "libs/icons/ui/container/src",
   "prefix": "angular-samples",

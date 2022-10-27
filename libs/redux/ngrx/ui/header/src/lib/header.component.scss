@@ -1,0 +1,15 @@
+@use 'libs/ui/stylesheets/mixins' as mixins;
+@use 'libs/ui/stylesheets/variables' as variables;
+
+h1 {
+  margin: 1rem 0;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+a {
+  text-decoration: none;
+  color: variables.$color-default;
+}

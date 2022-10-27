@@ -1,0 +1,24 @@
+@use 'libs/ui/stylesheets/mixins' as mixins;
+
+:host {
+  display: flex;
+  min-height: 100%;
+  flex-direction: column;
+  width: 100%;
+}
+
+header,
+footer {
+  flex-shrink: 0;
+}
+
+main {
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+
+  & > * {
+    width: 100%;
+  }
+}

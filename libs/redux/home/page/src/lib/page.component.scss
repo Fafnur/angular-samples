@@ -1,0 +1,26 @@
+@use 'libs/ui/stylesheets/mixins' as mixins;
+@use 'libs/ui/stylesheets/variables' as variables;
+
+:host {
+  display: flex;
+  justify-content: center;
+  min-height: 100vh;
+  margin-top: 2rem;
+
+  @include mixins.media-tablet() {
+    margin-top: 3rem;
+  }
+
+  @include mixins.media-web() {
+    margin-top: 5rem;
+  }
+}
+
+h1 {
+  margin: 2rem 0;
+}
+
+div {
+  text-align: center;
+  margin-bottom: 4rem;
+}

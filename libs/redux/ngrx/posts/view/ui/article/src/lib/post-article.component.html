@@ -1,0 +1,4 @@
+<div><img automation-id="image" [src]="post.image" alt="" /></div>
+<h2 automation-id="title">{{ post.title }}</h2>
+<p automation-id="date">{{ post.created | date: 'shortDate' }}</p>
+<div automation-id="body" [innerHTML]="post | postBody"></div>

@@ -1,0 +1,5 @@
+<angular-samples-row automation-id="row" tablet="" web="">
+  <angular-samples-column automation-id="column" tablet="12" web="6" *ngFor="let post of posts$ | async; trackBy: trackByFn">
+    <angular-samples-post-last automation-id="post" [post]="post"></angular-samples-post-last>
+  </angular-samples-column>
+</angular-samples-row>
