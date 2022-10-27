@@ -4,7 +4,7 @@
     [slide]="image"
     [active]="active === index"
     *ngFor="let image of slides; let index = index; trackBy: trackByFn"
-    (clicked)="onClicked()"
+    (clicked)="onClicked($event)"
   ></angular-samples-carousel-slide>
 
   <angular-samples-carousel-dots

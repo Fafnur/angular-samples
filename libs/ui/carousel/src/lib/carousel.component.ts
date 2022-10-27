@@ -15,13 +15,13 @@ export class CarouselComponent {
   }
 
   @Output() selected = new EventEmitter<number>();
-  @Output() clicked = new EventEmitter<void>();
+  @Output() clicked = new EventEmitter<CarouselSlide>();
 
   active = 0;
   slides!: CarouselSlide[];
 
-  onClicked(): void {
-    this.clicked.emit();
+  onClicked(slide: CarouselSlide): void {
+    this.clicked.emit(slide);
   }
 
   onSelected(index: number): void {

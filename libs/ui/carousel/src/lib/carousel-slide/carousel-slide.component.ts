@@ -11,10 +11,10 @@ import { CarouselSlide } from '../carousel.interface';
 export class CarouselSlideComponent {
   @Input() slide!: CarouselSlide;
   @Input() active = false;
-  @Output() clicked = new EventEmitter<void>();
+  @Output() clicked = new EventEmitter<CarouselSlide>();
 
   onClick(): void {
-    this.clicked.emit();
+    this.clicked.emit(this.slide);
   }
 
   get ngStyle(): { backgroundImage: string } | null {
