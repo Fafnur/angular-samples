@@ -39,6 +39,7 @@
       "@angular-samples/redux/ngrx/ui/header": ["libs/redux/ngrx/ui/header/src/index.ts"],
       "@angular-samples/redux/posts/api": ["libs/redux/posts/api/src/index.ts"],
       "@angular-samples/redux/posts/common": ["libs/redux/posts/common/src/index.ts"],
+      "@angular-samples/redux/posts/ui/pipes": ["libs/redux/posts/ui/pipes/src/index.ts"],
       "@angular-samples/ui/carousel": ["libs/ui/carousel/src/index.ts"],
       "@angular-samples/ui/container": ["libs/ui/container/src/index.ts"],
       "@angular-samples/ui/grid": ["libs/ui/grid/src/index.ts"],

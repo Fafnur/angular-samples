@@ -28,6 +28,7 @@
     "redux-ngrx-ui-header": "libs/redux/ngrx/ui/header",
     "redux-posts-api": "libs/redux/posts/api",
     "redux-posts-common": "libs/redux/posts/common",
+    "redux-posts-ui-pipes": "libs/redux/posts/ui/pipes",
     "ui-carousel": "libs/ui/carousel",
     "ui-container": "libs/ui/container",
     "ui-grid": "libs/ui/grid",

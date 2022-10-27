@@ -17,10 +17,6 @@ export class PageComponentPo extends PageObject {
     return this.getByAutomationId('container');
   }
 
-  get title() {
-    return this.getByAutomationId('title');
-  }
-
   get header() {
     return this.getByAutomationId('header');
   }

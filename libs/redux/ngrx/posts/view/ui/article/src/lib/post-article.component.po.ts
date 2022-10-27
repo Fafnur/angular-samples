@@ -8,4 +8,12 @@ export class PostArticleComponentPo extends PageObject {
   get body() {
     return this.getByAutomationId('body');
   }
+
+  get image() {
+    return this.getByAutomationId('image');
+  }
+
+  get date() {
+    return this.getByAutomationId('date');
+  }
 }

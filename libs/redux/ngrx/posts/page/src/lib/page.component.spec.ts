@@ -46,7 +46,6 @@ describe('PostsPageComponent', () => {
     fixture.detectChanges();
 
     expect(po.container).toBeTruthy();
-    expect(po.title).toBeTruthy();
     expect(po.promo).toBeTruthy();
     expect(po.last).toBeTruthy();
     expect(po.popular).toBeTruthy();
