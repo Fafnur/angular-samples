@@ -18,6 +18,7 @@
     "icons-ui-svg-sources": "libs/icons/ui/svg-sources",
     "redux": "apps/redux",
     "redux-home-page": "libs/redux/home/page",
+    "redux-home-ui-card": "libs/redux/home/ui/card",
     "redux-ngrx-posts-page": "libs/redux/ngrx/posts/page",
     "redux-ngrx-posts-pages": "libs/redux/ngrx/posts/pages",
     "redux-ngrx-posts-state": "libs/redux/ngrx/posts/state",
