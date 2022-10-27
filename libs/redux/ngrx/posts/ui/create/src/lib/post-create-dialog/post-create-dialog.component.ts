@@ -4,6 +4,7 @@ import { MatDialogRef } from '@angular/material/dialog';
 import { Subject, takeUntil, tap } from 'rxjs';
 
 import { FormFor } from '@angular-samples/core/types';
+import { uuidv4 } from '@angular-samples/core/uuid';
 import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { PostCreate } from '@angular-samples/redux/posts/common';
 
@@ -17,7 +18,7 @@ export class PostCreateDialogComponent implements OnInit, OnDestroy {
   submitted = false;
 
   readonly form = new FormGroup<FormFor<PostCreate>>({
-    uuid: new FormControl(crypto.randomUUID(), { nonNullable: true, validators: [Validators.required] }),
+    uuid: new FormControl(uuidv4(), { nonNullable: true, validators: [Validators.required] }),
     title: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(2)] }),
     body: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(20)] }),
     image: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(5)] }),

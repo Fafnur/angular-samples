@@ -18,6 +18,11 @@ import { Post } from '@angular-samples/redux/posts/common';
 import { PostCreateDialogComponent } from './post-create-dialog.component';
 import { PostCreateDialogComponentPo } from './post-create-dialog.component.po';
 
+jest.mock('@angular-samples/core/uuid', () => ({
+  ...jest.requireActual('@angular-samples/core/uuid'),
+  uuidv4: jest.fn().mockReturnValue('uuid'),
+}));
+
 describe('PostCreateDialogComponent', () => {
   let po: PostCreateDialogComponentPo;
   let fixture: ComponentFixture<PostCreateDialogComponent>;
