@@ -15,6 +15,7 @@
     "skipDefaultLibCheck": true,
     "baseUrl": ".",
     "paths": {
+      "@angular-samples/core/environments": ["libs/core/environments/src/index.ts"],
       "@angular-samples/core/hammer": ["libs/core/hammer/src/index.ts"],
       "@angular-samples/core/icons": ["libs/core/icons/src/index.ts"],
       "@angular-samples/core/operators": ["libs/core/operators/src/index.ts"],

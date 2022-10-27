@@ -2,6 +2,7 @@
   "$schema": "./node_modules/nx/schemas/workspace-schema.json",
   "version": 2,
   "projects": {
+    "core-environments": "libs/core/environments",
     "core-hammer": "libs/core/hammer",
     "core-icons": "libs/core/icons",
     "core-operators": "libs/core/operators",

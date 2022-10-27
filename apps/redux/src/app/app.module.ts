@@ -5,10 +5,12 @@ import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
+import { ENVIRONMENTS } from '@angular-samples/core/environments';
 import { HammerModule } from '@angular-samples/core/hammer';
 import { RootStoreModule } from '@angular-samples/redux/ngrx/store/root';
 import { LayoutModule } from '@angular-samples/ui/layout';
 
+import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 
@@ -29,6 +31,10 @@ registerLocaleData(localeRu);
     {
       provide: MAT_DATE_LOCALE,
       useValue: 'ru-RU',
+    },
+    {
+      provide: ENVIRONMENTS,
+      useValue: environment,
     },
   ],
   bootstrap: [AppComponent],
