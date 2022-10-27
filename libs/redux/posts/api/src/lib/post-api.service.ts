@@ -34,14 +34,16 @@ export class PostApiService {
     private readonly windowService: WindowService,
     @Optional() @Inject(POSTS) private readonly posts: PostDto[] | null
   ) {
-    let savedPosts: PostDto[] | null = null;
+    let savedPosts: Record<string, PostDto> | null = null;
     if (this.platformService.isBrowser) {
       const savedPostString = this.windowService.window.localStorage.getItem(POSTS_KEY) ?? null;
       if (savedPostString) {
         savedPosts = JSON.parse(savedPostString);
       }
     }
-    const entities = savedPosts ?? this.posts ?? POSTS_DEFAULT;
+
+    const entities = savedPosts ? Object.values(savedPosts) : this.posts ?? POSTS_DEFAULT;
+
     this.uuids = entities.map((post) => post.uuid);
     this.entities = entities.reduce((acc, current) => ({ ...acc, [current.uuid]: current }), {});
   }
