@@ -17,7 +17,7 @@
     "icons-ui-header": "libs/icons/ui/header",
     "icons-ui-svg-paths": "libs/icons/ui/svg-paths",
     "icons-ui-svg-sources": "libs/icons/ui/svg-sources",
-    "redux": "apps/redux",
+    "ngrx": "apps/ngrx",
     "redux-home-page": "libs/redux/home/page",
     "redux-home-ui-card": "libs/redux/home/ui/card",
     "redux-ngrx-posts-page": "libs/redux/ngrx/posts/page",

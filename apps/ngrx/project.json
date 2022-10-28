@@ -1,22 +1,22 @@
 {
-  "name": "redux",
+  "name": "ngrx",
   "$schema": "../../node_modules/nx/schemas/project-schema.json",
   "projectType": "application",
-  "sourceRoot": "apps/redux/src",
+  "sourceRoot": "apps/ngrx/src",
   "prefix": "angular-samples",
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/apps/redux",
-        "index": "apps/redux/src/index.html",
-        "main": "apps/redux/src/main.ts",
-        "polyfills": "apps/redux/src/polyfills.ts",
-        "tsConfig": "apps/redux/tsconfig.app.json",
+        "outputPath": "dist/apps/ngrx",
+        "index": "apps/ngrx/src/index.html",
+        "main": "apps/ngrx/src/main.ts",
+        "polyfills": "apps/ngrx/src/polyfills.ts",
+        "tsConfig": "apps/ngrx/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/redux/src/favicon.ico", "apps/redux/src/assets"],
-        "styles": ["apps/redux/src/styles.scss"],
+        "assets": ["apps/ngrx/src/favicon.ico", "apps/ngrx/src/assets"],
+        "styles": ["apps/ngrx/src/styles.scss"],
         "scripts": []
       },
       "configurations": {
@@ -35,8 +35,8 @@
           ],
           "fileReplacements": [
             {
-              "replace": "apps/redux/src/environments/environment.ts",
-              "with": "apps/redux/src/environments/environment.prod.ts"
+              "replace": "apps/ngrx/src/environments/environment.ts",
+              "with": "apps/ngrx/src/environments/environment.prod.ts"
             }
           ],
           "outputHashing": "all"
@@ -56,10 +56,10 @@
       "executor": "@angular-devkit/build-angular:dev-server",
       "configurations": {
         "production": {
-          "browserTarget": "redux:build:production"
+          "browserTarget": "ngrx:build:production"
         },
         "development": {
-          "browserTarget": "redux:build:development"
+          "browserTarget": "ngrx:build:development"
         }
       },
       "defaultConfiguration": "development"
@@ -67,20 +67,20 @@
     "extract-i18n": {
       "executor": "@angular-devkit/build-angular:extract-i18n",
       "options": {
-        "browserTarget": "redux:build"
+        "browserTarget": "ngrx:build"
       }
     },
     "lint": {
       "executor": "@nrwl/linter:eslint",
       "options": {
-        "lintFilePatterns": ["apps/redux/**/*.ts", "apps/redux/**/*.html"]
+        "lintFilePatterns": ["apps/ngrx/**/*.ts", "apps/ngrx/**/*.html"]
       }
     },
     "test": {
       "executor": "@nrwl/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
-        "jestConfig": "apps/redux/jest.config.ts",
+        "jestConfig": "apps/ngrx/jest.config.ts",
         "passWithNoTests": true
       }
     }
