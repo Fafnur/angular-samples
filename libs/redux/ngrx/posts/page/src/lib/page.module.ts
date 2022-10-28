@@ -5,7 +5,7 @@ import { PostCreateModule } from '@angular-samples/redux/ngrx/posts/ui/create';
 import { PostsLastModule } from '@angular-samples/redux/ngrx/posts/ui/last';
 import { PostsPopularModule } from '@angular-samples/redux/ngrx/posts/ui/popular';
 import { PostsPromoModule } from '@angular-samples/redux/ngrx/posts/ui/promo';
-import { HeaderModule } from '@angular-samples/redux/ngrx/ui/header';
+import { HeaderModule } from '@angular-samples/redux/ui/header';
 import { ContainerModule } from '@angular-samples/ui/container';
 import { GridModule } from '@angular-samples/ui/grid';
 

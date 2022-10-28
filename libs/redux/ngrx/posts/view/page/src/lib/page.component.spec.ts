@@ -10,8 +10,8 @@ import { providerOf } from '@angular-samples/core/testing';
 import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { PostsPopularModule } from '@angular-samples/redux/ngrx/posts/ui/popular';
 import { PostArticleModule } from '@angular-samples/redux/ngrx/posts/view/ui/article';
-import { HeaderModule } from '@angular-samples/redux/ngrx/ui/header';
 import { Post, POST_STUB } from '@angular-samples/redux/posts/common';
+import { HeaderModule } from '@angular-samples/redux/ui/header';
 import { ContainerModule } from '@angular-samples/ui/container';
 import { GridModule } from '@angular-samples/ui/grid';
 
