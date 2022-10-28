@@ -22,6 +22,6 @@ export class PostsPromoComponent implements OnInit {
   }
 
   onClicked(slide: CarouselSlide): void {
-    void this.router.navigate(['/ngrx/posts/', slide.uuid]);
+    void this.router.navigate(['/post/', slide.uuid]);
   }
 }

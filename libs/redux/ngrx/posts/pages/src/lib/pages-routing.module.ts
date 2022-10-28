@@ -3,11 +3,11 @@ import { RouterModule, Routes } from '@angular/router';
 
 const routes: Routes = [
   {
-    path: 'ngrx',
+    path: '',
     loadChildren: () => import('@angular-samples/redux/ngrx/posts/page').then((modules) => modules.PageModule),
   },
   {
-    path: 'ngrx/posts/:uuid',
+    path: 'post/:uuid',
     loadChildren: () => import('@angular-samples/redux/ngrx/posts/view/page').then((modules) => modules.PageModule),
   },
 ];

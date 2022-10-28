@@ -8,8 +8,4 @@ export class HeaderComponentPo extends PageObject {
   get home() {
     return this.getByAutomationId('home');
   }
-
-  get ngrx() {
-    return this.getByAutomationId('ngrx');
-  }
 }

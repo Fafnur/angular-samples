@@ -6,7 +6,7 @@ import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { Post } from '@angular-samples/redux/posts/common';
 
 @Component({
-  selector: 'angular-samples-page',
+  selector: 'angular-samples-post-view-page',
   templateUrl: './page.component.html',
   styleUrls: ['./page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
@@ -31,7 +31,7 @@ export class PageComponent implements OnInit, OnDestroy {
 
           if (!uuid) {
             // Note: Redirect should be moved on guard or ngrx effect
-            void this.router.navigate(['/ngrx']);
+            void this.router.navigate(['/']);
           }
 
           return uuid;
@@ -44,7 +44,7 @@ export class PageComponent implements OnInit, OnDestroy {
             this.changeDetectorRef.markForCheck();
           } else {
             // Note: Redirect should be moved on guard or ngrx effect
-            void this.router.navigate(['/ngrx']);
+            void this.router.navigate(['/']);
           }
         }),
         takeUntil(this.destroy$)

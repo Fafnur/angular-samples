@@ -19,6 +19,7 @@
     "icons-ui-svg-sources": "libs/icons/ui/svg-sources",
     "ngrx": "apps/ngrx",
     "redux-akita": "apps/redux/akita",
+    "redux-akita-posts-page": "libs/redux/akita/posts/page",
     "redux-dashboard": "apps/redux/dashboard",
     "redux-home-page": "libs/redux/home/page",
     "redux-home-ui-card": "libs/redux/home/ui/card",

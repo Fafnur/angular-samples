@@ -30,6 +30,5 @@ describe('HeaderComponent', () => {
 
     expect(po.header).toBeTruthy();
     expect(po.home).toBeTruthy();
-    expect(po.ngrx).toBeTruthy();
   });
 });
