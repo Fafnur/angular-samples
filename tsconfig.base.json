@@ -43,6 +43,7 @@
       "@angular-samples/redux/ngrx/posts/view/ui/article": ["libs/redux/ngrx/posts/view/ui/article/src/index.ts"],
       "@angular-samples/redux/ngrx/store/root": ["libs/redux/ngrx/store/root/src/index.ts"],
       "@angular-samples/redux/ngxs/posts/page": ["libs/redux/ngxs/posts/page/src/index.ts"],
+      "@angular-samples/redux/ngxs/store/root": ["libs/redux/ngxs/store/root/src/index.ts"],
       "@angular-samples/redux/posts/api": ["libs/redux/posts/api/src/index.ts"],
       "@angular-samples/redux/posts/common": ["libs/redux/posts/common/src/index.ts"],
       "@angular-samples/redux/posts/ui/pipes": ["libs/redux/posts/ui/pipes/src/index.ts"],

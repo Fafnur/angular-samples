@@ -4,11 +4,10 @@ import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
 import { MAT_DATE_LOCALE } from '@angular/material/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { NgxsReduxDevtoolsPluginModule } from '@ngxs/devtools-plugin';
-import { NgxsModule } from '@ngxs/store';
 
 import { ENVIRONMENTS } from '@angular-samples/core/environments';
 import { HammerModule } from '@angular-samples/core/hammer';
+import { RootStoreDevelopmentModule, RootStoreModule } from '@angular-samples/redux/ngxs/store/root';
 import { LayoutModule } from '@angular-samples/ui/layout';
 
 import { environment } from '../environments/environment';
@@ -22,10 +21,7 @@ registerLocaleData(localeRu);
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    NgxsModule.forRoot([], {
-      developmentMode: !environment.production,
-    }),
-    NgxsReduxDevtoolsPluginModule.forRoot(),
+    !environment.production ? RootStoreDevelopmentModule : RootStoreModule,
     AppRoutingModule,
     LayoutModule,
     HammerModule,

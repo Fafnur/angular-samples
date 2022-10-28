@@ -35,6 +35,7 @@
     "redux-ngrx-store-root": "libs/redux/ngrx/store/root",
     "redux-ngxs": "apps/redux/ngxs",
     "redux-ngxs-posts-page": "libs/redux/ngxs/posts/page",
+    "redux-ngxs-store-root": "libs/redux/ngxs/store/root",
     "redux-posts-api": "libs/redux/posts/api",
     "redux-posts-common": "libs/redux/posts/common",
     "redux-posts-ui-pipes": "libs/redux/posts/ui/pipes",

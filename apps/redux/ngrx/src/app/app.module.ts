@@ -7,7 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ENVIRONMENTS } from '@angular-samples/core/environments';
 import { HammerModule } from '@angular-samples/core/hammer';
-import { RootStoreModule } from '@angular-samples/redux/ngrx/store/root';
+import { RootStoreDevelopmentModule, RootStoreModule } from '@angular-samples/redux/ngrx/store/root';
 import { LayoutModule } from '@angular-samples/ui/layout';
 
 import { environment } from '../environments/environment';
@@ -18,7 +18,15 @@ import { RemoteEntryModule } from './remote-entry/entry.module';
 registerLocaleData(localeRu);
 
 @NgModule({
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, RootStoreModule, LayoutModule, HammerModule, RemoteEntryModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    !environment.production ? RootStoreDevelopmentModule : RootStoreModule,
+    LayoutModule,
+    HammerModule,
+    RemoteEntryModule,
+  ],
   declarations: [AppComponent],
   providers: [
     {

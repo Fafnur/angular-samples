@@ -1,15 +1,14 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgxsModule } from '@ngxs/store';
 
-import { RootStoreModule } from '@angular-samples/redux/ngrx/store/root';
+import { RootStoreModule as NgrxRootStoreModule } from '@angular-samples/redux/ngrx/store/root';
+import { RootStoreModule as NgxsRootStoreModule } from '@angular-samples/redux/ngxs/store/root';
 
-import { environment } from '../environments/environment';
 import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
-  imports: [BrowserModule, AppRoutingModule, RootStoreModule, NgxsModule.forRoot([], { developmentMode: !environment.production })],
+  imports: [BrowserModule, AppRoutingModule, NgrxRootStoreModule, NgxsRootStoreModule],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })
