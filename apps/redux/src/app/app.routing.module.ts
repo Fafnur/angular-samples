@@ -12,9 +12,13 @@ const routes: Routes = [
         path: '',
         loadChildren: () => import('@angular-samples/redux/home/page').then((modules) => modules.PageModule),
       },
+      // {
+      //   path: '',
+      //   loadChildren: () => import('@angular-samples/redux/ngrx/posts/pages').then((modules) => modules.PagesModule),
+      // },
       {
-        path: '',
-        loadChildren: () => import('@angular-samples/redux/ngrx/posts/pages').then((modules) => modules.PagesModule),
+        path: 'ngxs',
+        loadChildren: () => import('@angular-samples/redux/ngxs/posts/page').then((modules) => modules.PageModule),
       },
     ],
   },

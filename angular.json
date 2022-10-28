@@ -31,6 +31,7 @@
     "redux-ngrx-posts-view-ui-article": "libs/redux/ngrx/posts/view/ui/article",
     "redux-ngrx-store-root": "libs/redux/ngrx/store/root",
     "redux-ngrx-ui-header": "libs/redux/ngrx/ui/header",
+    "redux-ngxs-posts-page": "libs/redux/ngxs/posts/page",
     "redux-posts-api": "libs/redux/posts/api",
     "redux-posts-common": "libs/redux/posts/common",
     "redux-posts-ui-pipes": "libs/redux/posts/ui/pipes",
