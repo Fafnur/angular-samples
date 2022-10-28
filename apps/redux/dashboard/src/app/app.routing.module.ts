@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('@angular-samples/redux/home/page').then((modules) => modules.PageModule),
+        loadChildren: () => import('@angular-samples/redux/dashboard/page').then((modules) => modules.PageModule),
       },
       {
         path: 'akita',

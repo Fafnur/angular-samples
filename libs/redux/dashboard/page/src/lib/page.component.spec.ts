@@ -3,7 +3,7 @@ import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { RouterTestingModule } from '@angular/router/testing';
 import { MockModule } from 'ng-mocks';
 
-import { CardModule } from '@angular-samples/redux/home/ui/card';
+import { CardModule } from '@angular-samples/redux/dashboard/ui/card';
 import { ContainerModule } from '@angular-samples/ui/container';
 import { GridModule } from '@angular-samples/ui/grid';
 

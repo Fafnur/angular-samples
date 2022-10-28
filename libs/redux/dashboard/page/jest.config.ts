@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'redux-home-ui-card',
-  preset: '../../../../../jest.preset.js',
+  displayName: 'redux-dashboard-page',
+  preset: '../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../../../coverage/libs/redux/home/ui/card',
+  coverageDirectory: '../../../../coverage/libs/redux/dashboard/page',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },
