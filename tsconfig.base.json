@@ -50,6 +50,7 @@
       "@angular-samples/redux/posts/ui/promo": ["libs/redux/posts/ui/promo/src/index.ts"],
       "@angular-samples/redux/posts/view/page": ["libs/redux/posts/view/page/src/index.ts"],
       "@angular-samples/redux/posts/view/ui/article": ["libs/redux/posts/view/ui/article/src/index.ts"],
+      "@angular-samples/redux/ui/header": ["libs/redux/ui/header/src/index.ts"],
       "@angular-samples/ui/carousel": ["libs/ui/carousel/src/index.ts"],
       "@angular-samples/ui/container": ["libs/ui/container/src/index.ts"],
       "@angular-samples/ui/grid": ["libs/ui/grid/src/index.ts"],

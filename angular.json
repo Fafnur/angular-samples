@@ -42,6 +42,7 @@
     "redux-posts-ui-promo": "libs/redux/posts/ui/promo",
     "redux-posts-view-page": "libs/redux/posts/view/page",
     "redux-posts-view-ui-article": "libs/redux/posts/view/ui/article",
+    "redux-ui-header": "libs/redux/ui/header",
     "ui-carousel": "libs/ui/carousel",
     "ui-container": "libs/ui/container",
     "ui-grid": "libs/ui/grid",

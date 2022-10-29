@@ -1,6 +1,7 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+import { HeaderComponent } from '@angular-samples/redux/ui/header';
 import { LayoutComponent } from '@angular-samples/ui/layout';
 
 const routes: Routes = [
@@ -8,6 +9,11 @@ const routes: Routes = [
     path: '',
     component: LayoutComponent,
     children: [
+      {
+        path: '',
+        component: HeaderComponent,
+        outlet: 'header',
+      },
       {
         path: '',
         loadChildren: () => import('@angular-samples/redux/dashboard/page').then((modules) => modules.PageModule),

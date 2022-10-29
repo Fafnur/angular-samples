@@ -1,0 +1,8 @@
+<nav automation-id="nav">
+  <a automation-id="home" mat-icon-button routerLink="/">
+    <mat-icon>home</mat-icon>
+  </a>
+  <a [attr.automation-id]="icon.name" mat-icon-button [routerLink]="['/', icon.name]" *ngFor="let icon of icons">
+    <mat-icon [svgIcon]="icon.name"></mat-icon>
+  </a>
+</nav>
