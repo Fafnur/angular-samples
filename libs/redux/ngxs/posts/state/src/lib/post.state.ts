@@ -1,5 +1,5 @@
 import { Injectable } from '@angular/core';
-import { Action, createSelector, Selector, State, StateContext } from '@ngxs/store';
+import { Action, createSelector, NgxsOnInit, Selector, State, StateContext } from '@ngxs/store';
 import { catchError, tap } from 'rxjs';
 
 import { PostApiService } from '@angular-samples/redux/posts/api';
@@ -24,7 +24,7 @@ export const initialPostState: PostStateModel = {
   defaults: initialPostState,
 })
 @Injectable()
-export class PostState {
+export class PostState implements NgxsOnInit {
   @Selector()
   static loaded(state: PostStateModel): boolean {
     return state.loaded;
@@ -63,6 +63,10 @@ export class PostState {
   }
 
   constructor(private readonly postApiService: PostApiService) {}
+
+  ngxsOnInit(ctx: StateContext<PostStateModel>): void {
+    ctx.dispatch(new PostActions.Load());
+  }
 
   @Action(PostActions.Load)
   load(ctx: StateContext<PostStateModel>) {
