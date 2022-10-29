@@ -1,4 +1,6 @@
-import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
+import { ChangeDetectionStrategy, Component, Inject, InjectionToken, Optional } from '@angular/core';
+
+export const REDUX_TYPE = new InjectionToken<string>('REDUX_TYPE');
 
 @Component({
   selector: 'angular-samples-header',
@@ -7,5 +9,9 @@ import { ChangeDetectionStrategy, Component, Input } from '@angular/core';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
-  @Input() type!: string;
+  readonly type: string;
+
+  constructor(@Optional() @Inject(REDUX_TYPE) private readonly reduxType: string | null) {
+    this.type = this.reduxType ?? 'State Management';
+  }
 }

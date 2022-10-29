@@ -7,6 +7,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { ENVIRONMENTS } from '@angular-samples/core/environments';
 import { HammerModule } from '@angular-samples/core/hammer';
+import { REDUX_TYPE } from '@angular-samples/redux/ui/header';
 import { LayoutModule } from '@angular-samples/ui/layout';
 
 import { environment } from '../environments/environment';
@@ -19,6 +20,10 @@ registerLocaleData(localeRu);
   declarations: [AppComponent],
   imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, LayoutModule, HammerModule],
   providers: [
+    {
+      provide: REDUX_TYPE,
+      useValue: 'Akita',
+    },
     {
       provide: LOCALE_ID,
       useValue: 'ru',
