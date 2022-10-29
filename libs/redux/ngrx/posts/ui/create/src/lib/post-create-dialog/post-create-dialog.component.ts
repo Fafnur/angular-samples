@@ -5,8 +5,8 @@ import { Subject, takeUntil, tap } from 'rxjs';
 
 import { FormFor } from '@angular-samples/core/types';
 import { uuidv4 } from '@angular-samples/core/uuid';
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { PostCreate } from '@angular-samples/redux/posts/common';
+import { PostFacade } from '@angular-samples/redux/posts/facade';
 
 @Component({
   selector: 'angular-samples-post-create-dialog',

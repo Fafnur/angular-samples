@@ -5,8 +5,8 @@ import { ReplaySubject } from 'rxjs';
 import { mock, when } from 'ts-mockito';
 
 import { providerOf } from '@angular-samples/core/testing';
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { Post, POSTS_STUB } from '@angular-samples/redux/posts/common';
+import { PostFacade, PostFacadeStub } from '@angular-samples/redux/posts/facade';
 import { GridModule } from '@angular-samples/ui/grid';
 
 import { PostLastModule } from './post-last/post-last.module';
@@ -20,7 +20,7 @@ describe('PostsLastComponent', () => {
   let postsLast$: ReplaySubject<Post[]>;
 
   beforeEach(async () => {
-    postFacadeMock = mock(PostFacade);
+    postFacadeMock = mock(PostFacadeStub);
 
     postsLast$ = new ReplaySubject<Post[]>(1);
 

@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { EMPTY } from 'rxjs';
 
 import { PostChange, PostCreate } from '@angular-samples/redux/posts/common';
 
@@ -10,6 +11,8 @@ import { PostFacade } from './post.facade';
  */
 @Injectable()
 export class PostFacadeStub extends PostFacade {
+  override post$ = (uuid: string) => EMPTY;
+
   change(postChange: PostChange): void {}
 
   clear(): void {}

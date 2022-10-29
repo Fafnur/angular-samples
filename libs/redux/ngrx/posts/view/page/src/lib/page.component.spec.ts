@@ -7,10 +7,10 @@ import { BehaviorSubject, ReplaySubject } from 'rxjs';
 import { mock, when } from 'ts-mockito';
 
 import { providerOf } from '@angular-samples/core/testing';
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { PostsPopularModule } from '@angular-samples/redux/ngrx/posts/ui/popular';
 import { PostArticleModule } from '@angular-samples/redux/ngrx/posts/view/ui/article';
 import { Post, POST_STUB } from '@angular-samples/redux/posts/common';
+import { PostFacade, PostFacadeStub } from '@angular-samples/redux/posts/facade';
 import { HeaderModule } from '@angular-samples/redux/ui/header';
 import { ContainerModule } from '@angular-samples/ui/container';
 import { GridModule } from '@angular-samples/ui/grid';
@@ -28,7 +28,7 @@ describe('PageComponent', () => {
 
   beforeEach(async () => {
     activatedRouteMock = mock(ActivatedRoute);
-    postFacadeMock = mock(PostFacade);
+    postFacadeMock = mock(PostFacadeStub);
 
     post$ = new ReplaySubject<Post>(1);
     params$ = new BehaviorSubject<{ uuid: string }>({ uuid: POST_STUB.uuid });

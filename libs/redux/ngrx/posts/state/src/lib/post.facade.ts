@@ -4,12 +4,13 @@ import { Store } from '@ngrx/store';
 import { map, Observable } from 'rxjs';
 
 import { PostChange, PostCreate } from '@angular-samples/redux/posts/common';
+import { PostFacade } from '@angular-samples/redux/posts/facade';
 
 import * as PostActions from './post.actions';
 import * as PostSelectors from './post.selectors';
 
 @Injectable()
-export class PostFacade {
+export class NgrxPostFacade implements PostFacade {
   loaded$ = this.store.select(PostSelectors.selectLoaded);
 
   posts$ = this.store.select(PostSelectors.selectPosts);

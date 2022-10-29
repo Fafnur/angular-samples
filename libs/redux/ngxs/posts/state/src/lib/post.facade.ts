@@ -3,12 +3,13 @@ import { Actions, ofActionDispatched, Select, Store } from '@ngxs/store';
 import { map, Observable } from 'rxjs';
 
 import { Post, PostChange, PostCreate } from '@angular-samples/redux/posts/common';
+import { PostFacade } from '@angular-samples/redux/posts/facade';
 
 import * as PostActions from './post.actions';
 import { PostState } from './post.state';
 
 @Injectable()
-export class PostFacade {
+export class NgxsPostFacade implements PostFacade {
   @Select(PostState.loaded)
   loaded$!: Observable<boolean>;
 

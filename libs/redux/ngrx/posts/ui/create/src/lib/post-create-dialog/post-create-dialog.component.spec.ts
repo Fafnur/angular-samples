@@ -12,8 +12,8 @@ import { ReplaySubject } from 'rxjs';
 import { mock, when } from 'ts-mockito';
 
 import { providerOf } from '@angular-samples/core/testing';
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { Post } from '@angular-samples/redux/posts/common';
+import { PostFacade, PostFacadeStub } from '@angular-samples/redux/posts/facade';
 
 import { PostCreateDialogComponent } from './post-create-dialog.component';
 import { PostCreateDialogComponentPo } from './post-create-dialog.component.po';
@@ -33,7 +33,7 @@ describe('PostCreateDialogComponent', () => {
   let createFailure$: ReplaySubject<unknown>;
 
   beforeEach(async () => {
-    postFacadeMock = mock(PostFacade);
+    postFacadeMock = mock(PostFacadeStub);
     matDialogRef = mock(MatDialogRef<PostCreateDialogComponentPo>);
 
     createSuccess$ = new ReplaySubject<Post>(1);

@@ -1,7 +1,4 @@
-import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
-import { tap } from 'rxjs';
-
-import { PostFacade } from '@angular-samples/redux/ngxs/posts/state';
+import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 @Component({
   selector: 'angular-samples-ngxs-posts-page',
@@ -9,12 +6,4 @@ import { PostFacade } from '@angular-samples/redux/ngxs/posts/state';
   styleUrls: ['./page.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
-export class PageComponent implements OnInit {
-  constructor(private readonly postFacade: PostFacade) {}
-
-  ngOnInit(): void {
-    this.postFacade.loadSuccess$.pipe(tap(console.log)).subscribe();
-
-    this.postFacade.load();
-  }
-}
+export class PageComponent {}

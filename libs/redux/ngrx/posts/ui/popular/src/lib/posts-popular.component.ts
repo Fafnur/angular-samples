@@ -1,8 +1,8 @@
 import { ChangeDetectionStrategy, Component, Input, OnInit } from '@angular/core';
 import { map, Observable } from 'rxjs';
 
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { Post } from '@angular-samples/redux/posts/common';
+import { PostFacade } from '@angular-samples/redux/posts/facade';
 
 @Component({
   selector: 'angular-samples-posts-popular',

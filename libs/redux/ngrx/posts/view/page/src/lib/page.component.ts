@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, ChangeDetectorRef, Component, OnDestroy, OnIni
 import { ActivatedRoute, Router } from '@angular/router';
 import { filter, map, Subject, switchMap, takeUntil, tap } from 'rxjs';
 
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { Post } from '@angular-samples/redux/posts/common';
+import { PostFacade } from '@angular-samples/redux/posts/facade';
 
 @Component({
   selector: 'angular-samples-post-view-page',

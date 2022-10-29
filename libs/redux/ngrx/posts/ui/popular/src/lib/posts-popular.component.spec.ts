@@ -5,8 +5,8 @@ import { ReplaySubject } from 'rxjs';
 import { mock, when } from 'ts-mockito';
 
 import { providerOf } from '@angular-samples/core/testing';
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { Post, POSTS_STUB } from '@angular-samples/redux/posts/common';
+import { PostFacade, PostFacadeStub } from '@angular-samples/redux/posts/facade';
 
 import { PostPopularModule } from './post-popular/post-popular.module';
 import { PostsPopularComponent } from './posts-popular.component';
@@ -19,7 +19,7 @@ describe('PostsPopularComponent', () => {
   let postsPopular$: ReplaySubject<Post[]>;
 
   beforeEach(async () => {
-    postFacadeMock = mock(PostFacade);
+    postFacadeMock = mock(PostFacadeStub);
 
     postsPopular$ = new ReplaySubject<Post[]>(1);
 

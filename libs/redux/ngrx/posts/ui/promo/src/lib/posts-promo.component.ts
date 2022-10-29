@@ -2,8 +2,8 @@ import { ChangeDetectionStrategy, Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { Observable } from 'rxjs';
 
-import { PostFacade } from '@angular-samples/redux/ngrx/posts/state';
 import { Post } from '@angular-samples/redux/posts/common';
+import { PostFacade } from '@angular-samples/redux/posts/facade';
 import { CarouselSlide } from '@angular-samples/ui/carousel';
 
 @Component({
