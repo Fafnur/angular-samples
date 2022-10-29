@@ -1,1 +1,2 @@
-export * from './lib/redux-ngxs-posts-state.module';
+export * from './lib/post.facade';
+export * from './lib/posts-state.module';
