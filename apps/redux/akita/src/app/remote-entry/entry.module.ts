@@ -1,36 +1,16 @@
-import { DEFAULT_CURRENCY_CODE, LOCALE_ID, NgModule } from '@angular/core';
-import { MAT_DATE_LOCALE } from '@angular/material/core';
+import { NgModule } from '@angular/core';
 
-import { ENVIRONMENTS } from '@angular-samples/core/environments';
-import { HammerModule } from '@angular-samples/core/hammer';
-import { REDUX_TYPE } from '@angular-samples/redux/posts/ui/header';
-import { LayoutModule } from '@angular-samples/ui/layout';
+import { PATH_REMOTE } from '@angular-samples/redux/config';
 
-import { environment } from '../../environments/environment';
+import { AppCoreModule } from '../app.core.module';
 import { EntryRoutingModule } from './entry-routing.module';
 
 @NgModule({
-  imports: [EntryRoutingModule, LayoutModule, HammerModule],
+  imports: [AppCoreModule, EntryRoutingModule],
   providers: [
     {
-      provide: REDUX_TYPE,
-      useValue: 'Akita',
-    },
-    {
-      provide: LOCALE_ID,
-      useValue: 'ru',
-    },
-    {
-      provide: DEFAULT_CURRENCY_CODE,
-      useValue: 'RUB',
-    },
-    {
-      provide: MAT_DATE_LOCALE,
-      useValue: 'ru-RU',
-    },
-    {
-      provide: ENVIRONMENTS,
-      useValue: environment,
+      provide: PATH_REMOTE,
+      useValue: 'akita',
     },
   ],
 })

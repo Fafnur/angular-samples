@@ -1,18 +1,23 @@
-import { registerLocaleData } from '@angular/common';
-import localeRu from '@angular/common/locales/ru';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { AppComponent } from './app.component';
-import { AppRoutingModule } from './app.routing.module';
-import { RemoteEntryModule } from './remote-entry/entry.module';
+import { RootStoreDevelopmentModule, RootStoreModule } from '@angular-samples/redux/ngrx/store/root';
 
-registerLocaleData(localeRu);
+import { environment } from '../environments/environment';
+import { AppComponent } from './app.component';
+import { AppCoreModule } from './app.core.module';
+import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppCoreModule,
+    AppRoutingModule,
+    !environment.production ? RootStoreDevelopmentModule : RootStoreModule,
+  ],
   declarations: [AppComponent],
-  imports: [BrowserModule, BrowserAnimationsModule, AppRoutingModule, RemoteEntryModule],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

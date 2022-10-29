@@ -10,6 +10,10 @@ const routes: Routes = [
     children: [
       {
         path: '',
+        loadChildren: () => import('@angular-samples/redux/ngxs/posts/pages').then((modules) => modules.PagesModule),
+      },
+      {
+        path: 'remote',
         loadChildren: () => import('./remote-entry/entry.module').then((m) => m.RemoteEntryModule),
       },
     ],
