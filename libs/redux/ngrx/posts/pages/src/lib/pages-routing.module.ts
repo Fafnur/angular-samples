@@ -4,11 +4,11 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('@angular-samples/redux/ngrx/posts/page').then((modules) => modules.PageModule),
+    loadChildren: () => import('@angular-samples/redux/posts/page').then((modules) => modules.PageModule),
   },
   {
     path: 'post/:uuid',
-    loadChildren: () => import('@angular-samples/redux/ngrx/posts/view/page').then((modules) => modules.PageModule),
+    loadChildren: () => import('@angular-samples/redux/posts/view/page').then((modules) => modules.PageModule),
   },
 ];
 

@@ -7,10 +7,10 @@ import { BehaviorSubject, ReplaySubject } from 'rxjs';
 import { mock, when } from 'ts-mockito';
 
 import { providerOf } from '@angular-samples/core/testing';
-import { PostArticleModule } from '@angular-samples/redux/ngrx/posts/view/ui/article';
 import { Post, POST_STUB } from '@angular-samples/redux/posts/common';
 import { PostFacade, PostFacadeStub } from '@angular-samples/redux/posts/facade';
 import { PostsPopularModule } from '@angular-samples/redux/posts/ui/popular';
+import { PostArticleModule } from '@angular-samples/redux/posts/view/ui/article';
 import { HeaderModule } from '@angular-samples/redux/ui/header';
 import { ContainerModule } from '@angular-samples/ui/container';
 import { GridModule } from '@angular-samples/ui/grid';
