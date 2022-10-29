@@ -1,0 +1,12 @@
+<div>
+  <h1 automation-id="header">
+    <ng-container *ngIf="!isHome">
+      <a mat-icon-button routerLink="/">
+        <mat-icon>home</mat-icon>
+      </a>
+      |
+    </ng-container>
+    Новости с ипользованием {{ type }}
+  </h1>
+  <ng-content></ng-content>
+</div>

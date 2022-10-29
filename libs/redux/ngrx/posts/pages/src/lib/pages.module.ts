@@ -1,10 +1,10 @@
 import { NgModule } from '@angular/core';
 
-import { PostStateModule } from '@angular-samples/redux/ngrx/posts/state';
+import { PostsStateModule } from '@angular-samples/redux/ngrx/posts/state';
 
 import { PagesRoutingModule } from './pages-routing.module';
 
 @NgModule({
-  imports: [PostStateModule, PagesRoutingModule],
+  imports: [PostsStateModule, PagesRoutingModule],
 })
 export class PagesModule {}

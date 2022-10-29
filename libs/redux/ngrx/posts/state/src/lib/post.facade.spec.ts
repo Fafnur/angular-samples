@@ -9,20 +9,20 @@ import { ERROR_STUB } from '@angular-samples/core/testing';
 import { POST_CHANGE_STUB, POST_CREATE_STUB, POST_STUB, POSTS_ENTITIES_STUB, POSTS_STUB } from '@angular-samples/redux/posts/common';
 
 import * as PostActions from './post.actions';
-import { PostFacade } from './post.facade';
+import { NgrxPostFacade } from './post.facade';
 import { initialPostState, POST_FEATURE_KEY } from './post.reducer';
 import * as PostSelectors from './post.selectors';
 
 describe('Post Selectors', () => {
   let actions: Observable<Action>;
   let mockStore: MockStore;
-  let facade: PostFacade;
+  let facade: NgrxPostFacade;
   let dispatchSpy: jest.SpyInstance;
 
   beforeAll(() => {
     TestBed.configureTestingModule({
       providers: [
-        PostFacade,
+        NgrxPostFacade,
         provideMockActions(() => actions),
         provideMockStore({
           initialState: { [POST_FEATURE_KEY]: initialPostState },
@@ -39,7 +39,7 @@ describe('Post Selectors', () => {
       ],
     });
 
-    facade = TestBed.inject(PostFacade);
+    facade = TestBed.inject(NgrxPostFacade);
     mockStore = TestBed.inject(MockStore);
     dispatchSpy = jest.spyOn(mockStore, 'dispatch');
   });
