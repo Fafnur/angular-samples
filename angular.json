@@ -39,6 +39,7 @@
     "redux-ngxs-store-root": "libs/redux/ngxs/store/root",
     "redux-posts-api": "libs/redux/posts/api",
     "redux-posts-common": "libs/redux/posts/common",
+    "redux-posts-facade": "libs/redux/posts/facade",
     "redux-posts-ui-pipes": "libs/redux/posts/ui/pipes",
     "redux-ui-header": "libs/redux/ui/header",
     "ui-carousel": "libs/ui/carousel",
