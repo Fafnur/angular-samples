@@ -1,6 +1,6 @@
 {
-  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "name": "redux-posts-ui-promo",
+  "$schema": "../../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/redux/posts/ui/promo/src",
   "prefix": "angular-samples",

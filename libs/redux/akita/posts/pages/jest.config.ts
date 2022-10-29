@@ -1,6 +1,6 @@
 /* eslint-disable */
 export default {
-  displayName: 'redux-ngxs-posts-page',
+  displayName: 'redux-akita-posts-pages',
   preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../../../coverage/libs/redux/ngxs/posts/page',
+  coverageDirectory: '../../../../../coverage/libs/redux/akita/posts/pages',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

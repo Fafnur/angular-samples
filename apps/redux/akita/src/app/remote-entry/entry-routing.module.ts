@@ -4,7 +4,7 @@ import { RouterModule, Routes } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
-    loadChildren: () => import('@angular-samples/redux/akita/posts/page').then((modules) => modules.PageModule),
+    loadChildren: () => import('@angular-samples/redux/akita/posts/pages').then((modules) => modules.PagesModule),
   },
 ];
 

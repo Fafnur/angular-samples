@@ -18,4 +18,4 @@ import { POST_FEATURE_KEY, postReducer } from './post.reducer';
     },
   ],
 })
-export class PostStateModule {}
+export class PostsStateModule {}
