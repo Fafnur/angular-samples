@@ -3,13 +3,12 @@
 
 h1 {
   margin: 1rem 0;
+}
+
+div {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
   justify-content: space-between;
-}
-
-a {
-  text-decoration: none;
-  color: variables.$color-default;
+  align-items: center;
 }

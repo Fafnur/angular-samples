@@ -1,7 +1,7 @@
 /* eslint-disable */
 export default {
-  displayName: 'redux-ui-header',
-  preset: '../../../../jest.preset.js',
+  displayName: 'redux-posts-ui-header',
+  preset: '../../../../../jest.preset.js',
   setupFilesAfterEnv: ['<rootDir>/src/test-setup.ts'],
   globals: {
     'ts-jest': {
@@ -9,7 +9,7 @@ export default {
       stringifyContentPathRegex: '\\.(html|svg)$',
     },
   },
-  coverageDirectory: '../../../../coverage/libs/redux/ui/header',
+  coverageDirectory: '../../../../../coverage/libs/redux/posts/ui/header',
   transform: {
     '^.+\\.(ts|mjs|js|html)$': 'jest-preset-angular',
   },

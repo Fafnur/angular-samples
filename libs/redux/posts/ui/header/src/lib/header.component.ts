@@ -3,7 +3,7 @@ import { ChangeDetectionStrategy, Component, Inject, InjectionToken, Optional } 
 export const REDUX_TYPE = new InjectionToken<string>('REDUX_TYPE');
 
 @Component({
-  selector: 'angular-samples-header',
+  selector: 'angular-samples-post-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
