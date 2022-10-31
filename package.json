@@ -64,8 +64,6 @@
     "@angular/cli": "~14.2.7",
     "@angular/compiler-cli": "^14.2.8",
     "@angular/language-service": "^14.2.8",
-    "@ngneat/elf": "^2.2.0",
-    "@ngneat/elf-devtools": "^1.2.1",
     "@ngrx/schematics": "^14.3.2",
     "@ngrx/store-devtools": "^14.3.2",
     "@nrwl/angular": "15.0.4",

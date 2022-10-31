@@ -2,7 +2,7 @@ import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
-import { RootStoreModule as AkitaRootStoreModule } from '@angular-samples/redux/akita/store/root';
+// import { RootStoreModule as AkitaRootStoreModule } from '@angular-samples/redux/akita/store/root';
 import { RootStoreModule as NgrxRootStoreModule } from '@angular-samples/redux/ngrx/store/root';
 import { RootStoreModule as NgxsRootStoreModule } from '@angular-samples/redux/ngxs/store/root';
 import { HeaderModule } from '@angular-samples/redux/ui/header';
@@ -18,7 +18,8 @@ import { AppRoutingModule } from './app.routing.module';
     AppRoutingModule,
     NgrxRootStoreModule,
     NgxsRootStoreModule,
-    AkitaRootStoreModule,
+    // Note: It's broken remote application for akita.
+    // AkitaRootStoreModule,
     LayoutModule,
     HeaderModule,
   ],

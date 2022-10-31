@@ -20,4 +20,9 @@ import { PostStore } from './post.store';
     },
   ],
 })
-export class PostsStateModule {}
+export class PostsStateModule {
+  // TODO: Dirty fix for emulate OnInitEffects
+  constructor(postFacade: PostFacade) {
+    postFacade.load();
+  }
+}
