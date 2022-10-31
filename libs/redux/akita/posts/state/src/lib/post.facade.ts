@@ -1,25 +1,25 @@
 import { Injectable } from '@angular/core';
-import { Actions, ofType } from '@ngrx/effects';
-import { Store } from '@ngrx/store';
+import { dispatch, ofType } from '@ngneat/effects';
+import { Actions } from '@ngneat/effects-ng';
 import { map, Observable } from 'rxjs';
 
 import { PostChange, PostCreate } from '@angular-samples/redux/posts/common';
 import { PostFacade } from '@angular-samples/redux/posts/facade';
 
 import * as PostActions from './post.actions';
-import * as PostSelectors from './post.selectors';
+import { PostQuery } from './post.query';
 
 @Injectable()
-export class NgrxPostFacade implements PostFacade {
-  loaded$ = this.store.select(PostSelectors.selectLoaded);
+export class AkitaPostFacade implements PostFacade {
+  loaded$ = this.postQuery.loaded$;
 
-  posts$ = this.store.select(PostSelectors.selectPosts);
+  posts$ = this.postQuery.posts$;
 
-  postsPromo$ = this.store.select(PostSelectors.selectPromoPosts);
+  postsPromo$ = this.postQuery.postsPromo$;
 
-  postsPopular$ = this.store.select(PostSelectors.selectPopularPosts);
+  postsLast$ = this.postQuery.postsLast$;
 
-  postsLast$ = this.store.select(PostSelectors.selectLastPosts);
+  postsPopular$ = this.postQuery.postsPopular$;
 
   loadSuccess$ = this.actions.pipe(
     ofType(PostActions.loadSuccess),
@@ -71,31 +71,31 @@ export class NgrxPostFacade implements PostFacade {
     map(({ error }) => error)
   );
 
-  post$ = (uuid: string) => this.store.select(PostSelectors.selectPostById(uuid));
+  post$ = this.postQuery.post$;
 
-  constructor(private readonly actions: Actions, private readonly store: Store) {}
+  constructor(private readonly postQuery: PostQuery, private readonly actions: Actions) {}
 
   load(): void {
-    this.store.dispatch(PostActions.load());
+    dispatch(PostActions.load());
   }
 
-  loadOne(uuid: string): void {
-    this.store.dispatch(PostActions.loadOne({ uuid }));
+  loadOne(uuid: string) {
+    dispatch(PostActions.loadOne({ uuid }));
   }
 
   create(postCreate: PostCreate): void {
-    this.store.dispatch(PostActions.create({ postCreate }));
+    dispatch(PostActions.create({ postCreate }));
   }
 
   change(postChange: PostChange): void {
-    this.store.dispatch(PostActions.change({ postChange }));
+    dispatch(PostActions.change({ postChange }));
   }
 
   remove(uuid: string): void {
-    this.store.dispatch(PostActions.remove({ uuid }));
+    dispatch(PostActions.remove({ uuid }));
   }
 
   clear(): void {
-    this.store.dispatch(PostActions.clear());
+    dispatch(PostActions.clear());
   }
 }

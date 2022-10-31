@@ -30,6 +30,8 @@
       "@angular-samples/icons/ui/svg-paths": ["libs/icons/ui/svg-paths/src/index.ts"],
       "@angular-samples/icons/ui/svg-sources": ["libs/icons/ui/svg-sources/src/index.ts"],
       "@angular-samples/redux/akita/posts/pages": ["libs/redux/akita/posts/pages/src/index.ts"],
+      "@angular-samples/redux/akita/posts/state": ["libs/redux/akita/posts/state/src/index.ts"],
+      "@angular-samples/redux/akita/store/root": ["libs/redux/akita/store/root/src/index.ts"],
       "@angular-samples/redux/config": ["libs/redux/config/src/index.ts"],
       "@angular-samples/redux/dashboard/page": ["libs/redux/dashboard/page/src/index.ts"],
       "@angular-samples/redux/dashboard/ui/card": ["libs/redux/dashboard/ui/card/src/index.ts"],

@@ -83,6 +83,10 @@ export class NgxsPostFacade implements PostFacade {
     return this.store.dispatch(new PostActions.Load());
   }
 
+  loadOne(uuid: string) {
+    return this.store.dispatch(new PostActions.LoadOne(uuid));
+  }
+
   create(postCreate: PostCreate) {
     return this.store.dispatch(new PostActions.Create(postCreate));
   }
