@@ -79,6 +79,10 @@ export class AkitaPostFacade implements PostFacade {
     dispatch(PostActions.load());
   }
 
+  loadOne(uuid: string) {
+    dispatch(PostActions.loadOne({ uuid }));
+  }
+
   create(postCreate: PostCreate): void {
     dispatch(PostActions.create({ postCreate }));
   }

@@ -93,6 +93,8 @@ export abstract class PostFacade {
    */
   abstract load(): void;
 
+  abstract loadOne(uuid: string): void;
+
   /**
    * Method that create the post
    */

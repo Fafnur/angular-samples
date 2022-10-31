@@ -79,6 +79,10 @@ export class NgrxPostFacade implements PostFacade {
     this.store.dispatch(PostActions.load());
   }
 
+  loadOne(uuid: string): void {
+    this.store.dispatch(PostActions.loadOne({ uuid }));
+  }
+
   create(postCreate: PostCreate): void {
     this.store.dispatch(PostActions.create({ postCreate }));
   }

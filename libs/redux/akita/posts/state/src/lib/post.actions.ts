@@ -15,9 +15,9 @@ export const loadFailure = createAction('[Post] Load Failure', props<{ error: un
 // Load one
 export const loadOne = createAction('[Post] Load One', props<{ uuid: string }>());
 
-export const loadOneSuccess = createAction('[Post] Load One Success', props<{ post: Post }>());
+export const loadOneSuccess = createAction('[Post] Load One Success', props<{ post: Post | null }>());
 
-export const loadOneFailure = createAction('[Post] Load One Failure', props<{ error: unknown; uuid: string }>());
+export const loadOneFailure = createAction('[Post] Load One Failure', props<{ error: unknown }>());
 
 // Create
 export const create = createAction('[Post] Create', props<{ postCreate: PostCreate }>());

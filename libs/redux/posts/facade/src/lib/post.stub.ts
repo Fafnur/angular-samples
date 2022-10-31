@@ -21,6 +21,8 @@ export class PostFacadeStub extends PostFacade {
 
   load(): void {}
 
+  loadOne(uuid: string): void {}
+
   remove(uuid: string): void {}
 }
 /* eslint-enable @typescript-eslint/no-empty-function, @typescript-eslint/no-unused-vars */

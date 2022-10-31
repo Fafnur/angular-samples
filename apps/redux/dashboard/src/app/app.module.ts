@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
 import { RootStoreModule as AkitaRootStoreModule } from '@angular-samples/redux/akita/store/root';
 import { RootStoreModule as NgrxRootStoreModule } from '@angular-samples/redux/ngrx/store/root';
@@ -11,7 +12,16 @@ import { AppComponent } from './app.component';
 import { AppRoutingModule } from './app.routing.module';
 
 @NgModule({
-  imports: [BrowserModule, AppRoutingModule, NgrxRootStoreModule, NgxsRootStoreModule, LayoutModule, HeaderModule, AkitaRootStoreModule],
+  imports: [
+    BrowserModule,
+    BrowserAnimationsModule,
+    AppRoutingModule,
+    NgrxRootStoreModule,
+    NgxsRootStoreModule,
+    AkitaRootStoreModule,
+    LayoutModule,
+    HeaderModule,
+  ],
   declarations: [AppComponent],
   bootstrap: [AppComponent],
 })

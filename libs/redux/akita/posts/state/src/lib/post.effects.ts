@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { createEffect, ofType } from '@ngneat/effects';
+import { Actions } from '@ngneat/effects-ng';
 import { catchError, map, of, switchMap, tap } from 'rxjs';
 
 import { PostApiService } from '@angular-samples/redux/posts/api';
@@ -12,16 +13,17 @@ import { PostStore } from './post.store';
  */
 @Injectable()
 export class PostEffects {
-  init$ = createEffect((actions) => {
-    return actions.pipe(
+  init$ = createEffect(() => {
+    return this.actions.pipe(
       ofType(PostActions.init),
       map(() => PostActions.load())
     );
   });
 
-  loadTodos$ = createEffect((actions) => {
-    return actions.pipe(
+  load$ = createEffect(() => {
+    return this.actions.pipe(
       ofType(PostActions.load),
+      tap((a) => console.log(a)),
       switchMap(() =>
         this.postApiService.get().pipe(
           tap((posts) => this.postStore.set(posts)),
@@ -32,8 +34,22 @@ export class PostEffects {
     );
   });
 
-  create$ = createEffect((actions) => {
-    return actions.pipe(
+  loadOne$ = createEffect(() => {
+    return this.actions.pipe(
+      ofType(PostActions.loadOne),
+      tap((a) => console.log(a)),
+      switchMap(({ uuid }) =>
+        this.postApiService.getOne(uuid).pipe(
+          tap((post) => (post ? this.postStore.add(post) : undefined)),
+          map((post) => PostActions.loadOneSuccess({ post })),
+          catchError((error) => of(PostActions.loadOneFailure({ error })))
+        )
+      )
+    );
+  });
+
+  create$ = createEffect(() => {
+    return this.actions.pipe(
       ofType(PostActions.create),
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       switchMap(({ postCreate }: any) =>
@@ -46,8 +62,8 @@ export class PostEffects {
     );
   });
 
-  change$ = createEffect((actions) => {
-    return actions.pipe(
+  change$ = createEffect(() => {
+    return this.actions.pipe(
       ofType(PostActions.change),
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       switchMap(({ postChange }: any) =>
@@ -60,8 +76,8 @@ export class PostEffects {
     );
   });
 
-  remove$ = createEffect((actions) => {
-    return actions.pipe(
+  remove$ = createEffect(() => {
+    return this.actions.pipe(
       ofType(PostActions.remove),
       // eslint-disable-next-line @typescript-eslint/no-explicit-any
       switchMap(({ uuid }: any) =>
@@ -74,8 +90,8 @@ export class PostEffects {
     );
   });
 
-  clear$ = createEffect((actions) => {
-    return actions.pipe(
+  clear$ = createEffect(() => {
+    return this.actions.pipe(
       ofType(PostActions.clear),
       switchMap(() =>
         this.postApiService.clear().pipe(
@@ -87,5 +103,5 @@ export class PostEffects {
     );
   });
 
-  constructor(private readonly postApiService: PostApiService, private readonly postStore: PostStore) {}
+  constructor(private readonly postApiService: PostApiService, private readonly postStore: PostStore, private readonly actions: Actions) {}
 }
