@@ -1,2 +1,2 @@
 export * from './lib/post.facade';
-export * from './lib/post.stub';
+export * from './lib/post.facade.stub';
