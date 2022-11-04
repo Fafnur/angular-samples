@@ -9,15 +9,7 @@ import { RootRouterStateSerializer } from './root-router-state-serializer';
 
 @NgModule({
   imports: [
-    StoreModule.forRoot(rootReducers, {
-      initialState: rootInitialState,
-      metaReducers: [],
-      // TODO: Check defaults
-      runtimeChecks: {
-        strictActionImmutability: true,
-        strictStateImmutability: true,
-      },
-    }),
+    StoreModule.forRoot(rootReducers, { initialState: rootInitialState }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot({
       serializer: RootRouterStateSerializer,
@@ -30,8 +22,6 @@ export class RootStoreModule {}
   imports: [
     StoreModule.forRoot(rootReducers, {
       initialState: rootInitialState,
-      metaReducers: [],
-      // TODO: Check defaults
       runtimeChecks: {
         strictActionImmutability: true,
         strictStateImmutability: true,
