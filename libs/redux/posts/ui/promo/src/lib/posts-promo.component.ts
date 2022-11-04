@@ -27,6 +27,7 @@ export class PostsPromoComponent implements OnInit {
   }
 
   onClicked(slide: CarouselSlide): void {
+    // Note: Dirty hack for fix navigation on shell and remote apps
     const path = this.pathRemote ? ['/', this.pathRemote, 'post', slide.uuid] : ['/post', slide.uuid];
 
     void this.router.navigate(path);
