@@ -1,11 +1,11 @@
-import { crateGetEntityState } from '@angular-samples/core/testing';
+import { createGetEntityState } from '@angular-samples/core/testing';
 import { POST_STUB, POSTS_ENTITIES_STUB, POSTS_STUB } from '@angular-samples/redux/posts/common';
 
 import { initialPostState, postAdapter, PostState } from './post.reducer';
 import * as PostSelectors from './post.selectors';
 
 describe('Post Selectors', () => {
-  const getState = crateGetEntityState(initialPostState, postAdapter);
+  const getState = createGetEntityState(initialPostState, postAdapter);
   let state: PostState;
 
   it('selectPosts() should return posts', () => {
