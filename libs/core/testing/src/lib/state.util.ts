@@ -1,4 +1,4 @@
-import { EntityAdapter, EntityState } from '@ngrx/entity/src/models';
+import { EntityAdapter, EntityState } from '@ngrx/entity';
 
 /**
  * Util for create configurable ngrx state
