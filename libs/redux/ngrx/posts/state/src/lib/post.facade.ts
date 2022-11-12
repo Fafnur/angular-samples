@@ -9,6 +9,9 @@ import { PostFacade } from '@angular-samples/redux/posts/facade';
 import * as PostActions from './post.actions';
 import * as PostSelectors from './post.selectors';
 
+/**
+ * Ngrx implementation PostFacade
+ */
 @Injectable()
 export class NgrxPostFacade implements PostFacade {
   loaded$ = this.store.select(PostSelectors.selectLoaded);
