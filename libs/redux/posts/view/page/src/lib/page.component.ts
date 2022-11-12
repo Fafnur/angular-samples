@@ -5,6 +5,9 @@ import { filter, map, Subject, switchMap, takeUntil, tap } from 'rxjs';
 import { Post } from '@angular-samples/redux/posts/common';
 import { PostFacade } from '@angular-samples/redux/posts/facade';
 
+/**
+ * Post view component
+ */
 @Component({
   selector: 'angular-samples-post-view-page',
   templateUrl: './page.component.html',
@@ -12,8 +15,14 @@ import { PostFacade } from '@angular-samples/redux/posts/facade';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PageComponent implements OnInit, OnDestroy {
+  /**
+   * Post. Will be loaded by id from url
+   */
   post!: Post;
 
+  /**
+   * Destroy subject for unsubscribe
+   */
   private readonly destroy$ = new Subject<void>();
 
   constructor(

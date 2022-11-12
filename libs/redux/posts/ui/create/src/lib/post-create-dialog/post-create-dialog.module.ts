@@ -9,6 +9,9 @@ import { MatInputModule } from '@angular/material/input';
 
 import { PostCreateDialogComponent } from './post-create-dialog.component';
 
+/**
+ * Post create dialog module
+ */
 @NgModule({
   imports: [CommonModule, ReactiveFormsModule, MatDialogModule, MatInputModule, MatCheckboxModule, MatFormFieldModule, MatButtonModule],
   declarations: [PostCreateDialogComponent],

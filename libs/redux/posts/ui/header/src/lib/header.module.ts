@@ -6,6 +6,9 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header.component';
 
+/**
+ * Post page header module
+ */
 @NgModule({
   imports: [CommonModule, RouterModule, MatIconModule, MatButtonModule],
   declarations: [HeaderComponent],

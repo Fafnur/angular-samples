@@ -3,6 +3,9 @@ import { ChangeDetectionStrategy, Component, Inject, Input, OnInit, Optional } f
 import { PATH_REMOTE } from '@angular-samples/redux/config';
 import { Post } from '@angular-samples/redux/posts/common';
 
+/**
+ * Post last component
+ */
 @Component({
   selector: 'angular-samples-post-last',
   templateUrl: './post-last.component.html',
@@ -10,8 +13,14 @@ import { Post } from '@angular-samples/redux/posts/common';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostLastComponent implements OnInit {
+  /**
+   * Post for view
+   */
   @Input() post!: Post;
 
+  /**
+   * For shell and remove application we have different paths.
+   */
   path!: string[];
 
   constructor(@Optional() @Inject(PATH_REMOTE) private readonly pathRemote: string | null) {}

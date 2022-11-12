@@ -6,6 +6,9 @@ import { PostsPipesModule } from '@angular-samples/redux/posts/ui/pipes';
 
 import { PostArticleComponent } from './post-article.component';
 
+/**
+ * Post article module
+ */
 @NgModule({
   imports: [CommonModule, RouterModule, PostsPipesModule],
   declarations: [PostArticleComponent],

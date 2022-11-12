@@ -10,6 +10,9 @@ import { GridModule } from '@angular-samples/ui/grid';
 import { PageComponent } from './page.component';
 import { PageRoutingModule } from './page-routing.module.ts';
 
+/**
+ * Post view page module
+ */
 @NgModule({
   imports: [CommonModule, PageRoutingModule, HeaderModule, ContainerModule, GridModule, PostsPopularModule, PostArticleModule],
   declarations: [PageComponent],
