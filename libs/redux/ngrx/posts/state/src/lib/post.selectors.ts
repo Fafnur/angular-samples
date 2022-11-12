@@ -23,21 +23,21 @@ export const selectLoaded = createSelector(selectPostState, (state) => state.loa
 export const selectPosts = createSelector(selectPostState, (state) => selectAll(state));
 
 /**
- * Selector that returns a list of promo posts from a state.
+ * Selector that returns a list of the promo posts from a state.
  */
 export const selectPromoPosts = createSelector(selectPosts, (posts) =>
   posts.filter((post) => post.promo).sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime())
 );
 
 /**
- * Selector that returns a list of popular posts from a state.
+ * Selector that returns a list of the popular posts from a state.
  */
 export const selectPopularPosts = createSelector(selectPosts, (posts) =>
   posts.filter((post) => !post.promo).sort((a, b) => b.views - a.views)
 );
 
 /**
- * Selector that returns a list of latest the posts from a state.
+ * Selector that returns a list of the latest posts from a state.
  */
 export const selectLastPosts = createSelector(selectPosts, (posts) =>
   posts.filter((post) => !post.promo).sort((a, b) => new Date(b.created).getTime() - new Date(a.created).getTime())

@@ -5,7 +5,7 @@ import { PostsStateModule } from '@angular-samples/redux/ngrx/posts/state';
 import { PagesRoutingModule } from './pages-routing.module';
 
 /**
- * All post pages for Ngrx application
+ * Pages for Ngrx application
  */
 @NgModule({
   imports: [PostsStateModule, PagesRoutingModule],

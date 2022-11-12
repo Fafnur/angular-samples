@@ -8,6 +8,9 @@ import { PostFacade } from '@angular-samples/redux/posts/facade';
 import * as PostActions from './post.actions';
 import { PostState } from './post.state';
 
+/**
+ * Ngxs implementation PostFacade
+ */
 @Injectable()
 export class NgxsPostFacade implements PostFacade {
   @Select(PostState.loaded)
