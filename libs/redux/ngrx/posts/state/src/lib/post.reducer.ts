@@ -14,7 +14,7 @@ export interface PostState extends EntityState<Post> {
   /**
    * Post list loading flag
    */
-  loaded: boolean;
+  readonly loaded: boolean;
 }
 
 /**

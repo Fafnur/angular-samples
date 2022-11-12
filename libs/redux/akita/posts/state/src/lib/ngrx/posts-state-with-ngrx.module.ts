@@ -10,7 +10,7 @@ import { PostEffects } from './post.effects';
 import { AkitaNgrxPostFacade } from './post.facade';
 
 /**
- * Sample with Ngrx Effects
+ * Post state with Akita and Ngrx Effects
  */
 @NgModule({
   imports: [PostApiModule, EffectsModule.forFeature([PostEffects])],

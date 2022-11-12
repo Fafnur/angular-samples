@@ -37,7 +37,7 @@ export const initialPostState: PostStateModel = {
 };
 
 /**
- * This service using for change state, dispatch actions and subscribe on selectors.
+ * This service is used to change state, dispatch actions and subscribe on selectors.
  * In Ngrx this merges selectors, reducer and effects.
  */
 @State<PostStateModel>({

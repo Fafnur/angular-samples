@@ -9,6 +9,9 @@ import { AkitaPostFacade } from './post.facade';
 import { PostQuery } from './post.query';
 import { PostStore } from './post.store';
 
+/**
+ * Akita feature store for posts entities.
+ */
 @NgModule({
   imports: [PostApiModule, EffectsNgModule.forFeature([PostEffects])],
   providers: [

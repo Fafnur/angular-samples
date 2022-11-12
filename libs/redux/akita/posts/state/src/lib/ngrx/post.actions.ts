@@ -2,7 +2,9 @@ import { createAction, props } from '@ngrx/store';
 
 import { Post, PostChange, PostCreate } from '@angular-samples/redux/posts/common';
 
-// Init
+/**
+ * Ngrx action for effects in Akita.
+ */
 export const init = createAction('[Post] Init');
 
 // Load all

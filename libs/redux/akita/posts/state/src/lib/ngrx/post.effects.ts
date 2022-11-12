@@ -9,6 +9,9 @@ import { PostApiService } from '@angular-samples/redux/posts/api';
 import { PostStore } from '../post.store';
 import * as PostActions from './post.actions';
 
+/**
+ * Ngrx Effects for Akita
+ */
 @Injectable()
 export class PostEffects implements OnInitEffects {
   init$ = createEffect(() => {
