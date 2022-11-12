@@ -4,6 +4,9 @@ import { IconService } from '@angular-samples/core/icons';
 
 import { akitaIcon, ngrxIcon, ngxsIcon } from './header.icons';
 
+/**
+ * Icons for redux applications
+ */
 const ICONS: { name: string; source: string }[] = [
   {
     name: 'ngrx',
@@ -26,9 +29,18 @@ const ICONS: { name: string; source: string }[] = [
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class HeaderComponent {
+  /**
+   * Redux application icons
+   */
   readonly icons = ICONS;
 
+  /**
+   * Header component constructor
+   *
+   * @param iconService Icon service for using svg with material icons
+   */
   constructor(private readonly iconService: IconService) {
+    // Adding svg icons to material
     for (const icon of ICONS) {
       this.iconService.add(icon.name, icon.source);
     }

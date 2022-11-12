@@ -6,6 +6,9 @@ import { RouterModule } from '@angular/router';
 
 import { HeaderComponent } from './header.component';
 
+/**
+ * Header for dashboard application
+ */
 @NgModule({
   imports: [CommonModule, RouterModule, MatButtonModule, MatIconModule],
   declarations: [HeaderComponent],

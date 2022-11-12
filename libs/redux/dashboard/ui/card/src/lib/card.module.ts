@@ -4,6 +4,9 @@ import { RouterModule } from '@angular/router';
 
 import { CardComponent } from './card.component';
 
+/**
+ * Redux card module
+ */
 @NgModule({
   imports: [CommonModule, RouterModule],
   declarations: [CardComponent],

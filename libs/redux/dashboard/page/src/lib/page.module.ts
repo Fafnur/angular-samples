@@ -8,6 +8,9 @@ import { GridModule } from '@angular-samples/ui/grid';
 import { PageComponent } from './page.component';
 import { PageRoutingModule } from './page-routing.module';
 
+/**
+ * Page for dashboard application
+ */
 @NgModule({
   imports: [CommonModule, PageRoutingModule, ContainerModule, GridModule, CardModule],
   declarations: [PageComponent],

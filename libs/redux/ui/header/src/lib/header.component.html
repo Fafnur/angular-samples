@@ -1,7 +1,9 @@
 <nav automation-id="nav">
+  <!-- link to shell application -->
   <a automation-id="home" mat-icon-button routerLink="/">
     <mat-icon>home</mat-icon>
   </a>
+  <!-- links to remote applications -->
   <a [attr.automation-id]="icon.name" mat-icon-button [routerLink]="['/', icon.name]" *ngFor="let icon of icons">
     <mat-icon [svgIcon]="icon.name"></mat-icon>
   </a>
