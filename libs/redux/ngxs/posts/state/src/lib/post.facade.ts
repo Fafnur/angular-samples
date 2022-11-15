@@ -80,18 +80,18 @@ export class NgxsPostFacade implements PostFacade {
 
   post$ = (uuid: string) => this.store.select(PostState.post(uuid));
 
-  constructor(private readonly postState: PostState, private readonly store: Store, private actions: Actions) {}
+  constructor(private readonly store: Store, private actions: Actions) {}
 
   load() {
-    return this.store.dispatch(new PostActions.Load());
+    this.store.dispatch(new PostActions.Load());
   }
 
   loadOne(uuid: string) {
-    return this.store.dispatch(new PostActions.LoadOne(uuid));
+    this.store.dispatch(new PostActions.LoadOne(uuid));
   }
 
   create(postCreate: PostCreate) {
-    return this.store.dispatch(new PostActions.Create(postCreate));
+    this.store.dispatch(new PostActions.Create(postCreate));
   }
 
   change(postChange: PostChange): void {
