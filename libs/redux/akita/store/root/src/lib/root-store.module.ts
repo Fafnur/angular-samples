@@ -23,7 +23,7 @@ export class RootStoreModule {}
  * Akita root store for development
  */
 @NgModule({
-  imports: [EffectsNgModule.forRoot([], { dispatchByDefault: true })],
+  imports: [EffectsNgModule.forRoot([])],
   providers: [
     // Note: For enable logging actions, install @ngneat/elf, @ngneat/elf-devtools, and use initElfDevTools
     // {
