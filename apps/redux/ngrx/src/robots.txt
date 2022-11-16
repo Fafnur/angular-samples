@@ -1,0 +1,9 @@
+User-agent: *
+Disallow: /api/
+
+User-agent: Yandex
+Disallow: /api/
+Clean-param: bonus&utm_source&utm_medium&utm_campaign&utm_term&utm_content&click_id
+
+Host: https://ngrx.fafn.ru
+Sitemap: https://ngrx.fafn.ru/sitemap.xml

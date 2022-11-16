@@ -15,7 +15,7 @@
         "polyfills": "apps/redux/akita/src/polyfills.ts",
         "tsConfig": "apps/redux/akita/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/redux/akita/src/favicon.ico", "apps/redux/akita/src/assets"],
+        "assets": ["apps/redux/akita/src/favicon.ico", "apps/redux/akita/src/assets", "apps/redux/akita/src/robots.txt"],
         "styles": ["apps/redux/akita/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {

@@ -15,7 +15,7 @@
         "polyfills": "apps/redux/ngrx/src/polyfills.ts",
         "tsConfig": "apps/redux/ngrx/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/redux/ngrx/src/favicon.ico", "apps/redux/ngrx/src/assets"],
+        "assets": ["apps/redux/ngrx/src/favicon.ico", "apps/redux/ngrx/src/assets", "apps/redux/ngrx/src/robots.txt"],
         "styles": ["apps/redux/ngrx/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
