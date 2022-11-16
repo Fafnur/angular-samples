@@ -15,7 +15,14 @@
         "polyfills": "apps/redux/ngxs/src/polyfills.ts",
         "tsConfig": "apps/redux/ngxs/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
-        "assets": ["apps/redux/ngxs/src/favicon.ico", "apps/redux/ngxs/src/assets"],
+        "assets": [
+          "apps/redux/ngxs/src/favicon.ico",
+          "apps/redux/ngxs/src/assets",
+          "apps/redux/ngxs/src/robots.txt",
+          "apps/redux/ngxs/src/site.webmanifest",
+          "apps/redux/ngxs/src/browserconfig.xml",
+          "apps/redux/ngxs/src/sitemap.xml"
+        ],
         "styles": ["apps/redux/ngxs/src/styles.scss"],
         "scripts": [],
         "customWebpackConfig": {
@@ -24,6 +31,10 @@
       },
       "configurations": {
         "production": {
+          "index": {
+            "input": "apps/redux/ngxs/src/index.prod.html",
+            "output": "index.html"
+          },
           "budgets": [
             {
               "type": "initial",
