@@ -31,7 +31,6 @@ export class PostEffects {
   load$ = createEffect(() => {
     return this.actions.pipe(
       ofType(PostActions.load),
-      tap((a) => console.log(a)),
       switchMap(() =>
         this.postApiService.get().pipe(
           tap((posts) => this.postStore.set(posts)),
@@ -48,7 +47,6 @@ export class PostEffects {
   loadOne$ = createEffect(() => {
     return this.actions.pipe(
       ofType(PostActions.loadOne),
-      tap((a) => console.log(a)),
       switchMap(({ uuid }) =>
         this.postApiService.getOne(uuid).pipe(
           tap((post) => (post ? this.postStore.add(post) : undefined)),
