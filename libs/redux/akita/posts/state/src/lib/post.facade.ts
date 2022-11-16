@@ -9,6 +9,9 @@ import { PostFacade } from '@angular-samples/redux/posts/facade';
 import * as PostActions from './post.actions';
 import { PostQuery } from './post.query';
 
+/**
+ * Akita implementation PostFacade
+ */
 @Injectable()
 export class AkitaPostFacade implements PostFacade {
   loaded$ = this.postQuery.loaded$;

@@ -3,6 +3,9 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { PageComponent } from './page.component';
 
+/**
+ * Posts page
+ */
 const routes: Routes = [
   {
     path: '',
@@ -10,6 +13,9 @@ const routes: Routes = [
   },
 ];
 
+/**
+ * Post page for all redux application
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

@@ -3,6 +3,9 @@ import { MatDialog } from '@angular/material/dialog';
 
 import { PostCreateDialogComponent } from './post-create-dialog/post-create-dialog.component';
 
+/**
+ * Post create component
+ */
 @Component({
   selector: 'angular-samples-post-create',
   templateUrl: './post-create.component.html',
@@ -12,6 +15,9 @@ import { PostCreateDialogComponent } from './post-create-dialog/post-create-dial
 export class PostCreateComponent {
   constructor(private readonly matDialog: MatDialog) {}
 
+  /**
+   * This method open dialog window with post form
+   */
   onCreate(): void {
     void this.matDialog.open(PostCreateDialogComponent, { disableClose: true, width: '600px' });
   }

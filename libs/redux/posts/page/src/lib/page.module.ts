@@ -12,6 +12,9 @@ import { GridModule } from '@angular-samples/ui/grid';
 import { PageComponent } from './page.component';
 import { PageRoutingModule } from './page-routing.module';
 
+/**
+ * Posts page module
+ */
 @NgModule({
   imports: [
     CommonModule,

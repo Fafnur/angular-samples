@@ -5,6 +5,8 @@ import { RouterStateSerializer } from '@ngrx/router-store';
 import { RouterReducerStateExtended } from './root.reducer';
 
 /**
+ * Custom router serializer
+ *
  * @see https://ngrx.io/guide/router-store/configuration
  */
 @Injectable()

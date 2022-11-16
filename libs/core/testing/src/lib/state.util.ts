@@ -1,14 +1,27 @@
-import { EntityAdapter, EntityState } from '@ngrx/entity/src/models';
+import { EntityAdapter, EntityState } from '@ngrx/entity';
 
-export function crateGetState<T>(initialState: T): (data: Partial<T>) => T {
+/**
+ * Util for create configurable ngrx state
+ * @param initialState Initial state ngrx feature
+ */
+export function createGetState<T>(initialState: T): (data: Partial<T>) => T {
   return (data) => ({ ...initialState, ...data });
 }
 
-export function crateGetEntityState<T, R>(
+/**
+ * Util for create configurable ngrx state with ngrx entity
+ *
+ * @param initialState Initial state ngrx feature
+ * @param adapter Ngrx entity adapter
+ */
+export function createGetEntityState<T, R>(
   initialState: T & EntityState<R>,
   adapter: EntityAdapter<R>
 ): (data?: Partial<T>, entities?: R[]) => T {
   return (data = {}, entities = []) => adapter.setAll(entities, { ...initialState, ...data });
 }
 
+/**
+ * Stub for error
+ */
 export const ERROR_STUB = 'Unknown Error';

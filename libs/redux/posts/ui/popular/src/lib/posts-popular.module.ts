@@ -4,6 +4,9 @@ import { NgModule } from '@angular/core';
 import { PostPopularModule } from './post-popular/post-popular.module';
 import { PostsPopularComponent } from './posts-popular.component';
 
+/**
+ * Posts popular widget
+ */
 @NgModule({
   imports: [CommonModule, PostPopularModule],
   declarations: [PostsPopularComponent],

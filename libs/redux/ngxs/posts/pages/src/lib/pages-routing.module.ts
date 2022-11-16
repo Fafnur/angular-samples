@@ -1,6 +1,9 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
+/**
+ * Routes for Ngxs application
+ */
 const routes: Routes = [
   {
     path: '',
@@ -12,6 +15,9 @@ const routes: Routes = [
   },
 ];
 
+/**
+ * Router module for Ngxs application
+ */
 @NgModule({
   imports: [RouterModule.forChild(routes)],
   exports: [RouterModule],

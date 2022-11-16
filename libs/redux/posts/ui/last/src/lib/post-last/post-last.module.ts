@@ -4,6 +4,9 @@ import { RouterModule } from '@angular/router';
 
 import { PostLastComponent } from './post-last.component';
 
+/**
+ * Post last module
+ */
 @NgModule({
   imports: [CommonModule, RouterModule],
   declarations: [PostLastComponent],

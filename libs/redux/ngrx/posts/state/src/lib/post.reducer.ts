@@ -7,18 +7,33 @@ import * as PostActions from './post.actions';
 
 export const POST_FEATURE_KEY = 'posts';
 
+/**
+ * This state using for show posts in widgets.
+ */
 export interface PostState extends EntityState<Post> {
-  loaded: boolean;
+  /**
+   * Post list loading flag
+   */
+  readonly loaded: boolean;
 }
 
+/**
+ * This adapter using for changing collection posts in state.
+ */
 export const postAdapter = createEntityAdapter<Post>({
   selectId: (entity) => entity.uuid,
 });
 
+/**
+ * This initial value for post state.
+ */
 export const initialPostState: PostState = postAdapter.getInitialState({
   loaded: false,
 });
 
+/**
+ * This reducer using for change state. When action was dispatched, the reducer changes the state.
+ */
 const reducer = createReducer(
   initialPostState,
   on(
@@ -45,6 +60,12 @@ const reducer = createReducer(
   )
 );
 
+/**
+ * Post reducer
+ *
+ * @param state Post State
+ * @param action The action that was dispatched
+ */
 export function postReducer(state: PostState | undefined, action: Action): PostState {
   return reducer(state, action);
 }

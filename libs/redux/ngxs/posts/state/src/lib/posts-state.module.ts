@@ -7,6 +7,9 @@ import { PostFacade } from '@angular-samples/redux/posts/facade';
 import { NgxsPostFacade } from './post.facade';
 import { PostState } from './post.state';
 
+/**
+ * Ngxs feature store for posts entities.
+ */
 @NgModule({
   imports: [PostApiModule, NgxsModule.forFeature([PostState])],
   providers: [

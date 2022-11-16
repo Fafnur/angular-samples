@@ -8,8 +8,14 @@ import { PostApiService } from '@angular-samples/redux/posts/api';
 
 import * as PostActions from './post.actions';
 
+/**
+ * Ngrx effects for posts entities.
+ */
 @Injectable()
 export class PostEffects implements OnInitEffects {
+  /**
+   * Effect to call loading of list posts after feature store initialization.
+   */
   init$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(PostActions.init),
@@ -21,6 +27,9 @@ export class PostEffects implements OnInitEffects {
     );
   });
 
+  /**
+   * Effect for loading of list posts.
+   */
   load$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(PostActions.load),
@@ -32,6 +41,9 @@ export class PostEffects implements OnInitEffects {
     );
   });
 
+  /**
+   * Effect for creating a new post.
+   */
   create$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(PostActions.create),
@@ -43,6 +55,9 @@ export class PostEffects implements OnInitEffects {
     );
   });
 
+  /**
+   * Effect for changing a post.
+   */
   change$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(PostActions.change),
@@ -54,6 +69,9 @@ export class PostEffects implements OnInitEffects {
     );
   });
 
+  /**
+   * Effect for removing a post.
+   */
   remove$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(PostActions.remove),
@@ -65,6 +83,9 @@ export class PostEffects implements OnInitEffects {
     );
   });
 
+  /**
+   * Effect for removing all posts.
+   */
   clear$ = createEffect(() => {
     return this.actions$.pipe(
       ofType(PostActions.clear),

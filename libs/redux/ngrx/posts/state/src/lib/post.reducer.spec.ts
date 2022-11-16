@@ -1,13 +1,13 @@
 import { Action } from '@ngrx/store';
 
-import { crateGetEntityState } from '@angular-samples/core/testing';
+import { createGetEntityState } from '@angular-samples/core/testing';
 import { Post, POST_CHANGE_STUB, POST_STUB, POSTS_STUB } from '@angular-samples/redux/posts/common';
 
 import * as PostActions from './post.actions';
 import { initialPostState, postAdapter, postReducer, PostState } from './post.reducer';
 
 describe('Post Reducer', () => {
-  const getState = crateGetEntityState(initialPostState, postAdapter);
+  const getState = createGetEntityState(initialPostState, postAdapter);
   let state: PostState;
 
   beforeEach(() => {

@@ -9,9 +9,13 @@ import { PostEffects } from './post.effects';
 import { NgrxPostFacade } from './post.facade';
 import { POST_FEATURE_KEY, postReducer } from './post.reducer';
 
+/**
+ * Ngrx feature store for posts entities.
+ */
 @NgModule({
   imports: [PostApiModule, StoreModule.forFeature(POST_FEATURE_KEY, postReducer), EffectsModule.forFeature([PostEffects])],
   providers: [
+    // Provide NgrxPostFacade like as PostFacade.
     {
       provide: PostFacade,
       useClass: NgrxPostFacade,

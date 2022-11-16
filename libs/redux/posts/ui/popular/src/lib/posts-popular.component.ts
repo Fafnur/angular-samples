@@ -4,6 +4,9 @@ import { map, Observable } from 'rxjs';
 import { Post } from '@angular-samples/redux/posts/common';
 import { PostFacade } from '@angular-samples/redux/posts/facade';
 
+/**
+ * Posts popular component
+ */
 @Component({
   selector: 'angular-samples-posts-popular',
   templateUrl: './posts-popular.component.html',
@@ -11,8 +14,14 @@ import { PostFacade } from '@angular-samples/redux/posts/facade';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostsPopularComponent implements OnInit {
+  /**
+   * Count posts for view
+   */
   @Input() view = 4;
 
+  /**
+   * Posts collection
+   */
   posts$!: Observable<Post[]>;
 
   constructor(private readonly postFacade: PostFacade) {}

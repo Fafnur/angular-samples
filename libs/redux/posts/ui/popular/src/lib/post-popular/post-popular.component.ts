@@ -17,6 +17,7 @@ export class PostPopularComponent implements OnInit {
   constructor(@Optional() @Inject(PATH_REMOTE) private readonly pathRemote: string | null) {}
 
   ngOnInit(): void {
+    // Note: Dirty hack for fix navigation on shell and remote apps
     this.path = this.pathRemote ? ['/', this.pathRemote, 'post', this.post.uuid] : ['/post', this.post.uuid];
   }
 }

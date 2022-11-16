@@ -3,6 +3,9 @@ import { DomSanitizer } from '@angular/platform-browser';
 
 import { Post } from '@angular-samples/redux/posts/common';
 
+/**
+ * Pipe for transform \n to <br>
+ */
 @Pipe({
   name: 'postBody',
 })

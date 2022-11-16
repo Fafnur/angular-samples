@@ -8,6 +8,9 @@ import { uuidv4 } from '@angular-samples/core/uuid';
 import { PostCreate } from '@angular-samples/redux/posts/common';
 import { PostFacade } from '@angular-samples/redux/posts/facade';
 
+/**
+ * Post create dialog component
+ */
 @Component({
   selector: 'angular-samples-post-create-dialog',
   templateUrl: './post-create-dialog.component.html',
@@ -15,8 +18,14 @@ import { PostFacade } from '@angular-samples/redux/posts/facade';
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class PostCreateDialogComponent implements OnInit, OnDestroy {
+  /**
+   * Form submitted
+   */
   submitted = false;
 
+  /**
+   * Form group for a new post
+   */
   readonly form = new FormGroup<FormFor<PostCreate>>({
     uuid: new FormControl(uuidv4(), { nonNullable: true, validators: [Validators.required] }),
     title: new FormControl('', { nonNullable: true, validators: [Validators.required, Validators.minLength(2)] }),
@@ -25,6 +34,9 @@ export class PostCreateDialogComponent implements OnInit, OnDestroy {
     promo: new FormControl(false, { nonNullable: true, validators: [Validators.required] }),
   });
 
+  /**
+   * Subject for unsubscribe
+   */
   private readonly destroy$ = new Subject<void>();
 
   constructor(
@@ -64,9 +76,14 @@ export class PostCreateDialogComponent implements OnInit, OnDestroy {
     this.destroy$.complete();
   }
 
+  /**
+   * Submit form
+   */
   onSubmit(): void {
+    // Show errors for required fields
     this.form.markAllAsTouched();
 
+    // If form valid and was not send then send form
     if (this.form.valid && !this.submitted) {
       this.submitted = true;
       this.form.disable();

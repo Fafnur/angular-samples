@@ -85,6 +85,7 @@ export abstract class PostFacade {
 
   /**
    * Return Post by uuid
+   * @param uuid Post uuid
    */
   post$!: (uuid: string) => Observable<Post | null>;
 
@@ -93,20 +94,27 @@ export abstract class PostFacade {
    */
   abstract load(): void;
 
+  /**
+   * Method that returns a list of posts
+   * @param uuid Post uuid
+   */
   abstract loadOne(uuid: string): void;
 
   /**
    * Method that create the post
+   * @param postCreate Post create entity
    */
   abstract create(postCreate: PostCreate): void;
 
   /**
    * Method that change the post
+   * @param postChange Post change entity
    */
   abstract change(postChange: PostChange): void;
 
   /**
    * Method that remove the post
+   * @param uuid Post uuid
    */
   abstract remove(uuid: string): void;
 

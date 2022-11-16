@@ -7,17 +7,12 @@ import { StoreDevtoolsModule } from '@ngrx/store-devtools';
 import { rootInitialState, rootReducers } from './root.reducer';
 import { RootRouterStateSerializer } from './root-router-state-serializer';
 
+/**
+ * Root store for production
+ */
 @NgModule({
   imports: [
-    StoreModule.forRoot(rootReducers, {
-      initialState: rootInitialState,
-      metaReducers: [],
-      // TODO: Check defaults
-      runtimeChecks: {
-        strictActionImmutability: true,
-        strictStateImmutability: true,
-      },
-    }),
+    StoreModule.forRoot(rootReducers, { initialState: rootInitialState }),
     EffectsModule.forRoot([]),
     StoreRouterConnectingModule.forRoot({
       serializer: RootRouterStateSerializer,
@@ -26,12 +21,13 @@ import { RootRouterStateSerializer } from './root-router-state-serializer';
 })
 export class RootStoreModule {}
 
+/**
+ * Root store for development
+ */
 @NgModule({
   imports: [
     StoreModule.forRoot(rootReducers, {
       initialState: rootInitialState,
-      metaReducers: [],
-      // TODO: Check defaults
       runtimeChecks: {
         strictActionImmutability: true,
         strictStateImmutability: true,

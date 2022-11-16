@@ -9,10 +9,15 @@ import * as PostActions from './post.actions';
 import { PostStore } from './post.store';
 
 /**
+ * Ngrx effects for posts entities.
+ *
  * TODO: Need to run after init like as ngrxOnInitEffects
  */
 @Injectable()
 export class PostEffects {
+  /**
+   * Effect to call loading of list posts after feature store initialization.
+   */
   init$ = createEffect(() => {
     return this.actions.pipe(
       ofType(PostActions.init),
@@ -20,6 +25,9 @@ export class PostEffects {
     );
   });
 
+  /**
+   * Effect for loading of list posts.
+   */
   load$ = createEffect(() => {
     return this.actions.pipe(
       ofType(PostActions.load),
@@ -34,6 +42,9 @@ export class PostEffects {
     );
   });
 
+  /**
+   * Effect for load a post by id.
+   */
   loadOne$ = createEffect(() => {
     return this.actions.pipe(
       ofType(PostActions.loadOne),
@@ -42,12 +53,15 @@ export class PostEffects {
         this.postApiService.getOne(uuid).pipe(
           tap((post) => (post ? this.postStore.add(post) : undefined)),
           map((post) => PostActions.loadOneSuccess({ post })),
-          catchError((error) => of(PostActions.loadOneFailure({ error })))
+          catchError((error) => of(PostActions.loadOneFailure({ error, uuid })))
         )
       )
     );
   });
 
+  /**
+   * Effect for creating a new post.
+   */
   create$ = createEffect(() => {
     return this.actions.pipe(
       ofType(PostActions.create),
@@ -62,6 +76,9 @@ export class PostEffects {
     );
   });
 
+  /**
+   * Effect for changing a post.
+   */
   change$ = createEffect(() => {
     return this.actions.pipe(
       ofType(PostActions.change),
@@ -76,6 +93,9 @@ export class PostEffects {
     );
   });
 
+  /**
+   * Effect for removing a post.
+   */
   remove$ = createEffect(() => {
     return this.actions.pipe(
       ofType(PostActions.remove),
@@ -90,6 +110,9 @@ export class PostEffects {
     );
   });
 
+  /**
+   * Effect for removing all posts.
+   */
   clear$ = createEffect(() => {
     return this.actions.pipe(
       ofType(PostActions.clear),
