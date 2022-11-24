@@ -2,11 +2,15 @@
 
 This project presents popular solutions for [Angular](https://angular.io).
 
-![image](./apps/icons/src/assets/images/demo-sources.png)
-
 ## Solutions
 
 - [IconService](./libs/core/icons/README.md) - service for creating custom svg icons using Angular Material icons.
+
+![icons](./apps/icons/src/assets/images/demo-sources.png)
+
+- [Redux in Angular. Ngrx vs Ngxs vs Akita.](./apps/redux/dashboard/README.md) - application with different redux implementation on Angular.
+
+![redux](./apps/redux/dashboard/docs/dashboard.gif)
 
 ## Documentation
 
