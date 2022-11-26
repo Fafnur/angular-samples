@@ -16,11 +16,11 @@
       <mat-label>Содержимое</mat-label>
       <textarea matInput placeholder="Текст новости..." [formControl]="form.controls.body"></textarea>
     </mat-form-field>
-  </mat-dialog-content>
 
-  <p>
-    <mat-checkbox [formControl]="form.controls.promo">Промо новость</mat-checkbox>
-  </p>
+    <div>
+      <mat-checkbox [formControl]="form.controls.promo">Промо новость</mat-checkbox>
+    </div>
+  </mat-dialog-content>
 
   <mat-dialog-actions align="end">
     <button automation-id="cancel" type="button" mat-raised-button mat-dialog-close>Отмена</button>
