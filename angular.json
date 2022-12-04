@@ -25,6 +25,7 @@
     "redux-dashboard": "apps/redux/dashboard",
     "redux-dashboard-page": "libs/redux/dashboard/page",
     "redux-dashboard-ui-card": "libs/redux/dashboard/ui/card",
+    "redux-native": "apps/redux/native",
     "redux-ngrx": "apps/redux/ngrx",
     "redux-ngrx-posts-pages": "libs/redux/ngrx/posts/pages",
     "redux-ngrx-posts-state": "libs/redux/ngrx/posts/state",

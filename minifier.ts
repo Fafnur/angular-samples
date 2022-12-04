@@ -6,6 +6,7 @@ const files = [
   'dist/apps/redux/dashboard/index.html',
   'dist/apps/redux/ngrx/index.html',
   'dist/apps/redux/ngxs/index.html',
+  'dist/apps/redux/native/index.html',
 ];
 
 for (const filePath of files) {

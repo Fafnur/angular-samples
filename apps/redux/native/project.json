@@ -1,0 +1,122 @@
+{
+  "name": "redux-native",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
+  "projectType": "application",
+  "sourceRoot": "apps/redux/native/src",
+  "prefix": "angular-samples",
+  "targets": {
+    "build": {
+      "executor": "@nrwl/angular:webpack-browser",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/apps/redux/native",
+        "index": "apps/redux/native/src/index.html",
+        "main": "apps/redux/native/src/main.ts",
+        "polyfills": ["zone.js", "src/polyfills.ts"],
+        "tsConfig": "apps/redux/native/tsconfig.app.json",
+        "inlineStyleLanguage": "scss",
+        "assets": [
+          "apps/redux/native/src/favicon.ico",
+          "apps/redux/native/src/assets",
+          "apps/redux/native/src/robots.txt",
+          "apps/redux/native/src/site.webmanifest",
+          "apps/redux/native/src/browserconfig.xml",
+          "apps/redux/native/src/sitemap.xml"
+        ],
+        "styles": ["apps/redux/native/src/styles.scss"],
+        "scripts": [],
+        "customWebpackConfig": {
+          "path": "apps/redux/native/webpack.config.js"
+        }
+      },
+      "configurations": {
+        "production": {
+          "budgets": [
+            {
+              "type": "initial",
+              "maximumWarning": "500kb",
+              "maximumError": "1mb"
+            },
+            {
+              "type": "anyComponentStyle",
+              "maximumWarning": "2kb",
+              "maximumError": "4kb"
+            }
+          ],
+          "fileReplacements": [
+            {
+              "replace": "apps/redux/akita/src/environments/environment.ts",
+              "with": "apps/redux/akita/src/environments/environment.prod.ts"
+            }
+          ],
+          "outputHashing": "all",
+          "customWebpackConfig": {
+            "path": "apps/redux/native/webpack.prod.config.js"
+          }
+        },
+        "development": {
+          "buildOptimizer": false,
+          "optimization": false,
+          "vendorChunk": true,
+          "extractLicenses": false,
+          "sourceMap": true,
+          "namedChunks": true
+        }
+      },
+      "defaultConfiguration": "production"
+    },
+    "serve": {
+      "executor": "@nrwl/angular:webpack-dev-server",
+      "configurations": {
+        "production": {
+          "browserTarget": "redux-native:build:production"
+        },
+        "development": {
+          "browserTarget": "redux-native:build:development"
+        }
+      },
+      "defaultConfiguration": "development",
+      "options": {
+        "port": 4204,
+        "publicHost": "http://localhost:4204"
+      }
+    },
+    "extract-i18n": {
+      "executor": "@angular-devkit/build-angular:extract-i18n",
+      "options": {
+        "browserTarget": "redux-native:build"
+      }
+    },
+    "lint": {
+      "executor": "@nrwl/linter:eslint",
+      "options": {
+        "lintFilePatterns": ["apps/redux/native/**/*.ts", "apps/redux/native/**/*.html"]
+      }
+    },
+    "test": {
+      "executor": "@nrwl/jest:jest",
+      "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
+      "options": {
+        "jestConfig": "apps/redux/native/jest.config.ts",
+        "passWithNoTests": true
+      }
+    },
+    "serve-static": {
+      "executor": "@nrwl/angular:file-server",
+      "defaultConfiguration": "development",
+      "options": {
+        "buildTarget": "redux-native:build",
+        "port": 4204
+      },
+      "configurations": {
+        "development": {
+          "buildTarget": "redux-native:build:development"
+        },
+        "production": {
+          "buildTarget": "redux-native:build:production"
+        }
+      }
+    }
+  },
+  "tags": []
+}
