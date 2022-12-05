@@ -39,5 +39,6 @@ describe('PageComponent', () => {
     expect(po.ngrx).toBeTruthy();
     expect(po.ngxs).toBeTruthy();
     expect(po.akita).toBeTruthy();
+    expect(po.native).toBeTruthy();
   });
 });

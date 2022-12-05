@@ -2,6 +2,8 @@
 
 An example application for demonstrating Ngrx in Angular.
 
+![image](./docs/ngrx.gif)
+
 ## Demo
 
 You can view the demo project - [ngrx.fafn.ru](https://ngrx.fafn.ru).
@@ -21,8 +23,7 @@ Application using modules:
 - [LayoutModule](../../../libs/ui/layout/README.md) - common layout for all applications in workspace;
 - [HeaderModule](../../../libs/redux/ui/header/README.md) - links to remotes applications;
 - [NgrxRootStoreModule](../../../libs/redux/ngrx/store/root/README.md) - root store for Ngrx;
-- [NgxsRootStoreModule](../../../libs/redux/ngxs/store/root/README.md) - root store for Ngxs.
 
 ## Running unit tests
 
-Run `nx test redux-dashboard` to execute the unit tests.
+Run `nx test redux-ngrx` to execute the unit tests.

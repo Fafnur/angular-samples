@@ -3,5 +3,5 @@
 module.exports = {
   // ...baseConfig,
   name: 'redux-dashboard',
-  remotes: ['redux-ngrx', 'redux-ngxs', 'redux-akita'],
+  remotes: ['redux-ngrx', 'redux-ngxs', 'redux-akita', 'redux-native'],
 };

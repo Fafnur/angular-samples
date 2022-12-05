@@ -2,7 +2,7 @@ import { ChangeDetectionStrategy, Component } from '@angular/core';
 
 import { IconService } from '@angular-samples/core/icons';
 
-import { akitaIcon, ngrxIcon, ngxsIcon } from './header.icons';
+import { akitaIcon, angularIcon, ngrxIcon, ngxsIcon } from './header.icons';
 
 /**
  * Icons for redux applications
@@ -19,6 +19,10 @@ const ICONS: { name: string; source: string }[] = [
   {
     name: 'akita',
     source: akitaIcon,
+  },
+  {
+    name: 'native',
+    source: angularIcon,
   },
 ];
 

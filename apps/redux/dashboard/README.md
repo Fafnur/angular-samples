@@ -10,7 +10,8 @@ Also, you can see demo applications for single implementation ngrx, ngxs and aki
 
 - [ngrx.fafn.ru](https://redux.fafn.ru) - Ngrx implementation;
 - [ngxs.fafn.ru](https://ngxs.fafn.ru) - Ngxs implementation;
-- [akita.fafn.ru](https://akita.fafn.ru) - Akita implementation.
+- [akita.fafn.ru](https://akita.fafn.ru) - Akita implementation;
+- [native.fafn.ru](https://native.fafn.ru) - Native implementation.
 
 ## Local development
 
@@ -27,6 +28,7 @@ This project uses the following redux implementations:
 - Ngrx - first implementation of redux.
 - Ngxs - redux implementation that was supposed to fix performance issues and provide a more framework-like solution than ngrx.
 - Akita - An alternative take on redux that was supposed to reduce the amount of code when implementing redux.
+- Native - Native state management with simple Angular service.
 
 Since different implementations of redux require the inclusion of a global module in the AppModule, the application was built using microfrontends based on the Nx monorepo.
 
@@ -40,6 +42,7 @@ workspace
 │   └── redux
 │       ├── akita
 │       ├── dashboard
+│       ├── native
 │       ├── ngrx
 │       └── ngxs
 ├── libs
@@ -64,15 +67,17 @@ workspace
 │   │   ├── dashboard
 │   │   │   ├── page
 │   │   │   └── ui
+│   │   ├── native
+│   │   │   └── posts
+│   │   │       ├── pages
+│   │   │       └── state
 │   │   ├── ngrx
-│   │   ├── akita
 │   │   │   ├── posts
 │   │   │   │   ├── pages
 │   │   │   │   └── state
 │   │   │   └── store
 │   │   │       └── root
 │   │   ├── ngxs
-│   │   ├── akita
 │   │   │   ├── posts
 │   │   │   │   ├── pages
 │   │   │   │   └── state

@@ -35,6 +35,8 @@
       "@angular-samples/redux/config": ["libs/redux/config/src/index.ts"],
       "@angular-samples/redux/dashboard/page": ["libs/redux/dashboard/page/src/index.ts"],
       "@angular-samples/redux/dashboard/ui/card": ["libs/redux/dashboard/ui/card/src/index.ts"],
+      "@angular-samples/redux/native/posts/pages": ["libs/redux/native/posts/pages/src/index.ts"],
+      "@angular-samples/redux/native/posts/state": ["libs/redux/native/posts/state/src/index.ts"],
       "@angular-samples/redux/ngrx/posts/pages": ["libs/redux/ngrx/posts/pages/src/index.ts"],
       "@angular-samples/redux/ngrx/posts/state": ["libs/redux/ngrx/posts/state/src/index.ts"],
       "@angular-samples/redux/ngrx/store/root": ["libs/redux/ngrx/store/root/src/index.ts"],

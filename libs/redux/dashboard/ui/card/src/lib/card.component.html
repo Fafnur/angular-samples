@@ -1,4 +1,6 @@
 <a automation-id="link" [routerLink]="['/', type]">
-  <img automation-id="image" src="/assets/images/{{ type }}.svg" [alt]="type" />
+  <div>
+    <img class="{{ type }}" automation-id="image" src="/assets/images/{{ type }}.svg" [alt]="type" />
+  </div>
   <h3 automation-id="type">{{ type }}</h3>
 </a>

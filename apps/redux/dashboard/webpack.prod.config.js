@@ -6,5 +6,6 @@ module.exports = withModuleFederation({
     ['redux-ngrx', 'https://ngrx.fafn.ru'],
     ['redux-ngxs', 'https://ngxs.fafn.ru'],
     ['redux-akita', 'https://akita.fafn.ru'],
+    ['redux-native', 'https://native.fafn.ru'],
   ],
 });
