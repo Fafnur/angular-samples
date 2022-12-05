@@ -12,7 +12,7 @@
         "outputPath": "dist/apps/redux/native",
         "index": "apps/redux/native/src/index.html",
         "main": "apps/redux/native/src/main.ts",
-        "polyfills": ["zone.js", "src/polyfills.ts"],
+        "polyfills": ["zone.js", "apps/redux/native/src/polyfills.ts"],
         "tsConfig": "apps/redux/native/tsconfig.app.json",
         "inlineStyleLanguage": "scss",
         "assets": [

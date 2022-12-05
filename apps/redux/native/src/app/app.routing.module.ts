@@ -10,7 +10,7 @@ const routes: Routes = [
     children: [
       {
         path: '',
-        loadChildren: () => import('@angular-samples/redux/ngrx/posts/pages').then((modules) => modules.PagesModule),
+        loadChildren: () => import('@angular-samples/redux/native/posts/pages').then((modules) => modules.PagesModule),
       },
       {
         path: 'remote',
