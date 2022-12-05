@@ -4,7 +4,7 @@
 :host {
   display: flex;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 80vh;
   margin-top: 2rem;
 
   @include mixins.media-tablet() {

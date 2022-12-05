@@ -30,6 +30,10 @@ const routes: Routes = [
         path: 'ngrx',
         loadChildren: () => import('redux-ngrx/Module').then((m) => m.RemoteEntryModule),
       },
+      {
+        path: 'native',
+        loadChildren: () => import('redux-native/Module').then((m) => m.RemoteEntryModule),
+      },
     ],
   },
 ];

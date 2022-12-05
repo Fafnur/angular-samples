@@ -24,4 +24,8 @@ export class PageComponentPo extends PageObject {
   get akita() {
     return this.getByAutomationId('akita');
   }
+
+  get native() {
+    return this.getByAutomationId('native');
+  }
 }
