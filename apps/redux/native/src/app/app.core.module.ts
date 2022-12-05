@@ -17,7 +17,7 @@ registerLocaleData(localeRu);
   providers: [
     {
       provide: REDUX_TYPE,
-      useValue: 'NGRX',
+      useValue: 'NATIVE',
     },
     {
       provide: LOCALE_ID,
