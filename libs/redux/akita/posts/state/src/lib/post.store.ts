@@ -14,12 +14,19 @@ export interface PostState extends EntityState<Post, string> {
 }
 
 /**
+ * Initial state for post state
+ */
+export const initialPostState: PostState = {
+  loaded: false,
+};
+
+/**
  * This service using for change state.
  */
 @Injectable()
 @StoreConfig({ name: 'posts', idKey: 'uuid', resettable: true })
 export class PostStore extends EntityStore<PostState> {
   constructor() {
-    super();
+    super(initialPostState);
   }
 }
