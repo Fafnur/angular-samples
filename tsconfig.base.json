@@ -24,6 +24,7 @@
       "@angular-samples/core/types": ["libs/core/types/src/index.ts"],
       "@angular-samples/core/uuid": ["libs/core/uuid/src/index.ts"],
       "@angular-samples/core/window": ["libs/core/window/src/index.ts"],
+      "@angular-samples/forms/page": ["libs/forms/page/src/index.ts"],
       "@angular-samples/icons/page": ["libs/icons/page/src/index.ts"],
       "@angular-samples/icons/ui/container": ["libs/icons/ui/container/src/index.ts"],
       "@angular-samples/icons/ui/header": ["libs/icons/ui/header/src/index.ts"],
