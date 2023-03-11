@@ -1,5 +1,6 @@
 {
   "name": "core-testing",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/core/testing/src",
   "prefix": "angular-samples",

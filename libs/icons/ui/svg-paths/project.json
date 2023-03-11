@@ -1,5 +1,6 @@
 {
   "name": "icons-ui-svg-paths",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/icons/ui/svg-paths/src",
   "prefix": "angular-samples",

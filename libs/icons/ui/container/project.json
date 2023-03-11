@@ -1,5 +1,6 @@
 {
   "name": "icons-ui-container",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/icons/ui/container/src",
   "prefix": "angular-samples",
