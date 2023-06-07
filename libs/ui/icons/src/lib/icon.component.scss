@@ -1,0 +1,36 @@
+:host {
+  display: inline-block;
+  width: 24px;
+  height: 24px;
+  user-select: none;
+
+  &:not([with-colors]):not([angularSamplesWithColors]) {
+    fill: var(--md-sys-color-on-surface, black);
+  }
+
+  &:not([icon]) {
+    font-family: 'Material Icons';
+    font-weight: normal;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 1;
+    letter-spacing: normal;
+    text-transform: none;
+    white-space: nowrap;
+    overflow-wrap: normal;
+    direction: ltr;
+    font-feature-settings: 'liga';
+    -webkit-font-smoothing: antialiased;
+  }
+
+  :host-context([fafn-button]),
+  :host-context([fafnButton]) {
+    margin-left: -8px;
+    position: relative;
+    z-index: 2;
+
+    &:not([icon]) {
+      font-size: 18px;
+    }
+  }
+}
