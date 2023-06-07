@@ -1,11 +1,12 @@
 {
   "name": "core-testing",
+  "$schema": "../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/core/testing/src",
   "prefix": "angular-samples",
   "targets": {
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/core/testing"],
       "options": {
         "jestConfig": "libs/core/testing/jest.config.ts",
@@ -13,7 +14,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["libs/core/testing/**/*.ts", "libs/core/testing/**/*.html"]
       }
