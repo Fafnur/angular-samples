@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { IconService } from '@angular-samples/core/icons';
+import { IconMaterialService } from '@angular-samples/core/icons';
 
 import { akitaIcon, angularIcon, ngrxIcon, ngxsIcon } from './header.icons';
 
@@ -43,7 +43,7 @@ export class HeaderComponent {
    *
    * @param iconService Icon service for using svg with material icons
    */
-  constructor(private readonly iconService: IconService) {
+  constructor(private readonly iconService: IconMaterialService) {
     // Adding svg icons to material
     for (const icon of ICONS) {
       this.iconService.add(icon.name, icon.source);

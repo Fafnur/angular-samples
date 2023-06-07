@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { IconService } from '@angular-samples/core/icons';
+import { IconMaterialService } from '@angular-samples/core/icons';
 
 const ICONS: { name: string; path: string }[] = [
   {
@@ -24,7 +24,7 @@ const ICONS: { name: string; path: string }[] = [
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SvgPathsComponent {
-  constructor(private readonly iconService: IconService) {
+  constructor(private readonly iconService: IconMaterialService) {
     for (const icon of ICONS) {
       this.iconService.addPath(icon.name, icon.path);
     }

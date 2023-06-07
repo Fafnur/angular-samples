@@ -31,7 +31,7 @@ import { DomSanitizer } from '@angular/platform-browser';
 @Injectable({
   providedIn: 'root',
 })
-export class IconService {
+export class IconMaterialService {
   constructor(private readonly iconRegistry: MatIconRegistry, private readonly sanitizer: DomSanitizer) {}
 
   /**

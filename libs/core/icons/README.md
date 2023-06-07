@@ -6,7 +6,7 @@ Service for creating custom svg icons using Angular Material icons. Read more on
 
 ## How to use
 
-Add [IconService](./src/lib/icon.service.ts) on constructor on your component.
+Add [IconService](./src/lib/icon-material.service.ts) on constructor on your component.
 
 There are two ways to create icons:
 
