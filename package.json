@@ -6,6 +6,9 @@
     "---- Icons ----": "",
     "start:icons": "nx serve icons",
     "build:icons": "nx build icons",
+    "---- Icons Native ----": "",
+    "start:icons:native": "nx serve icons-native",
+    "build:icons:native": "nx build icons-native",
     "---- Redux ----": "",
     "start:redux": "nx serve redux-dashboard --devRemotes=redux-ngrx,redux-ngxs,redux-akita,redux-native",
     "build:redux": "nx build redux-dashboard && nx build redux-ngrx && nx build redux-ngxs && nx build redux-akita && nx build redux-native",
@@ -71,10 +74,13 @@
     "@ngrx/schematics": "16.0.1",
     "@ngrx/store-devtools": "16.0.1",
     "@nrwl/web": "16.3.2",
+    "@nx/angular": "16.3.2",
     "@nx/cypress": "16.3.2",
     "@nx/eslint-plugin": "16.3.2",
     "@nx/jest": "16.3.2",
+    "@nx/js": "16.3.2",
     "@nx/linter": "16.3.2",
+    "@nx/web": "16.3.2",
     "@nx/workspace": "16.3.2",
     "@schematics/angular": "16.0.4",
     "@types/dotenv-webpack": "^7.0.4",
@@ -107,8 +113,7 @@
     "ts-jest": "29.1.0",
     "ts-mockito": "^2.6.1",
     "ts-node": "^10.9.1",
-    "typescript": "5.0.4",
-    "@nx/angular": "16.3.2"
+    "typescript": "5.0.4"
   },
   "engines": {
     "node": ">=16.0.0"

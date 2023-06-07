@@ -2,10 +2,10 @@ import { MatIconRegistry } from '@angular/material/icon';
 import { DomSanitizer, ɵDomSanitizerImpl } from '@angular/platform-browser';
 import { instance, mock, verify, when } from 'ts-mockito';
 
-import { IconService } from './icon.service';
+import { IconMaterialService } from './icon-material.service';
 
 describe('IconService', () => {
-  let service: IconService;
+  let service: IconMaterialService;
   let domSanitizerMock: DomSanitizer;
   let matIconRegistryMock: MatIconRegistry;
 
@@ -17,7 +17,7 @@ describe('IconService', () => {
     matIconRegistryMock = mock(MatIconRegistry);
     domSanitizerMock = mock(ɵDomSanitizerImpl);
 
-    service = new IconService(instance(matIconRegistryMock), instance(domSanitizerMock));
+    service = new IconMaterialService(instance(matIconRegistryMock), instance(domSanitizerMock));
   });
 
   it('should create', () => {

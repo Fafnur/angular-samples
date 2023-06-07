@@ -6,7 +6,7 @@ import { NoopAnimationsModule } from '@angular/platform-browser/animations';
 import { MockModule } from 'ng-mocks';
 import { mock } from 'ts-mockito';
 
-import { IconService } from '@angular-samples/core/icons';
+import { IconMaterialService } from '@angular-samples/core/icons';
 import { providerOf } from '@angular-samples/core/testing';
 
 import { SvgSourcesComponent } from './svg-sources.component';
@@ -15,15 +15,15 @@ import { SvgSourcesComponentPo } from './svg-sources.component.po';
 describe('SvgSourcesComponent', () => {
   let po: SvgSourcesComponentPo;
   let fixture: ComponentFixture<SvgSourcesComponent>;
-  let iconServiceMock: IconService;
+  let iconServiceMock: IconMaterialService;
 
   beforeEach(async () => {
-    iconServiceMock = mock(IconService);
+    iconServiceMock = mock(IconMaterialService);
 
     await TestBed.configureTestingModule({
       imports: [CommonModule, NoopAnimationsModule, MockModule(MatIconModule), MockModule(MatButtonModule)],
       declarations: [SvgSourcesComponent],
-      providers: [providerOf(IconService, iconServiceMock)],
+      providers: [providerOf(IconMaterialService, iconServiceMock)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(SvgSourcesComponent);

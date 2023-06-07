@@ -7,7 +7,7 @@ import { RouterTestingModule } from '@angular/router/testing';
 import { MockModule } from 'ng-mocks';
 import { mock } from 'ts-mockito';
 
-import { IconService } from '@angular-samples/core/icons';
+import { IconMaterialService } from '@angular-samples/core/icons';
 import { providerOf } from '@angular-samples/core/testing';
 
 import { HeaderComponent } from './header.component';
@@ -16,15 +16,15 @@ import { HeaderComponentPo } from './header.component.po';
 describe('HeaderComponent', () => {
   let po: HeaderComponentPo;
   let fixture: ComponentFixture<HeaderComponent>;
-  let iconServiceMock: IconService;
+  let iconServiceMock: IconMaterialService;
 
   beforeEach(async () => {
-    iconServiceMock = mock(IconService);
+    iconServiceMock = mock(IconMaterialService);
 
     await TestBed.configureTestingModule({
       imports: [CommonModule, RouterTestingModule, NoopAnimationsModule, MockModule(MatButtonModule), MockModule(MatIconModule)],
       declarations: [HeaderComponent],
-      providers: [providerOf(IconService, iconServiceMock)],
+      providers: [providerOf(IconMaterialService, iconServiceMock)],
     }).compileComponents();
 
     fixture = TestBed.createComponent(HeaderComponent);

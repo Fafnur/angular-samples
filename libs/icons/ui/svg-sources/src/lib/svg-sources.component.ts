@@ -1,6 +1,6 @@
 import { ChangeDetectionStrategy, Component } from '@angular/core';
 
-import { IconService } from '@angular-samples/core/icons';
+import { IconMaterialService } from '@angular-samples/core/icons';
 
 import { facebookIcon, instagramIcon, telegramIcon } from './svg-sources.icons';
 
@@ -26,7 +26,7 @@ const ICONS: { name: string; source: string }[] = [
   changeDetection: ChangeDetectionStrategy.OnPush,
 })
 export class SvgSourcesComponent {
-  constructor(private readonly iconService: IconService) {
+  constructor(private readonly iconService: IconMaterialService) {
     for (const icon of ICONS) {
       this.iconService.add(icon.name, icon.source);
     }
