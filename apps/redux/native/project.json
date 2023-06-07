@@ -6,7 +6,7 @@
   "prefix": "angular-samples",
   "targets": {
     "build": {
-      "executor": "@nrwl/angular:webpack-browser",
+      "executor": "@nx/angular:webpack-browser",
       "outputs": ["{options.outputPath}"],
       "options": {
         "outputPath": "dist/apps/redux/native",
@@ -70,7 +70,7 @@
       "defaultConfiguration": "production"
     },
     "serve": {
-      "executor": "@nrwl/angular:webpack-dev-server",
+      "executor": "@nx/angular:webpack-dev-server",
       "configurations": {
         "production": {
           "browserTarget": "redux-native:build:production"
@@ -92,13 +92,13 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["apps/redux/native/**/*.ts", "apps/redux/native/**/*.html"]
       }
     },
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/{projectRoot}"],
       "options": {
         "jestConfig": "apps/redux/native/jest.config.ts",
@@ -106,7 +106,7 @@
       }
     },
     "serve-static": {
-      "executor": "@nrwl/angular:file-server",
+      "executor": "@nrwl/web:file-server",
       "defaultConfiguration": "development",
       "options": {
         "buildTarget": "redux-native:build",

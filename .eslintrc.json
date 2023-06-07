@@ -1,12 +1,12 @@
 {
   "root": true,
   "ignorePatterns": ["**/*"],
-  "plugins": ["@typescript-eslint", "prettier", "simple-import-sort", "import", "jsdoc", "ngrx", "@nrwl/nx"],
+  "plugins": ["@typescript-eslint", "prettier", "simple-import-sort", "import", "jsdoc", "ngrx", "@nx"],
   "overrides": [
     {
       "files": ["*.ts", "*.tsx", "*.js", "*.jsx"],
       "rules": {
-        "@nrwl/nx/enforce-module-boundaries": [
+        "@nx/enforce-module-boundaries": [
           "error",
           {
             "enforceBuildableLibDependency": true,
@@ -23,12 +23,7 @@
     },
     {
       "files": ["*.ts", "*.tsx"],
-      "extends": [
-        "plugin:@nrwl/nx/typescript",
-        "plugin:@nrwl/nx/angular",
-        "plugin:import/recommended",
-        "plugin:ngrx/recommended"
-      ],
+      "extends": ["plugin:@nx/typescript", "plugin:@nx/angular", "plugin:import/recommended", "plugin:ngrx/recommended"],
       "rules": {
         "@typescript-eslint/naming-convention": [
           "error",
@@ -88,7 +83,7 @@
     },
     {
       "files": ["*.js", "*.jsx"],
-      "extends": ["plugin:@nrwl/nx/javascript"],
+      "extends": ["plugin:@nx/javascript"],
       "rules": {}
     }
   ]

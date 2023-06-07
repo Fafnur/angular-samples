@@ -1,11 +1,12 @@
 {
   "name": "icons-ui-svg-sources",
+  "$schema": "../../../../node_modules/nx/schemas/project-schema.json",
   "projectType": "library",
   "sourceRoot": "libs/icons/ui/svg-sources/src",
   "prefix": "angular-samples",
   "targets": {
     "test": {
-      "executor": "@nrwl/jest:jest",
+      "executor": "@nx/jest:jest",
       "outputs": ["{workspaceRoot}/coverage/libs/icons/ui/svg-sources"],
       "options": {
         "jestConfig": "libs/icons/ui/svg-sources/jest.config.ts",
@@ -13,7 +14,7 @@
       }
     },
     "lint": {
-      "executor": "@nrwl/linter:eslint",
+      "executor": "@nx/linter:eslint",
       "options": {
         "lintFilePatterns": ["libs/icons/ui/svg-sources/**/*.ts", "libs/icons/ui/svg-sources/**/*.html"]
       }
