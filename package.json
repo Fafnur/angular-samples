@@ -3,6 +3,9 @@
   "version": "0.0.0",
   "license": "MIT",
   "scripts": {
+    "---- Module to Standalone ----": "",
+    "start:mtc": "nx serve module-to-standalone",
+    "build:mtc": "nx build module-to-standalone",
     "---- Icons ----": "",
     "start:icons": "nx serve icons",
     "build:icons": "nx build icons",
