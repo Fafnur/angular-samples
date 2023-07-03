@@ -42,6 +42,26 @@
         <note priority="1" from="description">Contact Description</note>
         <note priority="1" from="meaning">Contact Page</note>
       </trans-unit>
+      <trans-unit id="6796211619180007259" datatype="html">
+        <source>Home Page</source>
+        <target state="translated">Главная</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/home/page/src/lib/home-page.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Home Title</note>
+        <note priority="1" from="meaning">Home Page</note>
+      </trans-unit>
+      <trans-unit id="1233631464056736087" datatype="html">
+        <source>Random dog taken from the the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://vision.stanford.edu/aditya86/ImageNetDogs/&quot; target=&quot;_blank&quot;&gt;"/>Stanford Dogs Dataset<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <target state="translated">Случайная собака, взятая из набора данных <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://vision.stanford.edu/aditya86/ImageNetDogs/&quot; target=&quot;_blank&quot;&gt;"/>Stanford Dogs Dataset<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/home/page/src/lib/home-page.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Home Description</note>
+        <note priority="1" from="meaning">Home Page</note>
+      </trans-unit>
       <trans-unit id="2821179408673282599" datatype="html">
         <source>Home</source>
         <target state="translated">Главная</target>
