@@ -2,7 +2,8 @@ import { CommonModule } from '@angular/common';
 import { NgModule } from '@angular/core';
 import { RouterModule } from '@angular/router';
 
-import { NxWelcomeComponent } from './nx-welcome.component';
+import { HomePageComponent } from './home-page.component';
+import { HomePageService } from './home-page.service';
 
 @NgModule({
   imports: [
@@ -10,10 +11,11 @@ import { NxWelcomeComponent } from './nx-welcome.component';
     RouterModule.forChild([
       {
         path: '',
-        component: NxWelcomeComponent,
+        component: HomePageComponent,
       },
     ]),
   ],
-  declarations: [NxWelcomeComponent],
+  declarations: [HomePageComponent],
+  providers: [HomePageService],
 })
 export class HomePageModule {}
