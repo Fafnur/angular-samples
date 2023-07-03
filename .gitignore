@@ -48,3 +48,14 @@ yarn.lock
 /apps/**/routes.txt
 #/apps/**/sitemap.xml Revert after adding sitemap generator
 /libs/**/source.xlf
+/apps/**/source.xlf
+/mocks/tmp
+/apps/**/src/assets/locale
+/apps/**/src/assets/settings.js
+/apps/**/src/assets/settings.json
+# /apps/**/src/sitemap.xml
+/apps/**/src/sitemap-static.xml
+dev.json
+.husky/*
+junit.xml
+/junit

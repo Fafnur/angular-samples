@@ -5,6 +5,15 @@
   "prefix": "angular-samples",
   "sourceRoot": "apps/module-to-standalone/src",
   "tags": [],
+  "i18n": {
+    "sourceLocale": "en-US",
+    "locales": {
+      "ru": {
+        "translation": "apps/module-to-standalone/src/messages.xlf",
+        "baseHref": ""
+      }
+    }
+  },
   "targets": {
     "build": {
       "executor": "@angular-devkit/build-angular:browser",
@@ -17,7 +26,8 @@
         "tsConfig": "apps/module-to-standalone/tsconfig.app.json",
         "assets": ["apps/module-to-standalone/src/favicon.ico", "apps/module-to-standalone/src/assets"],
         "styles": ["apps/module-to-standalone/src/styles.scss"],
-        "scripts": []
+        "scripts": [],
+        "localize": ["ru"]
       },
       "configurations": {
         "production": {
@@ -96,7 +106,8 @@
       "options": {
         "outputPath": "dist/module-to-standalone/server",
         "main": "apps/module-to-standalone/server.ts",
-        "tsConfig": "apps/module-to-standalone/tsconfig.server.json"
+        "tsConfig": "apps/module-to-standalone/tsconfig.server.json",
+        "localize": ["ru"]
       },
       "configurations": {
         "production": {

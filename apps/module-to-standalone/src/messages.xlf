@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6269817558778697821" datatype="html">
+        <source>About Page</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/about/page/src/lib/about-page.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">About Title</note>
+        <note priority="1" from="meaning">About Page</note>
+      </trans-unit>
+      <trans-unit id="676568747599639888" datatype="html">
+        <source> We work together to design, create and produce work that we are proud of for folks that we believe in. We are available for hire in a wide range of creative disciplines for a variety of jobs, projects and gigs.
+</source>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/about/page/src/lib/about-page.component.html</context>
+          <context context-type="linenumber">2,5</context>
+        </context-group>
+        <note priority="1" from="description">About Description</note>
+        <note priority="1" from="meaning">About Page</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
