@@ -1,12 +1,7 @@
-import { HttpEvent, HttpHandler, HttpInterceptor, HttpRequest } from '@angular/common/http';
-import { Injectable } from '@angular/core';
-import { Observable } from 'rxjs';
+import { HttpInterceptorFn } from '@angular/common/http';
 
-@Injectable()
-export class WithCredentialsInterceptor implements HttpInterceptor {
-  intercept(req: HttpRequest<any>, next: HttpHandler): Observable<HttpEvent<any>> {
-    req = req.clone({ withCredentials: true });
+export const withCredentialsInterceptor: HttpInterceptorFn = (req, next) => {
+  req = req.clone({ withCredentials: true });
 
-    return next.handle(req);
-  }
-}
+  return next(req);
+};
