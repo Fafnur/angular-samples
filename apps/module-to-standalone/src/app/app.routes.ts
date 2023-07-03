@@ -1,6 +1,13 @@
 import { Route } from '@angular/router';
 
+import { HeaderComponent } from '@angular-samples/module-to-standalone/ui/header';
+
 export const appRoutes: Route[] = [
+  {
+    path: '',
+    component: HeaderComponent,
+    outlet: 'header',
+  },
   {
     path: '',
     loadChildren: () => import('@angular-samples/module-to-standalone/home/page').then((modules) => modules.HomePageModule),
