@@ -4,6 +4,7 @@
     <body>
       <trans-unit id="6269817558778697821" datatype="html">
         <source>About Page</source>
+        <target state="translated">О проекте</target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/module-to-standalone/about/page/src/lib/about-page.component.html</context>
           <context context-type="linenumber">1</context>
@@ -12,14 +13,41 @@
         <note priority="1" from="meaning">About Page</note>
       </trans-unit>
       <trans-unit id="676568747599639888" datatype="html">
-        <source> We work together to design, create and produce work that we are proud of for folks that we believe in. We are available for hire in a wide range of creative disciplines for a variety of jobs, projects and gigs.
-</source>
+        <source> We work together to design, create and produce work that we are proud of for folks that we believe in. We are available for hire in a wide range of creative disciplines for a variety of jobs, projects and gigs.</source>
+        <target state="translated">Мы работаем вместе, чтобы разрабатывать, создавать и запускать проекты, которыми мы гордимся, для людей, в которых мы верим. Мы команда высококвалифицированных специалистов, которые могут выполнять широкий спектр задач, в различных областях. Вы можете нанять нас для решения ваших задач.</target>
         <context-group purpose="location">
           <context context-type="sourcefile">libs/module-to-standalone/about/page/src/lib/about-page.component.html</context>
           <context context-type="linenumber">2,5</context>
         </context-group>
         <note priority="1" from="description">About Description</note>
         <note priority="1" from="meaning">About Page</note>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target state="translated">Главная</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/ui/header/src/lib/header.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Header</note>
+      </trans-unit>
+      <trans-unit id="1726363342938046830" datatype="html">
+        <source>About</source>
+        <target state="translated">О проекте</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/ui/header/src/lib/header.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Header</note>
+      </trans-unit>
+      <trans-unit id="5945986349492910662" datatype="html">
+        <source>Contacts</source>
+        <target state="translated">Контакты</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/ui/header/src/lib/header.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Header</note>
       </trans-unit>
     </body>
   </file>

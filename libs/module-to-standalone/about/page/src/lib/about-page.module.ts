@@ -9,7 +9,7 @@ import { AboutPageComponent } from './about-page.component';
     CommonModule,
     RouterModule.forChild([
       {
-        path: 'about',
+        path: '',
         component: AboutPageComponent,
       },
     ]),
