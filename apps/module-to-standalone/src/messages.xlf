@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<xliff version="1.2" xmlns="urn:oasis:names:tc:xliff:document:1.2">
+  <file source-language="en-US" datatype="plaintext" original="ng2.template">
+    <body>
+      <trans-unit id="6269817558778697821" datatype="html">
+        <source>About Page</source>
+        <target state="translated">О проекте</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/about/page/src/lib/about-page.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">About Title</note>
+        <note priority="1" from="meaning">About Page</note>
+      </trans-unit>
+      <trans-unit id="676568747599639888" datatype="html">
+        <source> We work together to design, create and produce work that we are proud of for folks that we believe in. We are available for hire in a wide range of creative disciplines for a variety of jobs, projects and gigs.</source>
+        <target state="translated">Мы работаем вместе, чтобы разрабатывать, создавать и запускать проекты, которыми мы гордимся, для людей, в которых мы верим. Мы команда высококвалифицированных специалистов, которые могут выполнять широкий спектр задач, в различных областях. Вы можете нанять нас для решения ваших задач.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/about/page/src/lib/about-page.component.html</context>
+          <context context-type="linenumber">2,5</context>
+        </context-group>
+        <note priority="1" from="description">About Description</note>
+        <note priority="1" from="meaning">About Page</note>
+      </trans-unit>
+      <trans-unit id="3976995122080858250" datatype="html">
+        <source>Contact Page</source>
+        <target state="translated">Контакты</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/contacts/page/src/lib/contact-page.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Contact Title</note>
+        <note priority="1" from="meaning">Contact Page</note>
+      </trans-unit>
+      <trans-unit id="933525366358422803" datatype="html">
+        <source> If you have any questions, please send us an email: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:fafnur@yandex.ru&quot;&gt;"/>fafnur@yandex.ru<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <target state="translated">Если у вас остались вопросы, напишите нам сообщение на почту: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:fafnur@yandex.ru&quot;&gt;"/>fafnur@yandex.ru<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/contacts/page/src/lib/contact-page.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+        <note priority="1" from="description">Contact Description</note>
+        <note priority="1" from="meaning">Contact Page</note>
+      </trans-unit>
+      <trans-unit id="6796211619180007259" datatype="html">
+        <source>Home Page</source>
+        <target state="translated">Главная</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/home/page/src/lib/home-page.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Home Title</note>
+        <note priority="1" from="meaning">Home Page</note>
+      </trans-unit>
+      <trans-unit id="1233631464056736087" datatype="html">
+        <source>Random dog taken from the the <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://vision.stanford.edu/aditya86/ImageNetDogs/&quot; target=&quot;_blank&quot;&gt;"/>Stanford Dogs Dataset<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <target state="translated">Случайная собака, взятая из набора данных <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;http://vision.stanford.edu/aditya86/ImageNetDogs/&quot; target=&quot;_blank&quot;&gt;"/>Stanford Dogs Dataset<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/home/page/src/lib/home-page.component.html</context>
+          <context context-type="linenumber">2</context>
+        </context-group>
+        <note priority="1" from="description">Home Description</note>
+        <note priority="1" from="meaning">Home Page</note>
+      </trans-unit>
+      <trans-unit id="2821179408673282599" datatype="html">
+        <source>Home</source>
+        <target state="translated">Главная</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/ui/header/src/lib/header.component.ts</context>
+          <context context-type="linenumber">13</context>
+        </context-group>
+        <note priority="1" from="description">Header</note>
+      </trans-unit>
+      <trans-unit id="1726363342938046830" datatype="html">
+        <source>About</source>
+        <target state="translated">О проекте</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/ui/header/src/lib/header.component.ts</context>
+          <context context-type="linenumber">17</context>
+        </context-group>
+        <note priority="1" from="description">Header</note>
+      </trans-unit>
+      <trans-unit id="5945986349492910662" datatype="html">
+        <source>Contacts</source>
+        <target state="translated">Контакты</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/ui/header/src/lib/header.component.ts</context>
+          <context context-type="linenumber">21</context>
+        </context-group>
+        <note priority="1" from="description">Header</note>
+      </trans-unit>
+    </body>
+  </file>
+</xliff>
