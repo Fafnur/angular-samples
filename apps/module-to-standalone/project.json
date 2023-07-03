@@ -140,7 +140,8 @@
     "prerender": {
       "executor": "@nguniversal/builders:prerender",
       "options": {
-        "routes": ["/"]
+        "routes": ["/", "/contacts", "/about"],
+        "guessRoutes": false
       },
       "configurations": {
         "production": {
