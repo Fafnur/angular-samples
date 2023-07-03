@@ -18,6 +18,6 @@ export const appRoutes: Route[] = [
   },
   {
     path: 'contacts',
-    loadChildren: () => import('@angular-samples/module-to-standalone/contacts/page').then((modules) => modules.ContactPageModule),
+    loadComponent: () => import('@angular-samples/module-to-standalone/contacts/page').then((modules) => modules.ContactPageComponent),
   },
 ];
