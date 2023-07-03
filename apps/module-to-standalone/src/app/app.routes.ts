@@ -10,7 +10,7 @@ export const appRoutes: Route[] = [
   },
   {
     path: '',
-    loadChildren: () => import('@angular-samples/module-to-standalone/home/page').then((modules) => modules.HomePageModule),
+    loadComponent: () => import('@angular-samples/module-to-standalone/home/page').then((modules) => modules.HomePageComponent),
   },
   {
     path: 'about',
