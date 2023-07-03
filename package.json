@@ -6,6 +6,8 @@
     "---- Module to Standalone ----": "",
     "start:mtc": "nx serve module-to-standalone",
     "build:mtc": "nx build module-to-standalone",
+    "prerender:mtc": "nx run module-to-standalone:prerender:production && PROJECT=module-to-standalone ts-node minifier.ts",
+    "ssr:mtc": "node dist/apps/module-to-standalone/server/ru/main.js",
     "---- Icons ----": "",
     "start:icons": "nx serve icons",
     "build:icons": "nx build icons",

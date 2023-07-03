@@ -1,13 +1,29 @@
-import { readFileSync, writeFileSync } from 'fs';
 import { minify } from 'html-minifier';
+import { existsSync, readdirSync, lstatSync, readFileSync, writeFileSync } from 'node:fs';
+import { join } from 'node:path';
 
-const files = [
-  'dist/apps/redux/akita/index.html',
-  'dist/apps/redux/dashboard/index.html',
-  'dist/apps/redux/ngrx/index.html',
-  'dist/apps/redux/ngxs/index.html',
-  'dist/apps/redux/native/index.html',
-];
+function fromDir(startPath: string, filter: string): string[] {
+  if (!existsSync(startPath)) {
+    console.warn('no dir ', startPath);
+    return [];
+  }
+  const founded = [];
+  const files = readdirSync(startPath);
+  for (const file of files) {
+    const filename = join(startPath, file);
+    const stat = lstatSync(filename);
+    if (stat.isDirectory()) {
+      const foundedIn = fromDir(filename, filter);
+      founded.push(...foundedIn);
+    } else if (filename.indexOf(filter) >= 0) {
+      founded.push(filename);
+    }
+  }
+
+  return founded;
+}
+
+const files = fromDir(`dist/apps/${process.env.PROJECT ?? ''}`, '.html');
 
 for (const filePath of files) {
   const fileContent = readFileSync(filePath, 'utf8');
@@ -20,3 +36,5 @@ for (const filePath of files) {
 
   writeFileSync(filePath, minifiedValue);
 }
+
+console.log(files);

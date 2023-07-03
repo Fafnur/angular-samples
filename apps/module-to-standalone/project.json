@@ -19,7 +19,7 @@
       "executor": "@angular-devkit/build-angular:browser",
       "outputs": ["{options.outputPath}"],
       "options": {
-        "outputPath": "dist/module-to-standalone/browser",
+        "outputPath": "dist/apps/module-to-standalone/browser",
         "index": "apps/module-to-standalone/src/index.html",
         "main": "apps/module-to-standalone/src/main.ts",
         "polyfills": ["zone.js"],
@@ -104,7 +104,7 @@
     "server": {
       "executor": "@angular-devkit/build-angular:server",
       "options": {
-        "outputPath": "dist/module-to-standalone/server",
+        "outputPath": "dist/apps/module-to-standalone/server",
         "main": "apps/module-to-standalone/server.ts",
         "tsConfig": "apps/module-to-standalone/tsconfig.server.json",
         "localize": ["ru"]
