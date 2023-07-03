@@ -4,13 +4,20 @@ import { RouterModule } from '@angular/router';
 
 import { InterceptorsModule } from '@angular-samples/module-to-standalone/interceptors';
 import { HeaderModule } from '@angular-samples/module-to-standalone/ui/header';
+import { ContainerModule } from '@angular-samples/ui/container';
 
 import { AppComponent } from './app.component';
 import { appRoutes } from './app.routes';
 
 @NgModule({
   declarations: [AppComponent],
-  imports: [BrowserModule, RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }), HeaderModule, InterceptorsModule],
+  imports: [
+    BrowserModule,
+    RouterModule.forRoot(appRoutes, { initialNavigation: 'enabledBlocking' }),
+    HeaderModule,
+    InterceptorsModule,
+    ContainerModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

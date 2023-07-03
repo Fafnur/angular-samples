@@ -31,6 +31,7 @@
       "@angular-samples/icons/ui/svg-paths": ["libs/icons/ui/svg-paths/src/index.ts"],
       "@angular-samples/icons/ui/svg-sources": ["libs/icons/ui/svg-sources/src/index.ts"],
       "@angular-samples/module-to-standalone/about/page": ["libs/module-to-standalone/about/page/src/index.ts"],
+      "@angular-samples/module-to-standalone/contacts/page": ["libs/module-to-standalone/contacts/page/src/index.ts"],
       "@angular-samples/module-to-standalone/home/page": ["libs/module-to-standalone/home/page/src/index.ts"],
       "@angular-samples/module-to-standalone/interceptors": ["libs/module-to-standalone/interceptors/src/index.ts"],
       "@angular-samples/module-to-standalone/ui/header": ["libs/module-to-standalone/ui/header/src/index.ts"],

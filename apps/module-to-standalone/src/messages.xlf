@@ -22,6 +22,26 @@
         <note priority="1" from="description">About Description</note>
         <note priority="1" from="meaning">About Page</note>
       </trans-unit>
+      <trans-unit id="3976995122080858250" datatype="html">
+        <source>Contact Page</source>
+        <target state="translated">Контакты</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/contacts/page/src/lib/contact-page.component.html</context>
+          <context context-type="linenumber">1</context>
+        </context-group>
+        <note priority="1" from="description">Contact Title</note>
+        <note priority="1" from="meaning">Contact Page</note>
+      </trans-unit>
+      <trans-unit id="933525366358422803" datatype="html">
+        <source> If you have any questions, please send us an email: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:fafnur@yandex.ru&quot;&gt;"/>fafnur@yandex.ru<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</source>
+        <target state="translated">Если у вас остались вопросы, напишите нам сообщение на почту: <x id="START_LINK" ctype="x-a" equiv-text="&lt;a href=&quot;mailto:fafnur@yandex.ru&quot;&gt;"/>fafnur@yandex.ru<x id="CLOSE_LINK" ctype="x-a" equiv-text="&lt;/a&gt;"/>.</target>
+        <context-group purpose="location">
+          <context context-type="sourcefile">libs/module-to-standalone/contacts/page/src/lib/contact-page.component.html</context>
+          <context context-type="linenumber">2,4</context>
+        </context-group>
+        <note priority="1" from="description">Contact Description</note>
+        <note priority="1" from="meaning">Contact Page</note>
+      </trans-unit>
       <trans-unit id="2821179408673282599" datatype="html">
         <source>Home</source>
         <target state="translated">Главная</target>

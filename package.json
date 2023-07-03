@@ -8,6 +8,7 @@
     "build:mtc": "nx build module-to-standalone",
     "prerender:mtc": "nx run module-to-standalone:prerender:production && PROJECT=module-to-standalone ts-node minifier.ts",
     "ssr:mtc": "node dist/apps/module-to-standalone/server/ru/main.js",
+    "extract-i18n:mtc": "nx extract-i18n module-to-standalone --out-file=apps/module-to-standalone/src/source.xlf",
     "---- Icons ----": "",
     "start:icons": "nx serve icons",
     "build:icons": "nx build icons",
