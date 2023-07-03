@@ -14,7 +14,7 @@ export const appRoutes: Route[] = [
   },
   {
     path: 'about',
-    loadChildren: () => import('@angular-samples/module-to-standalone/about/page').then((modules) => modules.AboutPageModule),
+    loadComponent: () => import('@angular-samples/module-to-standalone/about/page').then((modules) => modules.AboutPageComponent),
   },
   {
     path: 'contacts',

@@ -1,1 +1,1 @@
-export * from './lib/about-page.module';
+export * from './lib/about-page.component';
